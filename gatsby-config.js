@@ -1,6 +1,20 @@
 module.exports = {
   siteMetadata: {
     title: "FixNcell Phone Repair",
+    menuLinks: [
+      {
+        name:'home',
+        link: '/'
+      },
+      {
+        name:'about',
+        link: '/about'
+      },
+      {
+        name:'repairs',
+        link:'/iphone-repair'
+      }
+    ]
   },
   plugins: [
     "gatsby-plugin-styled-components",

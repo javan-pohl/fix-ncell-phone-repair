@@ -1,0 +1,10 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background: #0098ff;
+  color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 1px;
+  min-height: 10px;
+  border-bottom: #000000 3px solid;
+}
