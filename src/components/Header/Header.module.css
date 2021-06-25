@@ -1,10 +1,48 @@
 .header {
-  position: fixed;
+  display: flex;
+  justify-content: space-between;
+	align-items: flex-end;
   width: 100%;
+  height: 100%;
   background: #0098ff;
   color: #ffffff;
-  padding-top: 5px;
-  padding-bottom: 1px;
+  padding: 15px 5px;
   min-height: 10px;
   border-bottom: #000000 3px solid;
+}
+.header a {
+  color: black;
+  text-decoration: none;
+}
+.li {
+  float: left;
+  font-weight: bold;
+  color: black;
+  padding: 0 0 0 15px;
+  margin: 0px;
+}
+.li a {
+  text-transform: uppercase;
+}
+.li a:hover {
+  color: white;
+}
+.nav {
+	margin: 0;
+}
+.navUl {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.title {
+  color: black;
+  float: left;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.titleWhite {
+  color: white;
 }
