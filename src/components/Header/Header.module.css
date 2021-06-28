@@ -27,11 +27,8 @@
 .li a:hover {
   color: white;
 }
-.nav {
-	margin: 0;
-}
 .navUl {
-  margin: 0;
+  margin: 0 10px;
   padding: 0;
   list-style-type: none;
 }
