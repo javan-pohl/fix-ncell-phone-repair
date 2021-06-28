@@ -1,13 +1,22 @@
 
 .contactButton {
-  background-color: aqua;
+	font-size: 20px;
+  background-color: white;
   color: black;
   width: 150px;
   height: 100px;
-	margin: 10px auto;
+	border-radius: 5px;
+	border: none;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	margin: 10px 25px;
 }
 
+.contactButton:active {
+	box-shadow: none;
+}
 .contactButton a {
+	display: inline-block;
+	padding: 25px;
 	text-decoration: none;
 	color: black;
 }

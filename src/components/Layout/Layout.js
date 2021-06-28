@@ -1,9 +1,8 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import Header from '../Header/Header'
-import {createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle `
+const GlobalStyle = createGlobalStyle`
 	body {
 		margin: 0
 	}
@@ -15,7 +14,7 @@ const GlobalStyle = createGlobalStyle `
 const Layout = ({ pageTitle, children }) => {
   return (
     <main>
-			<GlobalStyle />
+      <GlobalStyle />
       <title>{pageTitle}</title>
       <Header />
       <h1>{pageTitle}</h1>
