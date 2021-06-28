@@ -18,11 +18,13 @@ class Menu extends React.Component {
       <div
         role='button'
         tabIndex='0'
-        // className={`${styles.menu} ${this.state.open ? `${styles.open}` : ''}`}
         className={`${menu} ${this.state.open ? `${open}` : ''}`}
         onClick={() => this.close()}
         onKeyDown={() => this.close()}
       >
+        <Link to='/contact'>
+          <h1>Contact Us</h1>
+        </Link>
         <Link to='/'>
           <h1>Home</h1>
         </Link>

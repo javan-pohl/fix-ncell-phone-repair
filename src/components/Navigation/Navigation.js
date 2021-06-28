@@ -9,9 +9,6 @@ class Navigation extends React.Component {
   render() {
     return (
       <>
-        {/* <button onClick={() => this.toggleMenu()}>
-          Open Menu
-        </button> */}
 				<Hamburger hamClick={()=> this.toggleMenu()} />
         <Menu ref={el => (this.childMenu = el)} />
       </>

@@ -7,6 +7,9 @@ const GlobalStyle = createGlobalStyle `
 	body {
 		margin: 0
 	}
+	h1 {
+		text-align: center
+	}
 `
 
 const Layout = ({ pageTitle, children }) => {

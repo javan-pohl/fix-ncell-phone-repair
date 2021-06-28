@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import Navigation from '../Navigation/Navigation'
-import { header, li, navUl, title, titleWhite } from './Header.module.css'
+import { header, title, titleWhite } from './Header.module.css'
 
 const Header = () => {
   return (
@@ -11,19 +11,6 @@ const Header = () => {
           FixNcell <span className={titleWhite}>Phone Repair</span>
         </Link>
       </div>
-      {/* <nav >
-          <ul className={navUl}>
-            <li className={li}>
-              <Link to='/'>Home</Link>
-            </li>
-            <li className={li}>
-              <Link to='/about'>About</Link>
-            </li>
-            <li className={li}>
-              <Link to='/iphone-repair'>Repairs</Link>
-            </li>
-          </ul>
-        </nav> */}
       <Navigation />
     </header>
   )
