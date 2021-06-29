@@ -1,26 +1,36 @@
 import * as React from 'react'
-import Header from '../Header/Header'
 import { createGlobalStyle } from 'styled-components'
+import PropTypes from 'prop-types'
+import Header from '../Header/Header'
 
 const GlobalStyle = createGlobalStyle`
-	body {
-		margin: 0
-	}
-	h1 {
-		text-align: center
-	}
+body {
+margin: 0
+}
+h1 {
+text-align: center
+}
 `
 
-const Layout = ({ pageTitle, children }) => {
-  return (
-    <main>
-      <GlobalStyle />
-      <title>{pageTitle}</title>
-      <Header />
-      <h1>{pageTitle}</h1>
-      {children}
-    </main>
-  )
+const Layout = ({ pageTitle, children }) => (
+  <main>
+    <GlobalStyle />
+    <title>{pageTitle}</title>
+    <Header />
+    <h1>{pageTitle}</h1>
+    {children}
+  </main>
+)
+
+Layout.propTypes = {
+  pageTitle: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+}
+Layout.defaultProps = {
+  pageTitle: 'FixNcell Mobile iPhone Repair',
 }
 
 export default Layout

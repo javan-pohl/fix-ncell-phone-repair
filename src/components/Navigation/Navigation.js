@@ -1,22 +1,21 @@
-import React from "react"
+import React from 'react'
 
-import Menu from "../Menu/Menu"
+import Menu from '../Menu/Menu'
 
-import Hamburger from "../Hamburger/Hamburger"
+import Hamburger from '../Hamburger/Hamburger'
 
 class Navigation extends React.Component {
+  toggleMenu() {
+    this.childMenu.open()
+  }
 
   render() {
     return (
       <>
-				<Hamburger hamClick={()=> this.toggleMenu()} />
-        <Menu ref={el => (this.childMenu = el)} />
+        <Hamburger hamClick={() => this.toggleMenu()} />
+        <Menu ref={(el) => { this.childMenu = el }} />
       </>
     )
-  }
-
-  toggleMenu() {
-    this.childMenu.open()
   }
 }
 

@@ -5,20 +5,19 @@ import EmailButton from '../components/ContactPageButtons/EmailButton'
 
 const contactButtons = {
   display: 'flex',
+  flexWrap: 'wrap',
   justifyContent: 'center',
   margin: 'auto',
-	width: '50%'
+  width: '100%',
 }
 
-const ContactPage = () => {
-  return (
-    <Layout pageTitle='Contact Us'>
-      <div style={contactButtons}>
-        <CallButton />
-        <EmailButton />
-      </div>
-    </Layout>
-  )
-}
+const ContactPage = () => (
+  <Layout pageTitle="Contact Us">
+    <div style={contactButtons}>
+      <CallButton />
+      <EmailButton />
+    </div>
+  </Layout>
+)
 
 export default ContactPage
