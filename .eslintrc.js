@@ -6,7 +6,9 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'plugin:jest/recommended',
   ],
+
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -16,6 +18,7 @@ module.exports = {
   },
   plugins: [
     'react',
+		'jest',
   ],
   rules: {
     semi: ['error', 'never'],

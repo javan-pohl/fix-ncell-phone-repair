@@ -21,6 +21,7 @@ exports[`Header renders correctly 1`] = `
   </div>
   <div
     className="hamburgerMain"
+    id="hamburgerButton"
     onClick={[Function]}
     onKeyDown={[Function]}
     role="button"
@@ -38,6 +39,7 @@ exports[`Header renders correctly 1`] = `
   </div>
   <div
     className="menu "
+    id="navMenu"
     onClick={[Function]}
     onKeyDown={[Function]}
     role="button"

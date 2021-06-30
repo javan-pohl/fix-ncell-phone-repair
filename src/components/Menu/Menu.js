@@ -24,6 +24,7 @@ class Menu extends React.Component {
   render() {
     return (
       <div
+				id="navMenu"
         role="button"
         tabIndex="0"
 /* we don't want to destructure props here because that will cause name overlap */
