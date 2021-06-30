@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="title"
+  >
+    <a
+      href="/"
+    >
+      FixNcell
+       
+      <span
+        className="titleWhite"
+      >
+        Phone Repair
+      </span>
+    </a>
+  </div>
+  <div
+    className="hamburgerMain"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <div
+      className="hamburger"
+    />
+    <div
+      className="hamburger"
+    />
+    <div
+      className="hamburger"
+    />
+  </div>
+  <div
+    className="menu "
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
+    tabIndex="0"
+  >
+    <a
+      href="/contact"
+    >
+      <h1>
+        Contact Us
+      </h1>
+    </a>
+    <a
+      href="/"
+    >
+      <h1>
+        Home
+      </h1>
+    </a>
+    <a
+      href="/about"
+    >
+      <h1>
+        About
+      </h1>
+    </a>
+    <a
+      href="/iphone-repair"
+    >
+      <h1>
+        Repairs
+      </h1>
+    </a>
+  </div>
+</header>
+`;

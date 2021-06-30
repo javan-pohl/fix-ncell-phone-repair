@@ -1,14 +1,16 @@
 import * as React from 'react'
+import PropTypes from 'prop-types'
 import { hamburgerMain, hamburger } from './Hamburger.module.css'
 
-const Hamburger = ({hamClick}) => {
-  return (
-    <div className={hamburgerMain} onClick={() => hamClick()}>
-      <div className={hamburger}></div>
-      <div className={hamburger}></div>
-      <div className={hamburger}></div>
-    </div>
-  )
-}
+const Hamburger = ({ hamClick }) => (
+  <div className={hamburgerMain} onClick={() => hamClick()} onKeyDown={() => hamClick()} role="button" tabIndex={0}>
+    <div className={hamburger} />
+    <div className={hamburger} />
+    <div className={hamburger} />
+  </div>
+)
 
+Hamburger.propTypes = {
+  hamClick: PropTypes.func.isRequired,
+}
 export default Hamburger
