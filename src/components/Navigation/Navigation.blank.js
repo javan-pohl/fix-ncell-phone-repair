@@ -29,6 +29,6 @@ describe('Test Hamburger Menu', () => {
 		console.log('wrapper: ', wrapper)
     // navChildren.find('#hamburgerButton').simulate('click')
     wrapper.find('#hamburgerButton').simulate('click')
-    expect(wrapper.find('#navMenu')).toBeVisible()
+    expect(wrapper.find('#navMenu').children()).toBeVisible()
   })
 })
