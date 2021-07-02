@@ -7,11 +7,11 @@
   "keywords": [
     "gatsby"
   ],
-	"jest": {
-		"setupFilesAfterEnv": [
-			"<rootDir>src/setupTests.js"
-		]
-	},
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>src/setupTests.js"
+    ]
+  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
     "babel-jest": "^27.0.6",
     "babel-preset-gatsby": "^1.8.0",

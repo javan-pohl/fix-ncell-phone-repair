@@ -6,20 +6,20 @@ import { menu, open } from './Menu.module.css'
 // import styles from './Menu.module.scss'
 
 class Menu extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      open: false,
-    }
-  }
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     open: false,
+  //   }
+  // }
 
-  close() {
-    this.setState({ open: false })
-  }
+  // close() {
+  //   this.setState({ open: false })
+  // }
 
-  open() {
-    this.setState({ open: true })
-  }
+  // open() {
+  //   this.setState({ open: true })
+  // }
 
   render() {
     return (
@@ -29,10 +29,11 @@ class Menu extends React.Component {
         tabIndex="0"
 /* we don't want to destructure props here because that will cause name overlap */
 /* eslint-disable */
-        className={`${menu} ${this.state.open ? `${open}` : ''}`}
+        // className={`${menu} ${this.state.open ? `${open}` : ''}`}
+        className={`${menu} ${this.props.visible ? `${open}` : ''}`}
 /* eslint-enable */
-        onClick={() => this.close()}
-        onKeyDown={() => this.close()}
+        onClick={() => this.props.close()}
+        onKeyDown={() => this.props.close()}
       >
         <Link to="/contact">
           <h1>Contact Us</h1>
@@ -51,14 +52,15 @@ class Menu extends React.Component {
   }
 }
 
-export default React.forwardRef((props, ref) => {
-  const menuRef = useRef()
+// export default React.forwardRef((props, ref) => {
+//   const menuRef = useRef()
 
-  useImperativeHandle(ref, () => ({
-    open() {
-      menuRef.current.open()
-    },
-  }))
+//   useImperativeHandle(ref, () => ({
+//     open() {
+//       menuRef.current.open()
+//     },
+//   }))
 
-  return <Menu ref={menuRef} {...props} />
-})
+//   return <Menu ref={menuRef} {...props} />
+// })
+export default Menu
