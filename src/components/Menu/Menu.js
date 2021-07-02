@@ -1,25 +1,9 @@
-import React, { useImperativeHandle, useRef } from 'react'
+import React from 'react'
 
 import { Link } from 'gatsby'
 import { menu, open } from './Menu.module.css'
 
-// import styles from './Menu.module.scss'
-
 class Menu extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     open: false,
-  //   }
-  // }
-
-  // close() {
-  //   this.setState({ open: false })
-  // }
-
-  // open() {
-  //   this.setState({ open: true })
-  // }
 
   render() {
     return (
@@ -29,7 +13,6 @@ class Menu extends React.Component {
         tabIndex="0"
 /* we don't want to destructure props here because that will cause name overlap */
 /* eslint-disable */
-        // className={`${menu} ${this.state.open ? `${open}` : ''}`}
         className={`${menu} ${this.props.visible ? `${open}` : ''}`}
 /* eslint-enable */
         onClick={() => this.props.close()}
@@ -52,15 +35,4 @@ class Menu extends React.Component {
   }
 }
 
-// export default React.forwardRef((props, ref) => {
-//   const menuRef = useRef()
-
-//   useImperativeHandle(ref, () => ({
-//     open() {
-//       menuRef.current.open()
-//     },
-//   }))
-
-//   return <Menu ref={menuRef} {...props} />
-// })
 export default Menu

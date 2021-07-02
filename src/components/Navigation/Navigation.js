@@ -11,9 +11,7 @@ class Navigation extends React.Component {
       isOpen: false,
     }
   }
-  // toggleMenu() {
-  //   this.childMenu.open()
-  // }
+
   openMenu() {
     this.setState({ isOpen: true })
   }
@@ -24,13 +22,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <>
-        {/* <Hamburger hamClick={() => this.toggleMenu()} /> */}
         <Hamburger hamClick={() => this.openMenu()} />
-        {/* <Menu
-          ref={(el) => {
-            this.childMenu = el
-          }}
-        /> */}
 				<Menu visible={this.state.isOpen}	close={() => this.closeMenu()}/>
       </>
     )
