@@ -20,7 +20,7 @@ exports[`Header renders correctly 1`] = `
     </a>
   </div>
   <div
-    className="hamburgerMain"
+    data-testid="hamburgerButton"
     id="hamburgerButton"
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -36,43 +36,6 @@ exports[`Header renders correctly 1`] = `
     <div
       className="hamburger"
     />
-  </div>
-  <div
-    className="menu "
-    id="navMenu"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="button"
-    tabIndex="0"
-  >
-    <a
-      href="/contact"
-    >
-      <h1>
-        Contact Us
-      </h1>
-    </a>
-    <a
-      href="/"
-    >
-      <h1>
-        Home
-      </h1>
-    </a>
-    <a
-      href="/about"
-    >
-      <h1>
-        About
-      </h1>
-    </a>
-    <a
-      href="/iphone-repair"
-    >
-      <h1>
-        Repairs
-      </h1>
-    </a>
   </div>
 </header>
 `;

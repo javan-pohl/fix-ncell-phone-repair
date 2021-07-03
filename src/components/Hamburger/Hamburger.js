@@ -3,7 +3,14 @@ import PropTypes from 'prop-types'
 import { hamburgerMain, hamburger } from './Hamburger.module.css'
 
 const Hamburger = ({ hamClick }) => (
-  <div id="hamburgerButton" className={hamburgerMain} onClick={() => hamClick()} onKeyDown={() => hamClick()} role="button" tabIndex={0}>
+  <div
+    id='hamburgerButton'
+    data-testid='hamburgerButton'
+    onClick={() => hamClick()}
+    onKeyDown={() => hamClick()}
+    role='button'
+    tabIndex={0}
+  >
     <div className={hamburger} />
     <div className={hamburger} />
     <div className={hamburger} />

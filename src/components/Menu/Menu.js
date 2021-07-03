@@ -9,6 +9,7 @@ class Menu extends React.Component {
     return (
       <div
 				id="navMenu"
+				data-testid="navMenu"
         role="button"
         tabIndex="0"
 /* we don't want to destructure props here because that will cause name overlap */

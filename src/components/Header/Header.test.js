@@ -18,20 +18,20 @@ describe('Header', () => {
   })
 })
 
-configure({ adapter: new Adapter() })
+// configure({ adapter: new Adapter() })
 
-describe('Test Hamburger Menu', () => {
-  it('Test click event', () => {
-    // const hambMenu = shallow((<Header />))
-    const wrapper = mount(<Header />)
-		const propsChildren = wrapper.props.children
-    const navChildren = wrapper.children()
-		const navMenu = wrapper.find('#navMenu')
-		console.log('navChildren: ', navChildren)
-		console.log('propsChildren: ', propsChildren)
-		console.log('wrapper: ', wrapper)
-    // navChildren.find('#hamburgerButton').simulate('click')
-    wrapper.find(Hamburger).simulate('click')
-    expect(wrapper.find(Menu)).toBeVisible()
-  })
-})
+// describe('Test Hamburger Menu', () => {
+//   it('Test click event', () => {
+//     // const hambMenu = shallow((<Header />))
+//     const wrapper = mount(<Header />)
+// 		const propsChildren = wrapper.props.children
+//     const navChildren = wrapper.children()
+// 		const navMenu = wrapper.find('#navMenu')
+// 		console.log('navChildren: ', navChildren)
+// 		console.log('propsChildren: ', propsChildren)
+// 		console.log('wrapper: ', wrapper)
+//     // navChildren.find('#hamburgerButton').simulate('click')
+//     wrapper.find(Hamburger).simulate('click')
+//     expect(wrapper.find(Menu)).toBeVisible()
+//   })
+// })

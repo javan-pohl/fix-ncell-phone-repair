@@ -23,7 +23,7 @@ class Navigation extends React.Component {
     return (
       <>
         <Hamburger hamClick={() => this.openMenu()} />
-				<Menu visible={this.state.isOpen}	close={() => this.closeMenu()}/>
+				{this.state.isOpen && <Menu visible={true}	close={() => this.closeMenu()}/>}
       </>
     )
   }
