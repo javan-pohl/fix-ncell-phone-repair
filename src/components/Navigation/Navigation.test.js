@@ -4,14 +4,18 @@ import Navigation from './Navigation'
 import {render, fireEvent} from '@testing-library/react'
 import "@testing-library/jest-dom/extend-expect"
 
-test('clicking on hamburger button makes the menu visible', () => {
-	const {getByTestId} = render(<Navigation />)
-	const hamBtn = getByTestId("hamburgerButton")
-	
+test('expect menu to not exist, then to be visible after clicking the hamburger menu, and to again not exist after clicking the menu', () => {
+	const {queryByTestId} = render(<Navigation />)
+	const hamBtn = queryByTestId("hamburgerButton")
+	let menuEl = queryByTestId("navMenu")
+	expect(menuEl).toBeNull()
+	expect(hamBtn).not.toBeNull()
 	fireEvent.click(hamBtn)
-	// expect(menuEl).toHaveClass
-	// expect(menuEl).toBeVisible()
-	const menuEl = getByTestId("navMenu")
+	menuEl = queryByTestId("navMenu")
+	expect(menuEl).not.toBeNull()
 	expect(menuEl).toBeVisible()
-	// expect(menuEl).toHaveAttribute('visibility', 'hidden')
+	fireEvent.click(menuEl)
+	menuEl = queryByTestId("navMenu")
+	expect(menuEl).toBeNull()
+
 })
