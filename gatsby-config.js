@@ -3,17 +3,25 @@ module.exports = {
     title: "FixNcell Phone Repair",
     menuLinks: [
       {
-        name:'home',
-        link: '/'
+        testid:'homeLink',
+        link: '/',
+				text:'Home',
       },
       {
-        name:'about',
-        link: '/about'
+        testid:'aboutLink',
+        link: '/about',
+				text:'About',
       },
       {
-        name:'repairs',
-        link:'/iphone-repair'
-      }
+        testid:'repairsLink',
+        link:'/iphone-repair',
+				text:'Repairs',
+      },
+			{
+				testid:'contactLink',
+				link:'/contact',
+				text:'Contact Us'
+			}
     ]
   },
   plugins: [

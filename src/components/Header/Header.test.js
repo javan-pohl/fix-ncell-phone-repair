@@ -1,37 +1,50 @@
 import 'jsdom-global/register'
 import '@testing-library/jest-dom'
 import React from 'react'
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
+// import { useStaticQuery } from 'gatsby'
+import * as Gatsby from 'gatsby'
 import renderer from 'react-test-renderer'
-import { shallow, mount, configure } from 'enzyme'
 
 import Header from './Header'
-import Hamburger from '../Hamburger/Hamburger'
-import Menu from '../Menu/Menu'
+
+const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery')
+useStaticQuery.mockImplementation(() => ({
+  site: {
+    siteMetadata: {
+      title: 'FixNcell Phone Repair',
+      menuLinks: [
+        {
+          testid: 'homeLink',
+          link: '/',
+          text: 'Home',
+        },
+        {
+          testid: 'aboutLink',
+          link: '/about',
+          text: 'About',
+        },
+        {
+          testid: 'repairsLink',
+          link: '/iphone-repair',
+          text: 'Repairs',
+        },
+        {
+          testid: 'contactLink',
+          link: '/contact',
+          text: 'Contact Us',
+        },
+      ],
+    },
+  },
+}))
+
+beforeEach(() => {
+  jest.clearAllMocks()
+})
 
 describe('Header', () => {
   it('renders correctly', () => {
-    const tree = renderer
-      .create(<Header />)
-      .toJSON()
+    const tree = renderer.create(<Header />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
-
-// configure({ adapter: new Adapter() })
-
-// describe('Test Hamburger Menu', () => {
-//   it('Test click event', () => {
-//     // const hambMenu = shallow((<Header />))
-//     const wrapper = mount(<Header />)
-// 		const propsChildren = wrapper.props.children
-//     const navChildren = wrapper.children()
-// 		const navMenu = wrapper.find('#navMenu')
-// 		console.log('navChildren: ', navChildren)
-// 		console.log('propsChildren: ', propsChildren)
-// 		console.log('wrapper: ', wrapper)
-//     // navChildren.find('#hamburgerButton').simulate('click')
-//     wrapper.find(Hamburger).simulate('click')
-//     expect(wrapper.find(Menu)).toBeVisible()
-//   })
-// })

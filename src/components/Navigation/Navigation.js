@@ -15,15 +15,15 @@ class Navigation extends React.Component {
   openMenu() {
     this.setState({ isOpen: true })
   }
-	closeMenu() {
-		this.setState({ isOpen: false})
-	}
+  closeMenu() {
+    this.setState({ isOpen: false })
+  }
 
   render() {
     return (
       <>
         <Hamburger hamClick={() => this.openMenu()} />
-				{this.state.isOpen && <Menu visible={true}	close={() => this.closeMenu()}/>}
+        <Menu visible={this.state.isOpen} close={() => this.closeMenu()} />
       </>
     )
   }

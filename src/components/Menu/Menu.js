@@ -1,39 +1,53 @@
 import React from 'react'
 
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import { menu, open } from './Menu.module.css'
 
-class Menu extends React.Component {
-
-  render() {
-    return (
-      <div
-				id="navMenu"
-				data-testid="navMenu"
-        role="button"
-        tabIndex="0"
-/* we don't want to destructure props here because that will cause name overlap */
-/* eslint-disable */
-        className={`${menu} ${this.props.visible ? `${open}` : ''}`}
-/* eslint-enable */
-        onClick={() => this.props.close()}
-        onKeyDown={() => this.props.close()}
-      >
-        <Link to="/contact">
-          <h1>Contact Us</h1>
-        </Link>
-        <Link to="/">
-          <h1>Home</h1>
-        </Link>
-        <Link to="/about">
-          <h1>About</h1>
-        </Link>
-        <Link to="/iphone-repair">
-          <h1>Repairs</h1>
-        </Link>
-      </div>
-    )
-  }
+function getLinks() {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          menuLinks {
+            link
+            testid
+            text
+          }
+        }
+      }
+    }
+  `)
+  const {
+    site: {
+      siteMetadata: { menuLinks },
+    },
+  } = data
+  return menuLinks
+}
+function Menu({ visible, close }) {
+  const menuLinks = getLinks()
+  const links = menuLinks.map((link) => (
+    <Link data-testid={link.testid} to={link.link} key={link.testid}>
+      <h1>{link.text}</h1>
+    </Link>
+  ))
+  return (
+    <div
+      id='navMenu'
+      data-testid='navMenu'
+      role='button'
+      tabIndex='0'
+      /* we don't want to destructure props here because that will cause name overlap */
+      /* eslint-disable */
+      className={`${menu} ${visible ? `${open}` : ''}`}
+      /* eslint-enable */
+      onClick={() => close()}
+      onKeyDown={() => close()}
+    >
+      {links}
+    </div>
+  )
 }
 
 export default Menu
