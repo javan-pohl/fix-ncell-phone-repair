@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu renders correctly 1`] = `
+<div
+  className="menu"
+  data-testid="navMenu"
+  id="navMenu"
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  role="button"
+  style={
+    Object {
+      "opacity": "1",
+      "visibility": "visible",
+    }
+  }
+  tabIndex="0"
+>
+  <a
+    data-testid="homeLink"
+    href="/"
+  >
+    <h1>
+      Home
+    </h1>
+  </a>
+  <a
+    data-testid="aboutLink"
+    href="/about"
+  >
+    <h1>
+      About
+    </h1>
+  </a>
+  <a
+    data-testid="repairsLink"
+    href="/iphone-repair"
+  >
+    <h1>
+      Repairs
+    </h1>
+  </a>
+  <a
+    data-testid="contactLink"
+    href="/contact"
+  >
+    <h1>
+      Contact Us
+    </h1>
+  </a>
+</div>
+`;

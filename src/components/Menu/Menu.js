@@ -19,6 +19,7 @@ function getLinks() {
       }
     }
   `)
+	
   const {
     site: {
       siteMetadata: { menuLinks },
@@ -42,7 +43,7 @@ function Menu({ visible, close }) {
       className={`${menu}`}
       onClick={() => close()}
       onKeyDown={() => close()}
-      /* Moving these attributes from the css module here so that the visibility of the component is more easily testable */
+      /* Moving these attributes here from the css module so that the visibility of the component is more easily testable */
       style={{
         visibility: `${visible ? 'visible' : 'hidden'}`,
         opacity: `${visible ? '1' : '0'}`,
@@ -55,7 +56,8 @@ function Menu({ visible, close }) {
 
 Menu.propTypes = {
   visible: PropTypes.bool.isRequired,
-  close: PropTypes.func.isRequired,
+  /* eslint-disable-next-line react/require-default-props */
+  close: PropTypes.func,
 }
 
 export default Menu

@@ -18,7 +18,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest"
+    "test": "jest --watchAll=true"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
