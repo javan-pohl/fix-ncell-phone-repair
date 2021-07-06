@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "FixNcell Phone Repair",
+		phone: '3034216499',
+		email: 'fixncellllc@gmail.com',
     menuLinks: [
       {
         testid:'homeLink',

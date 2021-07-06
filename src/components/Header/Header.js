@@ -7,8 +7,10 @@ function Header() {
   return (
     <header className={header}>
       <div className={title}>
-        <Link to='/'>
-          FixNcell <span className={titleWhite}>Phone Repair</span>
+        <Link to="/">
+          FixNcell
+          {' '}
+          <span className={titleWhite}>Phone Repair</span>
         </Link>
       </div>
       <Navigation />

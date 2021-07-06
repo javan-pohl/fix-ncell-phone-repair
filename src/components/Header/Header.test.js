@@ -1,7 +1,6 @@
 import 'jsdom-global/register'
 import '@testing-library/jest-dom'
 import React from 'react'
-// import { useStaticQuery } from 'gatsby'
 import * as Gatsby from 'gatsby'
 import renderer from 'react-test-renderer'
 

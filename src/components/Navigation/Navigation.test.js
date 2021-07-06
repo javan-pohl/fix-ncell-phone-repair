@@ -40,11 +40,6 @@ beforeEach(() => {
   jest.clearAllMocks()
 })
 
-test('clicking on hamburger button makes the menu visible', () => {
-	const {getByTestId} = render(<Navigation />)
-	const hamBtn = getByTestId("hamburgerButton")
-})
-
 test('expect menu to not be visible, then to be visible after clicking the hamburger menu, and to again not be visible after clicking the menu', () => {
 	const {queryByTestId} = render(<Navigation />)
 	const hamBtn = queryByTestId("hamburgerButton")

@@ -10,7 +10,8 @@ exports[`Header renders correctly 1`] = `
     <a
       href="/"
     >
-      FixNcell 
+      FixNcell
+       
       <span
         className="titleWhite"
       >

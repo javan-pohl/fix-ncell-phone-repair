@@ -8,7 +8,6 @@ module.exports = {
     'airbnb',
     'plugin:jest/recommended',
   ],
-
   parserOptions: {
     ecmaFeatures: {
       jsx: true,

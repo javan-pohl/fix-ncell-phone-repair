@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CallButton renders correctly 1`] = `
+<button
+  className="contactButton"
+  data-testid="callUsButton"
+  type="button"
+>
+  <a
+    data-testid="callButtonA"
+    href="tel:3034216499"
+  >
+    <img
+      alt="email icon"
+      src=""
+    />
+    <br />
+    Call Us
+  </a>
+</button>
+`;
