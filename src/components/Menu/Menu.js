@@ -1,7 +1,8 @@
 import React from 'react'
 
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { menu, open } from './Menu.module.css'
+import PropTypes from 'prop-types'
+import { menu } from './Menu.module.css'
 
 function getLinks() {
   const data = useStaticQuery(graphql`
@@ -34,20 +35,27 @@ function Menu({ visible, close }) {
   ))
   return (
     <div
-      id='navMenu'
-      data-testid='navMenu'
-      role='button'
-      tabIndex='0'
-      /* we don't want to destructure props here because that will cause name overlap */
-      /* eslint-disable */
-      className={`${menu} ${visible ? `${open}` : ''}`}
-      /* eslint-enable */
+      id="navMenu"
+      data-testid="navMenu"
+      role="button"
+      tabIndex="0"
+      className={`${menu}`}
       onClick={() => close()}
       onKeyDown={() => close()}
+      /* Moving these attributes from the css module here so that the visibility of the component is more easily testable */
+      style={{
+        visibility: `${visible ? 'visible' : 'hidden'}`,
+        opacity: `${visible ? '1' : '0'}`,
+      }}
     >
       {links}
     </div>
   )
+}
+
+Menu.propTypes = {
+  visible: PropTypes.bool.isRequired,
+  close: PropTypes.func.isRequired,
 }
 
 export default Menu

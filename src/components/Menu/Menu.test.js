@@ -1,13 +1,56 @@
 import 'jsdom-global/register'
 import React from 'react'
+import * as Gatsby from 'gatsby'
 import Menu from './Menu'
-import {render, fireEvent} from '@testing-library/react'
-import "@testing-library/jest-dom/extend-expect"
+import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom/extend-expect'
 
-const linkIds = ['contactLink', 'homeLink', 'aboutLink', 'repairsLink']
-const linkTos = ['/contact', '/', '/about', 'iphone-repair']
-const linkText = ['Contact Us', 'Home', 'About', 'Repairs']
 
-test('menu should render four links with the correct names and "to" values', () => {
+const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery')
+useStaticQuery.mockImplementation(() => ({
+  site: {
+    siteMetadata: {
+      title: 'FixNcell Phone Repair',
+      menuLinks: [
+        {
+          testid: 'homeLink',
+          link: '/',
+          text: 'Home',
+        },
+        {
+          testid: 'aboutLink',
+          link: '/about',
+          text: 'About',
+        },
+        {
+          testid: 'repairsLink',
+          link: '/iphone-repair',
+          text: 'Repairs',
+        },
+        {
+          testid: 'contactLink',
+          link: '/contact',
+          text: 'Contact Us',
+        },
+      ],
+    },
+  },
+}))
 
+beforeEach(() => {
+  jest.clearAllMocks()
+})
+
+test('should not be visible when fed a "visible" prop of false', () => {
+  render(<Menu visible={false} />)
+  const menu = screen.getByTestId('navMenu')
+  const menuEl = document.getElementById('navMenu')
+  expect(menuEl).not.toBeVisible()
+})
+
+test('should be visible when fed a "visible" prop of true', () => {
+  render(<Menu visible={true} />)
+  const menu = screen.getByTestId('navMenu')
+  const menuEl = document.getElementById('navMenu')
+  expect(menuEl).toBeVisible()
 })

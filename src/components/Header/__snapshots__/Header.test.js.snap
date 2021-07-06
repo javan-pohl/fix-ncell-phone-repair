@@ -37,12 +37,18 @@ exports[`Header renders correctly 1`] = `
     />
   </div>
   <div
-    className="menu "
+    className="menu"
     data-testid="navMenu"
     id="navMenu"
     onClick={[Function]}
     onKeyDown={[Function]}
     role="button"
+    style={
+      Object {
+        "opacity": "0",
+        "visibility": "hidden",
+      }
+    }
     tabIndex="0"
   >
     <a
