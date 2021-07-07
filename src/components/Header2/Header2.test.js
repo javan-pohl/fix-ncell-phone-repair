@@ -1,9 +1,10 @@
 import 'jsdom-global/register'
+import '@testing-library/jest-dom'
 import React from 'react'
 import * as Gatsby from 'gatsby'
-import { render, fireEvent } from '@testing-library/react'
-import Navigation from './Navigation'
-import '@testing-library/jest-dom/extend-expect'
+import renderer from 'react-test-renderer'
+
+import Header2 from './Header2'
 
 const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery')
 useStaticQuery.mockImplementation(() => ({
@@ -40,14 +41,9 @@ beforeEach(() => {
   jest.clearAllMocks()
 })
 
-test('expect menu to not be visible, then to be visible after clicking the hamburger menu, and to again not be visible after clicking the menu', () => {
-  const { queryByTestId } = render(<Navigation />)
-  const hamBtn = queryByTestId('hamburgerButton')
-  let menuEl = queryByTestId('navMenu')
-  expect(menuEl).not.toBeVisible()
-  fireEvent.click(hamBtn)
-  expect(menuEl).toBeVisible()
-  fireEvent.click(menuEl)
-  menuEl = queryByTestId('navMenu')
-  expect(menuEl).not.toBeVisible()
+describe('Header', () => {
+  it('renders correctly', () => {
+    const tree = renderer.create(<Header />).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 })

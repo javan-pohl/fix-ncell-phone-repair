@@ -4,8 +4,8 @@ import Showcase from '../components/Showcase/Showcase'
 
 const IndexPage = () => (
   <Layout pageTitle="FixNcell Phone Repair Home Page">
-    <p>Test paragraph</p>
     <Showcase />
+    <p>Test paragraph</p>
   </Layout>
 )
 

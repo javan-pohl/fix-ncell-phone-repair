@@ -19,7 +19,7 @@ function getLinks() {
       }
     }
   `)
-	
+
   const {
     site: {
       siteMetadata: { menuLinks },
