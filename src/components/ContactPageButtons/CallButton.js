@@ -22,16 +22,16 @@ function getNum() {
 }
 
 const CallButton = () => {
-	const num = getNum()
-	return (
-		<button data-testid="callUsButton" className={contactButton} type='button'>
-			<a data-testid="callButtonA" href={`tel:${num}`}>
-				<img src={phoneIcon} alt='email icon' />
-				<br />
-				Call Us
-			</a>
-		</button>
-	)
+  const num = getNum()
+  return (
+    <button data-testid="callUsButton" className={contactButton} type="button">
+      <a data-testid="callButtonA" href={`tel:${num}`}>
+        <img src={phoneIcon} alt="email icon" />
+        <br />
+        Call Us
+      </a>
+    </button>
+  )
 }
 
 export default CallButton

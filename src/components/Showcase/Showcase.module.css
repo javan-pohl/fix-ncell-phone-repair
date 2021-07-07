@@ -1,0 +1,59 @@
+.showcase5 {
+  display: none;
+}
+
+.showcaseMobileSection {
+  display: inline-block;
+  background: url('https://www.fixncell.com/img/mobile_iphone_screen_repair_bw.jpg')
+    no-repeat 0 -70px;
+  background-size: cover;
+  background-position: bottom;
+  height: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+.showcaseMobile {
+  display: block;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  /*border: 5px solid grey;*/
+  margin: 7% auto auto auto;
+  padding-bottom: 15px;
+}
+
+.showcaseMobileInner {
+  width: 80%;
+  margin: 0 auto 0 auto;
+  font-size: 150%;
+  font-weight: 550;
+  padding: 15px 10px 0px 10px;
+  background: rgb(0, 152, 255, 0.9);
+  border-radius: 20px;
+}
+
+#showcaseMobileHeader {
+  padding-top: 15px;
+}
+
+.showcaseMobileInner p {
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
+.showcaseMobileScheduleButton {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  background: rgb(22, 205, 255, 0.9);
+  margin-bottom: 15px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+}
+
+.showcaseMobileScheduleButton:hover {
+  color: black;
+  background-color: #16cdff;
+  border: 4px solid blue;
+}

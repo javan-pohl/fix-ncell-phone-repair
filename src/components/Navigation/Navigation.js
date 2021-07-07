@@ -15,6 +15,7 @@ class Navigation extends React.Component {
   openMenu() {
     this.setState({ isOpen: true })
   }
+
   closeMenu() {
     this.setState({ isOpen: false })
   }
