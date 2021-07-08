@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header2 renders correctly 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="callBar"
+  >
+    <a
+      href="tel:undefined"
+    >
+      ☎ Call
+       
+    </a>
+  </div>
+  <div
+    className="headerContainer"
+  >
+    <div
+      className="branding"
+    >
+      <a
+        href="/"
+      >
+        <span
+          className="highlight"
+          id="highlight"
+        >
+          FixNcell
+           
+        </span>
+        iPhone Repair
+      </a>
+    </div>
+    <div
+      className="navigation"
+    >
+      <nav>
+        <ul>
+          <li
+            className="current"
+          >
+            <a
+              data-testid="homeLink"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            className="current"
+          >
+            <a
+              data-testid="aboutLink"
+              href="/about"
+            >
+              About
+            </a>
+          </li>
+          <li
+            className="current"
+          >
+            <a
+              data-testid="repairsLink"
+              href="/iphone-repair"
+            >
+              Repairs
+            </a>
+          </li>
+          <li
+            className="current"
+          >
+            <a
+              data-testid="contactLink"
+              href="/contact"
+            >
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+`;

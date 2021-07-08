@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
+import formatPhone from '../../functions/formatPhone'
 import {
   header,
   callBar,
@@ -10,35 +11,64 @@ import {
   current,
 } from './Header2.module.css'
 
+function getData() {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          phone
+          menuLinks {
+            link
+            testid
+            text
+          }
+        }
+      }
+    }
+  `)
+
+  const {
+    site: {
+      siteMetadata: { phone, menuLinks },
+    },
+  } = data
+
+  const myData = { phone, menuLinks }
+  return myData
+}
+
 function Header2() {
+  const { phone, menuLinks } = getData()
+  const links = menuLinks.map((link) => (
+    <li className={current} key={link.testid}>
+      <Link data-testid={link.testid} to={link.link}>
+        {link.text}
+      </Link>
+    </li>
+  ))
+  const phoneFormatted = formatPhone(phone)
   return (
     <header className={header}>
       <div className={callBar}>
-        <a href="tel:3034216499">&#9742; Call (303)421-6499</a>
+        <a href={`tel:${phone}`}>
+          &#9742; Call
+          {' '}
+          {phoneFormatted}
+        </a>
       </div>
       <div className={headerContainer}>
         <div className={branding}>
-          <a href="https://www.fixncell.com/">
+          <Link to="/">
             <span id="highlight" className={highlight}>
               FixNcell
               {' '}
             </span>
             iPhone Repair
-          </a>
+          </Link>
         </div>
         <div className={navigation}>
           <nav>
-            <ul>
-              <li className={current}>
-                <a href="https://www.fixncell.com/">Home</a>
-              </li>
-              <li className={current}>
-                <a href="./repairs.html">Repairs</a>
-              </li>
-              <li className={current}>
-                <a href="./about.html">About</a>
-              </li>
-            </ul>
+            <ul>{links}</ul>
           </nav>
         </div>
       </div>

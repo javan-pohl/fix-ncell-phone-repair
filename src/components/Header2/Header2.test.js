@@ -41,9 +41,9 @@ beforeEach(() => {
   jest.clearAllMocks()
 })
 
-describe('Header', () => {
+describe('Header2', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<Header />).toJSON()
+    const tree = renderer.create(<Header2 />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
