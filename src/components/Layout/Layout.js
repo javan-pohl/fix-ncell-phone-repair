@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import PropTypes from 'prop-types'
-import Header from '../Header/Header'
 import Header2 from '../Header2/Header2'
 
 const GlobalStyle = createGlobalStyle`
@@ -13,18 +12,17 @@ text-align: center
 }
 `
 
-const Layout = ({ pageTitle, children }) => (
+const Layout = ({ currentUrl, pageTitle, children }) => (
   <main>
     <GlobalStyle />
     <title>{pageTitle}</title>
-    {/* <Header /> */}
-    <Header2 />
-    {/* <h1>{pageTitle}</h1> */}
+    <Header2 currentUrl={currentUrl} />
     {children}
   </main>
 )
 
 Layout.propTypes = {
+  currentUrl: PropTypes.string,
   pageTitle: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
@@ -32,6 +30,7 @@ Layout.propTypes = {
   ]).isRequired,
 }
 Layout.defaultProps = {
+  currentUrl: '/',
   pageTitle: 'FixNcell Mobile iPhone Repair',
 }
 

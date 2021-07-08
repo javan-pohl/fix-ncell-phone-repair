@@ -1,8 +1,7 @@
 import React from 'react'
-
 import Menu from '../Menu/Menu'
-
 import Hamburger from '../Hamburger/Hamburger'
+/* eslint-disable react/destructuring-assignment */
 
 class Navigation extends React.Component {
   constructor(props) {

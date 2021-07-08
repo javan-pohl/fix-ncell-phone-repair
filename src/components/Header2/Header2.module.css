@@ -24,27 +24,23 @@
 }
 
 header a {
-  color: #ffffff;
-  text-decoration: none;
+	text-decoration: none;
+	color: #ffffff;
 }
 
 header .mobiletel {
-  display: none;
+	display: none;
 }
 
 .highlight {
-  color: #000000;
-  font-weight: bold;
-}
-header .current a {
-  color: #000000;
+	color: #000000;
   font-weight: bold;
 }
 header a:hover {
-  color: #cccccc;
+	color: #cccccc;
 }
 .branding {
-  font-size: 30px;
+	font-size: 30px;
   font-weight: bold;
   padding-bottom: 0px;
   padding-top: 0px;
@@ -52,18 +48,11 @@ header a:hover {
 }
 
 .branding a {
-  margin-bottom: 0px;
+	margin-bottom: 0px;
   bottom: 0px;
 }
-.navigation ul {
-  display: inline;
-}
+.white {
 
-.navigation li {
-  display: inline;
-  padding: 0px 0px 0px 10px;
-  text-transform: uppercase;
-  font-size: 16px;
 }
 @media(max-width:1080px){
 
@@ -77,21 +66,4 @@ header a:hover {
 	.branding {
 			margin: 0px;
 	}
-
-	.navigation {
-			padding-left: 0;
-	}
-
-	.navigation ul {
-			display: inline;
-			padding-left: 0px;
-			margin: 0px;        
-	}
-
-	.navigation li {
-			display: inline;
-			padding: 0px 7px 0px 7px;
-			margin: 0px;
-	}
-
 }

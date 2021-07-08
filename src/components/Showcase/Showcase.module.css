@@ -2,12 +2,9 @@
   display: none;
 }
 
-.showcase{
-  width: 100%;
-  padding-top: 0px;
-  margin-bottom: 0px;
-}
 .showcaseMobileSection {
+	padding-top: 0px;
+	margin-bottom: 0px;
   display: inline-block;
   background: url('https://www.fixncell.com/img/mobile_iphone_screen_repair_bw.jpg')
     no-repeat 0 -70px;
