@@ -1,11 +1,10 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import formatPhone from '../../functions/formatPhone'
+import CallBar from '../CallBar/CallBar'
 import Navigation2 from '../Navigation2/Navigation2'
 import {
   header,
-  callBar,
   headerContainer,
   highlight,
   branding,
@@ -39,17 +38,10 @@ function getData() {
 
 function Header2({ currentUrl }) {
   const { phone, menuLinks } = getData()
-  const phoneFormatted = formatPhone(phone)
   return (
     <header className={header}>
-      <div className={callBar}>
-        <a href={`tel:${phone}`}>
-          &#9742; Call
-          {' '}
-          {phoneFormatted}
-        </a>
-      </div>
       <div className={headerContainer}>
+        <CallBar phone={phone} />
         <div className={branding} data-testid="bizName">
           <Link to="/">
             <span id="highlight" className={highlight}>
@@ -66,7 +58,9 @@ function Header2({ currentUrl }) {
 }
 
 Header2.propTypes = {
-  currentUrl: PropTypes.string.isRequired,
+  currentUrl: PropTypes.string,
 }
-
+Header2.defaultProps = {
+  currentUrl: '/',
+}
 export default Header2

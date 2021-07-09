@@ -9,6 +9,7 @@ const contactButtons = {
   flexWrap: 'wrap',
   justifyContent: 'center',
   margin: 'auto',
+  paddingTop: '12%',
   width: '100%',
 }
 

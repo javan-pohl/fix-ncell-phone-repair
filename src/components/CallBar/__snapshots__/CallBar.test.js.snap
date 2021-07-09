@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CallBar renders correctly 1`] = `
+<div
+  className="callBar"
+  data-testid="callBar"
+>
+  <a
+    data-testid="callBarNum"
+    href="tel:3034216499"
+  >
+    ☎ Call or Text
+     
+    (303)421-6499
+  </a>
+</div>
+`;

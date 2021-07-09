@@ -5,20 +5,24 @@ exports[`Header2 renders correctly 1`] = `
   className="header"
 >
   <div
-    className="callBar"
-  >
-    <a
-      href="tel:undefined"
-    >
-      ☎ Call
-       
-    </a>
-  </div>
-  <div
     className="headerContainer"
   >
     <div
+      className="callBar"
+      data-testid="callBar"
+    >
+      <a
+        data-testid="callBarNum"
+        href="tel:3034216499"
+      >
+        ☎ Call or Text
+         
+        (303)421-6499
+      </a>
+    </div>
+    <div
       className="branding"
+      data-testid="bizName"
     >
       <a
         href="/"
@@ -30,7 +34,11 @@ exports[`Header2 renders correctly 1`] = `
           FixNcell
            
         </span>
-        iPhone Repair
+        <span
+          className="white"
+        >
+          iPhone Repair
+        </span>
       </a>
     </div>
     <div
@@ -38,42 +46,54 @@ exports[`Header2 renders correctly 1`] = `
     >
       <nav>
         <ul>
-          <li
-            className="current"
-          >
+          <li>
             <a
               data-testid="homeLink"
               href="/"
+              style={
+                Object {
+                  "color": "white",
+                }
+              }
             >
               Home
             </a>
           </li>
-          <li
-            className="current"
-          >
+          <li>
             <a
               data-testid="aboutLink"
               href="/about"
+              style={
+                Object {
+                  "color": "black",
+                }
+              }
             >
               About
             </a>
           </li>
-          <li
-            className="current"
-          >
+          <li>
             <a
               data-testid="repairsLink"
               href="/iphone-repair"
+              style={
+                Object {
+                  "color": "black",
+                }
+              }
             >
               Repairs
             </a>
           </li>
-          <li
-            className="current"
-          >
+          <li>
             <a
               data-testid="contactLink"
               href="/contact"
+              style={
+                Object {
+                  "color": "black",
+                }
+              }
             >
               Contact Us
             </a>

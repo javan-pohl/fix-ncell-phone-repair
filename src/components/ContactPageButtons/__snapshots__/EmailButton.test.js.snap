@@ -3,6 +3,7 @@
 exports[`EmailButton renders correctly 1`] = `
 <button
   className="contactButton"
+  type="button"
 >
   <a
     data-testid="emailButtonA"

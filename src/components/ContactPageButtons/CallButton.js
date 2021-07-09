@@ -28,7 +28,7 @@ const CallButton = () => {
       <a data-testid="callButtonA" href={`tel:${num}`}>
         <img src={phoneIcon} alt="email icon" />
         <br />
-        Call Us
+        Call or Text
       </a>
     </button>
   )

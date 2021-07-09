@@ -1,17 +1,10 @@
-.callBar {
-  background-color: black;
-  font-size: 13px;
-  text-align: center;
-  padding: 3px 0 3px 0;
-}
-.header{
-	font: 15px/1.5 Arial, Helvetica, sans-serif;
+.header {
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
   width: 100%;
-  background:#0098ff;
-  color:#ffffff;
+  background: #0098ff;
+  color: #ffffff;
   min-height: 50px;
-  margin: 0 0 0 0 ;
-
+  margin: 0 0 0 0;
 }
 .headerContainer {
   width: 80%;
@@ -24,23 +17,23 @@
 }
 
 header a {
-	text-decoration: none;
-	color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 header .mobiletel {
-	display: none;
+  display: none;
 }
 
 .highlight {
-	color: #000000;
+  color: #000000;
   font-weight: bold;
 }
 header a:hover {
-	color: #cccccc;
+  color: #cccccc;
 }
 .branding {
-	font-size: 30px;
+  font-size: 30px;
   font-weight: bold;
   padding-bottom: 0px;
   padding-top: 0px;
@@ -48,22 +41,16 @@ header a:hover {
 }
 
 .branding a {
-	margin-bottom: 0px;
+  margin-bottom: 0px;
   bottom: 0px;
 }
-.white {
+@media (max-width: 1080px) {
+  .headerContainer {
+    display: inline;
+    text-align: center;
+  }
 
-}
-@media(max-width:1080px){
-
-	.headerContainer {
-			display: inline;
-			text-align: center;
-			/*flex-wrap: wrap;
-			justify-content: center;*/
-	}
-
-	.branding {
-			margin: 0px;
-	}
+  .branding {
+    margin: 0px;
+  }
 }

@@ -15,7 +15,7 @@ exports[`CallButton renders correctly 1`] = `
       src=""
     />
     <br />
-    Call Us
+    Call or Text
   </a>
 </button>
 `;
