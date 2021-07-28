@@ -18,9 +18,9 @@ module.exports = {
       },
       {
         testid: 'repairsLink',
-        link: '/iphone-repair',
+        link: '/repairs',
         text: 'Repairs',
-        pageURL: 'https://www.fixncell.com/iphone-repairs',
+        pageURL: 'https://www.fixncell.com/repairs',
       },
       {
         testid: 'contactLink',
@@ -28,6 +28,66 @@ module.exports = {
         text: 'Contact',
         pageURL: 'https://www.fixncell.com/contact',
       },
+    ],
+    siteUrl: 'https://www.fixncell.com',
+    phoneTemplate: {
+      name: 'iPhone ',
+      link: '/phones/iphone-',
+      pageURL: 'https://www.fixncell.com/phones/iphone-',
+    },
+    phones: [
+      {
+        make: 'iPhone',
+        model: '6',
+      },
+      {
+        make: 'iPhone',
+        model: '6 Plus',
+      },
+      {
+        make: 'iPhone',
+        model: '7',
+      },
+      {
+        make: 'iPhone',
+        model: '7 Plus',
+      },
+      {
+        make: 'iPhone',
+        model: '8',
+      },
+      {
+        make: 'iPhone',
+        model: '8 Plus',
+      },
+      {
+        make: 'iPhone',
+        model: 'X',
+      },
+      {
+        make: 'iPhone',
+        model: 'XS',
+      },
+      // {
+      //   make: 'iPhone',
+      //   model: 'XS Max',
+      // },
+      // {
+      //   make: 'iPhone',
+      //   model: 'XR',
+      // },
+      // {
+      //   make: 'iPhone',
+      //   model: '11',
+      // },
+      // {
+      //   make: 'iPhone',
+      //   model: '11 Pro',
+      // },
+      // {
+      //   make: 'iPhone',
+      //   model: '11 Pro Max',
+      // },
     ],
   },
   plugins: [

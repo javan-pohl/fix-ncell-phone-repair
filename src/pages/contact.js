@@ -13,15 +13,13 @@ const contactButtons = {
   width: '100%',
 }
 
-function ContactPage({ location: { pathname } }) {
-  return (
-    <Layout pageTitle="Contact Us" currentUrl={pathname}>
-      <div style={contactButtons}>
-        <CallButton />
-        <EmailButton />
-      </div>
-    </Layout>
-  )
-}
+const ContactPage = ({ location: { pathname } }) => (
+  <Layout pageTitle="Contact Us" currentUrl={pathname}>
+    <div style={contactButtons}>
+      <CallButton />
+      <EmailButton />
+    </div>
+  </Layout>
+)
 
 export default ContactPage

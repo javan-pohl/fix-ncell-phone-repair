@@ -8,7 +8,6 @@ import {
   headerContainer,
   highlight,
   branding,
-  white,
 } from './Header2.module.css'
 
 function getData() {
@@ -48,7 +47,7 @@ function Header2({ currentUrl }) {
               FixNcell
               {' '}
             </span>
-            <span className={white}>iPhone Repair</span>
+            <span>iPhone Repair</span>
           </Link>
         </div>
         <Navigation2 menuLinks={menuLinks} currentUrl={currentUrl} />
