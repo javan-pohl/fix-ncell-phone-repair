@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { selectPhone } from './PhoneCard.css'
+import { card } from './PhoneCard.module.css'
 
-function PhoneCard() {
-  return <section className={selectPhone}>test</section>
-}
+const PhoneCard = ({ children }) => (
+  <section className={card}>{children}</section>
+)
 
 export default PhoneCard
