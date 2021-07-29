@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import PhoneCard from '../PhoneCard/PhoneCard'
+import SelectPhoneImg from '../SelectPhoneImg/SelectPhoneImg'
 
 function getTemplate() {
   const data = useStaticQuery(graphql`
@@ -41,15 +42,14 @@ function getTemplate() {
 function SelectPhone() {
   // const { name, link, pageURL } = getTemplate()
   const { template, model } = getTemplate()
-  console.log('model', model)
-  const phones = model.map((phone) => {
-    console.log('phone.model: ', phone.model)
-    return <PhoneCard>{phone.model}</PhoneCard>
-  })
-  console.log('phones', phones)
-  // console.log('phone: ', name, link, pageURL)
-  console.log('template: ', template, model)
-  // return <PhoneCard>this</PhoneCard>
+  const phones = model.map((phone) => (
+    <PhoneCard>
+      {/* iphone-
+      {phone.model.replace(' ', '-').toLowerCase()} */}
+      <SelectPhoneImg model={phone.model.replace(' ', '-').toLowerCase()} />
+    </PhoneCard>
+  ))
+  // const phones = model.map((phone) => <PhoneCard model={phone.model} />)
   return phones
 }
 
