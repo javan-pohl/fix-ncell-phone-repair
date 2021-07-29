@@ -18,7 +18,8 @@ import Img from 'gatsby-image'
 //   console.log('url: ', url)
 //   return <StaticImage src={url} />
 // }
-const SelectPhoneImg = () => {
+const SelectPhoneImg = ({ model }) => {
+  const model1 = '6'
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "phones/iphone-6-small.jpg" }) {
@@ -31,10 +32,24 @@ const SelectPhoneImg = () => {
     }
   `)
 
+  // const data = useStaticQuery(graphql`
+  //   query MyQuery {
+  //     allFile(filter: { relativePath: { regex: "/small/" } }) {
+  //       edges {
+  //         node {
+  //           id
+  //           publicURL
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+
   if (!data?.placeholderImage?.childImageSharp?.fluid) {
+    console.log('img not found')
     return <div>Picture not found</div>
   }
-
+  console.log('data: ', data)
   return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 export default SelectPhoneImg

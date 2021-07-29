@@ -2,11 +2,12 @@ import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import PhoneCard from '../PhoneCard/PhoneCard'
-import SelectPhoneImg from '../SelectPhoneImg/SelectPhoneImg'
+// import SelectPhoneImg from '../SelectPhoneImg/SelectPhoneImg'
+import getImages from '../../queries/getSmallPhoneImgs/getSmallPhoneImgs'
 
 function getTemplate() {
   const data = useStaticQuery(graphql`
-    query {
+    query MyQuery{
       site {
         siteMetadata {
           phoneTemplate {
@@ -41,14 +42,17 @@ function getTemplate() {
 
 function SelectPhone() {
   // const { name, link, pageURL } = getTemplate()
+  const { edges } = getImages()
   const { template, model } = getTemplate()
-  const phones = model.map((phone) => (
-    <PhoneCard>
-      {/* iphone-
-      {phone.model.replace(' ', '-').toLowerCase()} */}
-      <SelectPhoneImg model={phone.model.replace(' ', '-').toLowerCase()} />
-    </PhoneCard>
-  ))
+  const phones = model.map((phone) => {
+    const phoneURL = `iphone-${phone.model.replace(' ', '-').toLowerCase()}`
+    return (
+      <PhoneCard>
+        {phoneURL}
+        {/* <SelectPhoneImg model={phone.model.replace(' ', '-').toLowerCase()} /> */}
+      </PhoneCard>
+    )
+  })
   // const phones = model.map((phone) => <PhoneCard model={phone.model} />)
   return phones
 }
