@@ -42,15 +42,15 @@ function getTemplate() {
 
 function SelectPhone() {
   // const { name, link, pageURL } = getTemplate()
-  const { edges } = getImages()
+  const phoneImages = getImages()
+  console.log('phoneImages: ', phoneImages)
   const { template, model } = getTemplate()
+  console.log('model: ', model)
   const phones = model.map((phone) => {
-    const phoneURL = `iphone-${phone.model.replace(' ', '-').toLowerCase()}`
+    const phoneName = `iphone-${phone.model.replace(' ', '-').toLowerCase()}`
     return (
-      <PhoneCard>
-        {phoneURL}
-        {/* <SelectPhoneImg model={phone.model.replace(' ', '-').toLowerCase()} /> */}
-      </PhoneCard>
+      <PhoneCard phoneName={phoneName} key={phoneName} img={phoneImages[`${phoneName}-small`]} />
+
     )
   })
   // const phones = model.map((phone) => <PhoneCard model={phone.model} />)

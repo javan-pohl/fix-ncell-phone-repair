@@ -28,9 +28,11 @@ function getTemplate() {
 
   return { name, link, pageURL }
 }
-const PhoneCard = ({ children }) => {
+const PhoneCard = ({ phoneName, img }) => {
   // const PhoneCard = ({ model }) => { // console.log('model: ', model)
-  console.log('children: ', children)
+  console.log('phoneName: ', phoneName)
+  console.log('img', img)
+  // console.log('children: ', children)
   const { name, link, pageURL } = getTemplate() // return <section className={card}>{children}</section>
   const path = '../../iphone-6-small.jpg'
   const obj = {
@@ -40,7 +42,8 @@ const PhoneCard = ({ children }) => {
   return (
     <section className={card}>
       {/* <img src="/static/7afa24436d6df59d083439fe5e6a99ee/iphone-6-small.jpg" /> */}
-      <img src={obj['iphone-6-small.jpg']} />
+      {/* <img src={obj['iphone-6-small.jpg']} /> */}
+      <img src={img} />
     </section>
   )
   // return (

@@ -20,17 +20,12 @@ function getImages() {
       edges,
     },
   } = data
-  // const {
-  //   edges: { node },
-  // } = data
-  const phoneIMGs = {}
+
+  const phoneImages = {}
   edges.forEach(({ node }) => {
-    // console.log('node: ', node.name)
-    phoneIMGs[node.name] = node.publicURL
+    phoneImages[node.name] = node.publicURL
   })
-  // console.log('edges: ', edges)
-  console.log('phoneIMGs: ', phoneIMGs)
-  return edges
+  return phoneImages
 }
 
 export default getImages
