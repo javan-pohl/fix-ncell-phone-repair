@@ -28,17 +28,18 @@ function getTemplate() {
 
   return { name, link, pageURL }
 }
-const PhoneCard = ({ phoneName, img }) => {
+const PhoneCard = ({ model, img }) => {
   // const PhoneCard = ({ model }) => { // console.log('model: ', model)
-  console.log('phoneName: ', phoneName)
+  // console.log('phoneName: ', phoneName)
+  console.log('model: ', model)
   console.log('img', img)
   // console.log('children: ', children)
-  const { name, link, pageURL } = getTemplate() // return <section className={card}>{children}</section>
-  const path = '../../iphone-6-small.jpg'
-  const obj = {
-    'iphone-6-small.jpg':
-      '/static/7afa24436d6df59d083439fe5e6a99ee/iphone-6-small.jpg',
-  }
+  // const { name, link, pageURL } = getTemplate() // return <section className={card}>{children}</section>
+  // const path = '../../iphone-6-small.jpg'
+  // const obj = {
+  //   'iphone-6-small.jpg':
+  //     '/static/7afa24436d6df59d083439fe5e6a99ee/iphone-6-small.jpg',
+  // }
   return (
     <section className={card}>
       {/* <img src="/static/7afa24436d6df59d083439fe5e6a99ee/iphone-6-small.jpg" /> */}
