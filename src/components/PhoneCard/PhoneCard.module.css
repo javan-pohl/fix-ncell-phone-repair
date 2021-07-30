@@ -1,11 +1,20 @@
 .card {
   font-size: 20px;
-  background-color: green;
   color: black;
-  width: 150px;
-  height: 100px;
+  width: auto;
+  height: auto;
   border-radius: 5px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 35px;
+	padding: 10px;
+}
+
+.card h3 {
+	margin: 10px auto;
+	text-align: center;
+}
+
+.card img {
+	height: 200px;
 }
