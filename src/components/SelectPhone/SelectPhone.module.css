@@ -12,6 +12,10 @@
   justify-content: center;
 }
 
+.selectPhone a {
+	text-decoration: none;
+}
+
 @media (max-width: 600px) {
   .heading {
 		font-size: 25px;

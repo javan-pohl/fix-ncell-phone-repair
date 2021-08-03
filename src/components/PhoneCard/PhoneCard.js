@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import { card } from './PhoneCard.module.css'
 
 const PhoneCard = ({ model, img }) => {

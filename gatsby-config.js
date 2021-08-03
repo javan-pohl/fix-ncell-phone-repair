@@ -30,65 +30,6 @@ module.exports = {
       },
     ],
     siteUrl: 'https://www.fixncell.com',
-    phoneTemplate: {
-      name: 'iPhone ',
-      link: '/phones/iphone-',
-      pageURL: 'https://www.fixncell.com/phones/iphone-',
-    },
-    phones: [
-      {
-        make: 'iPhone',
-        model: '6',
-      },
-      {
-        make: 'iPhone',
-        model: '6 Plus',
-      },
-      {
-        make: 'iPhone',
-        model: '7',
-      },
-      {
-        make: 'iPhone',
-        model: '7 Plus',
-      },
-      {
-        make: 'iPhone',
-        model: '8',
-      },
-      {
-        make: 'iPhone',
-        model: '8 Plus',
-      },
-      {
-        make: 'iPhone',
-        model: 'X',
-      },
-      {
-        make: 'iPhone',
-        model: 'XS',
-      },
-      // {
-      //   make: 'iPhone',
-      //   model: 'XS Max',
-      // },
-      // {
-      //   make: 'iPhone',
-      //   model: 'XR',
-      // },
-      // {
-      //   make: 'iPhone',
-      //   model: '11',
-      // },
-      // {
-      //   make: 'iPhone',
-      //   model: '11 Pro',
-      // },
-      // {
-      //   make: 'iPhone',
-      //   model: '11 Pro Max',
-      // },
-    ],
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -111,7 +52,6 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
-    'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-transformer-json',
@@ -139,7 +79,4 @@ module.exports = {
       __key: 'pages',
     },
   ],
-  flags: {
-    DEV_SSR: false,
-  },
 }

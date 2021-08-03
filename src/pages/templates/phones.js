@@ -1,27 +1,23 @@
 import * as React from 'react'
 import Layout from '../../components/Layout/Layout'
 import getImages from '../../queries/getSmallPhoneImgs/getSmallPhoneImgs'
+import errImg from '../../images/no_image.jpg'
 
 const PhonePage = ({
   pageContext: {
     phone: { make, model, image },
   },
 }) => {
-  let imageURL = getImages(image)
-  console.log('image: ', image)
-  console.log('data: ', imageURL)
-  if (!imageURL) {
-    imageURL = '/static/cd25e3d6325109330ef342c482ef71a9/iphone-6-plus-small.jpg'
-  }
+  const imageURL = getImages(image) || errImg
+  const name = `${make} ${model}`
   return (
     <Layout pageTitle="Phone Page">
-      <h2>This is my default phone page</h2>
-      <h3>
-        {make}
+      <h1>
+        {name}
         {' '}
-        {model}
-      </h3>
-      <img src={imageURL} />
+        Repairs
+      </h1>
+      <img src={imageURL} alt={name} />
     </Layout>
   )
 }

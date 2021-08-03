@@ -8,8 +8,8 @@
   margin: 25px;
 	padding: 10px;
 	cursor: pointer;
+	text-decoration: none;
 }
-
 .card:hover {
   box-shadow: rgba(3, 118, 185, 0.35) 0px 5px 15px;
 }
