@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 function getModels() {
   const data = useStaticQuery(graphql`
-    query {
+    query getModels {
       site {
         siteMetadata {
           phones {

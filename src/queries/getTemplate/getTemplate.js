@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 function getTemplate() {
   const data = useStaticQuery(graphql`
-    query {
+    query getTemplate{
       site {
         siteMetadata {
           phoneTemplate {

@@ -1,20 +1,38 @@
 .card {
   font-size: 20px;
   color: black;
-  width: auto;
-  height: auto;
+	min-width: 160px;
   border-radius: 5px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin: 35px;
+  margin: 25px;
 	padding: 10px;
+	cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: rgba(3, 118, 185, 0.35) 0px 5px 15px;
 }
 
 .card h3 {
-	margin: 10px auto;
+	margin: 10px auto 5px auto;
 	text-align: center;
 }
 
 .card img {
+	display: block;
 	height: 200px;
+	margin: auto;
+}
+
+@media (max-width: 600px) {
+	.card {
+		min-width: 80px;
+		font-size: 15px;
+		margin: 10px;
+	}
+
+	.card img {
+		height: 100px;
+	}
 }

@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 
 function getImages() {
   const data = useStaticQuery(graphql`
-    query {
+    query getSmallImages{
       allFile(filter: { relativePath: { regex: "/-small/" } }) {
         edges {
           node {

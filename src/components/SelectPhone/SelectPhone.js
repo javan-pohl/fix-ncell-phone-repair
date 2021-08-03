@@ -12,7 +12,6 @@ function SelectPhone() {
   const {
     template: { name, link, pageURL },
   } = getTemplate()
-  console.log(name, link, pageURL)
   const phones = models.map((phone) => {
     const phoneName = `iphone-${phone.model.replace(' ', '-').toLowerCase()}`
     return (
