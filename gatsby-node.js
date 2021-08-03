@@ -1,5 +1,4 @@
 // const { createFilePath } = require('gatsby-source-filesystem')
-
 // exports.onCreateNode = ({ node, getNode, actions }) => {
 //   const { createNodeField } = actions
 //   if (node.internal.type === 'PhonesJson') {
@@ -22,20 +21,21 @@ exports.createPages = async function ({ actions, graphql }) {
     query {
       allPhonesJson {
         nodes {
+          id
           make
           model
+          slug
         }
       }
     }
   `)
   data.allPhonesJson.nodes.forEach((node) => {
-    const slug = `/repairs/${node.make}-${node.model}/`
-      .replace(' ', '-')
-      .toLowerCase()
     actions.createPage({
-      path: slug,
+      id: node.id,
+      path: node.slug,
       component: require.resolve('./src/pages/templates/phones.js'),
-      context: { slug },
+      // context: { slug: node.slug },
+      context: { phone: node },
     })
   })
 }

@@ -1,34 +1,42 @@
 [
 	{
 		"make": "iPhone",
-		"model": "6"
+		"model": "6",
+		"slug": "/repairs/iphone-6/"
 	},
 	{
 		"make": "iPhone",
-		"model": "6 Plus"
+		"model": "6 Plus",
+		"slug": "/repairs/iphone-6-plus/"
 	},
 	{
 		"make": "iPhone",
-		"model": "7"
+		"model": "7",
+		"slug": "/repairs/iphone-7/"
 	},
 	{
 		"make": "iPhone",
-		"model": "7 Plus"
+		"model": "7 Plus",
+		"slug": "/repairs/iphone-7-plus/"
 	},
 	{
 		"make": "iPhone",
-		"model": "8"
+		"model": "8",
+		"slug": "/repairs/iphone-8/"
 	},
 	{
 		"make": "iPhone",
-		"model": "8 Plus"
+		"model": "8 Plus",
+		"slug": "/repairs/iphone-8-plus/"
 	},
 	{
 		"make": "iPhone",
-		"model": "X"
+		"model": "X",
+		"slug": "/repairs/iphone-x/"
 	},
 	{
 		"make": "iPhone",
-		"model": "XS"
+		"model": "XS",
+		"slug": "/repairs/iphone-xs/"
 	}
 ]

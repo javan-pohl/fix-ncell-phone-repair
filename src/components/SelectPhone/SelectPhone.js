@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import PhoneCard from '../PhoneCard/PhoneCard'
 import getImages from '../../queries/getSmallPhoneImgs/getSmallPhoneImgs'
@@ -13,6 +14,7 @@ function SelectPhone() {
     template: { name, link, pageURL },
   } = getTemplate()
   const phones = models.map((phone) => {
+    console.log('phone: ', phone)
     const phoneName = `iphone-${phone.model.replace(' ', '-').toLowerCase()}`
     return (
       <PhoneCard
