@@ -1,8 +1,8 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
-function getImages(image) {
+function getImage({ image }) {
   const data = useStaticQuery(graphql`
-    query getSmallImages {
+    query getImage{
       allFile(filter: { relativePath: { regex: "/-small/" } }) {
         edges {
           node {
@@ -15,21 +15,16 @@ function getImages(image) {
   `)
 
   const {
-    allFile: { edges },
+    allFile: {
+      edges,
+    },
   } = data
 
   const phoneImages = {}
   edges.forEach(({ node }) => {
     phoneImages[node.name] = node.publicURL
   })
-  if (image !== undefined) {
-    console.log(image)
-    const name = image.replace('.jpg', '')
-    console.log('name: ', name)
-    console.log('resulst: ', phoneImages[name])
-    return phoneImages[name]
-  }
   return phoneImages
 }
 
-export default getImages
+export default getImage

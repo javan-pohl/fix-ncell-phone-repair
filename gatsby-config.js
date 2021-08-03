@@ -139,4 +139,7 @@ module.exports = {
       __key: 'pages',
     },
   ],
+  flags: {
+    DEV_SSR: false,
+  },
 }
