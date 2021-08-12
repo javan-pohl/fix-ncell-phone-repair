@@ -3,6 +3,7 @@ import Layout from '../../components/Layout/Layout'
 import getImages from '../../queries/getSmallPhoneImgs/getSmallPhoneImgs'
 import errImg from '../../images/no_image.jpg'
 
+// pageContext comes from gatsby.node.js
 const PhonePage = ({
   pageContext: {
     phone: { make, model, image },

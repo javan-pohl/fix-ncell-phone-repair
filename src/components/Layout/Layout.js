@@ -2,6 +2,7 @@ import * as React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import PropTypes from 'prop-types'
 import Header2 from '../Header2/Header2'
+import FooterStatic from '../FooterStatic/FooterStatic'
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -18,6 +19,7 @@ const Layout = ({ currentUrl, pageTitle, children }) => (
     <title>{pageTitle}</title>
     <Header2 currentUrl={currentUrl} />
     {children}
+    <FooterStatic />
   </main>
 )
 

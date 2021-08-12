@@ -1,0 +1,261 @@
+body {
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+th,td {
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-radius: 2px;
+  margin-left: 5px;
+}
+
+th {
+  line-height: 100%;
+}
+
+#phone-table td {
+  line-height: 100%;
+}
+
+tr:nth-child(even) {
+  background: #F0F0F0;
+}
+
+tr:nth-child(odd) {
+  background: #FFF;
+}
+
+#phone-table {
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+/* Global */
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*Header **/
+
+/* Showcase */
+
+/* newsletter */
+
+#phone-table span {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/*
+footer{
+  padding:20px;
+  border-top: #000000 2px solid;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+*/
+
+.footerContainer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  background-color: #131212;
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+@media (max-width:1000px) {
+  .footerListContainer {
+    order: 3;
+  }
+
+  .footerListBox {
+    margin-top: 15px;
+  }
+}
+
+.footerContainer a:hover {
+  color: #16cdff;
+}
+
+.footerLogoContainer {
+  flex-grow: 1;
+  text-align: center;
+  align-items: center;
+  background-color: #131212;
+  margin-bottom: auto;
+  padding: 0px 0px 30px 0px;
+}
+
+.footerLogo img {
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.footerContactButton {
+  display: block;
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 1.5px solid white;
+  background: black;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  width: 150px;
+}
+
+.footerListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-grow: 2;
+  justify-content: space-around;
+  background-color: none;
+}
+
+.footerListContainer a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.footerListBox {
+  background-color: none;
+  padding-top: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footerListTitleBox {
+  background-color: none;
+  font-size: 20px;
+  text-align: left;
+  padding: 0px;
+  margin-bottom: 7px;
+  vertical-align: top;
+  line-height: 100%;
+}
+
+.footerListItems {
+  margin-top: 0px;
+  text-align: left;
+}
+
+.footerListItems ul {
+  font-size: 13px;
+  list-style-type: none;
+  padding-left: 0px;
+  padding-top: 0px;
+  margin-top: 0px;
+  border: none;
+}
+
+.footerListItems li {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 5px;
+}
+
+@media (max-width:868px) {
+  .footerListItems li {
+    margin: 3px;
+  }
+}
+
+.footerListUL {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, auto);
+}
+
+.footerListUL2 {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.footerStoreHoursTable tr,.footerStoreHoursTable td {
+  color: white;
+  background-color: #131212;
+  border: none;
+  border-radius: 0px;
+  font-size: 11px;
+  text-align: left;
+}
+
+table.hours-table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerStoreHoursTable td:nth-child(2) {
+  text-align: center;
+}
+
+.footerStoreHoursTable th {
+  text-align: center;
+  border: none;
+}
+
+#footerTableDayOfWeek {
+  align: left;
+}
+
+.footerStoreHoursTable {
+  color: white;
+  background-color: #131212;
+  border: none;
+  border-radius: 0px;
+  font-size: 11px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerRightSide {
+  flex-grow: 1;
+  display: block;
+  background-color: #131212;
+  text-align: center;
+}
+
+.footerSocialContainer img {
+  height: 30px;
+  margin: 0px 5px 5px 5px;
+}
+
+.lowerFooter {
+  background-color: black;
+  font-size: 13px;
+  color: #16cdff;
+  text-align: center;
+  padding-right: 15px;
+}
+
+.lowerFooter a {
+  text-decoration: none;
+  color: #16cdff;
+  font-size: 12px;
+  border-left: 1px solid #16cdff;
+  padding-left: 8px;
+  margin-left: 5px;
+}
+
+/* **************** Media Quereies****************** */

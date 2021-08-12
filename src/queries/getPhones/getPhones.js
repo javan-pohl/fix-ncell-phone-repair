@@ -1,4 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby'
+// data comes from /src/data/phones.json
 
 function getPhones() {
   const data = useStaticQuery(graphql`
