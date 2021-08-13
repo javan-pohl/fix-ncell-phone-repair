@@ -13,15 +13,18 @@ text-align: center
 }
 `
 
-const Layout = ({ currentUrl, pageTitle, children }) => (
-  <main>
-    <GlobalStyle />
-    <title>{pageTitle}</title>
-    <Header2 currentUrl={currentUrl} />
-    {children}
-    <FooterStatic />
-  </main>
-)
+const Layout = ({ currentUrl, pageTitle, children }) => {
+  console.log('currentUrl: ', currentUrl)
+  return (
+    <main>
+      <GlobalStyle />
+      <title>{pageTitle}</title>
+      <Header2 currentUrl={currentUrl} />
+      {children}
+      <FooterStatic />
+    </main>
+  )
+}
 
 Layout.propTypes = {
   currentUrl: PropTypes.string,

@@ -9,8 +9,14 @@ exports.createPages = async function ({ actions, graphql }) {
           slug
         }
       }
+      allLocationsJson {
+        nodes {
+          name
+        }
+      }
     }
   `)
+  console.log('locations: ', data.allLocationsJson)
   data.allPhonesJson.nodes.forEach((node) => {
     node.image = `${node.make}-${node.model}-small.jpg`
       .replace(' ', '-')

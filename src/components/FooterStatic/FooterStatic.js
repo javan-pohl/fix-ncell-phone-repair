@@ -3,6 +3,8 @@ import './FooterStatic.css'
 import { Link } from 'gatsby'
 import getPhones from '../../queries/getPhones/getPhones'
 
+// I'm keeping this mostly static and will slowly change it to be fully dynamic
+
 const FooterStatic = () => {
   const { nodes } = getPhones()
   const phoneLinks = (
