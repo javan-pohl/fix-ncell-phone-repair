@@ -7,13 +7,17 @@ import errImg from '../../images/no_image.jpg'
 const PhonePage = ({
   pageContext: {
     phone: { make, model, image },
+    location,
   },
 }) => {
+  console.log('phones location: ', location)
   const imageURL = getImages(image) || errImg
   const name = `${make} ${model}`
   return (
     <Layout pageTitle="Phone Page">
       <h1>
+        {location}
+        {' '}
         {name}
         {' '}
         Repairs
