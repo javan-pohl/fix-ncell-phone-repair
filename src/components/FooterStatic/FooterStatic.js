@@ -2,11 +2,22 @@ import * as React from 'react'
 import './FooterStatic.css'
 import { Link } from 'gatsby'
 import getPhones from '../../queries/getPhones/getPhones'
+import getLocations from '../../queries/getLocations/getLocations'
 
 // I'm keeping this mostly static and will slowly change it to be fully dynamic
 
-const FooterStatic = () => {
+const FooterStatic = ({ url }) => {
+  console.log('url: ', url)
+  // url === '/' && url = window.location.href
+  if (url === '/' && typeof window !== 'undefined') {
+    url = window.location.href
+  }
+  console.log('url: ', url)
   const { nodes } = getPhones()
+  const { names: locations } = getLocations()
+  const locArray = locations.map((location) => location.name)
+  console.log('locArray: ', locArray)
+  console.log('names: ', locations)
   const phoneLinks = (
     <div className="footerListItems">
       <ul className="footerListUL" title="iPhone Models We Fix">
@@ -18,6 +29,17 @@ const FooterStatic = () => {
             </Link>
           )
         })}
+      </ul>
+    </div>
+  )
+  const locLinks = (
+    <div className="footerListItems">
+      <ul className="footerListUL" title="Areas We Services">
+        {locations.map((name) => (
+          <Link to={`/${name.name.toLowerCase()}/repairs`} key={name.name}>
+            <li className="footerListLI">{name.name}</li>
+          </Link>
+        ))}
       </ul>
     </div>
   )
@@ -49,16 +71,7 @@ const FooterStatic = () => {
         </div>
         <div className="footerListBox">
           <div className="footerListTitleBox">Areas We Service</div>
-          <div className="footerListItems">
-            <ul className="footerListUL2" title="Areas we service">
-              <li className="footerListLI">Denver</li>
-              <li className="footerListLI">Westminster</li>
-              <li className="footerListLI">Boulder</li>
-              <li className="footerListLI">Thornton</li>
-              <li className="footerListLI">Golden</li>
-              <li className="footerListLI">Lafayette</li>
-            </ul>
-          </div>
+          {locLinks}
         </div>
         <div className="footerListBox">
           <div className="footerListTitleBox">Repairs We Offer</div>

@@ -10,7 +10,6 @@ const PhonePage = ({
     location,
   },
 }) => {
-  console.log('phones location: ', location)
   const imageURL = getImages(image) || errImg
   const name = `${make} ${model}`
   return (

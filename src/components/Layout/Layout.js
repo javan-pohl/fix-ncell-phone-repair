@@ -21,7 +21,7 @@ const Layout = ({ currentUrl, pageTitle, children }) => {
       <title>{pageTitle}</title>
       <Header2 currentUrl={currentUrl} />
       {children}
-      <FooterStatic />
+      <FooterStatic url={currentUrl} />
     </main>
   )
 }
