@@ -7,17 +7,15 @@ import getLocations from '../../queries/getLocations/getLocations'
 // I'm keeping this mostly static and will slowly change it to be fully dynamic
 
 const FooterStatic = ({ url }) => {
-  console.log('url: ', url)
-  // url === '/' && url = window.location.href
   if (url === '/' && typeof window !== 'undefined') {
     url = window.location.href
   }
-  console.log('url: ', url)
   const { nodes } = getPhones()
-  const { names: locations } = getLocations()
+  const { locations } = getLocations()
   const locArray = locations.map((location) => location.name)
-  console.log('locArray: ', locArray)
-  console.log('names: ', locations)
+  const urlParams = url.split('/')
+  console.log('urlParams: ', urlParams)
+
   const phoneLinks = (
     <div className="footerListItems">
       <ul className="footerListUL" title="iPhone Models We Fix">

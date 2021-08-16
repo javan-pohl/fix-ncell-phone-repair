@@ -14,6 +14,10 @@ text-align: center
 `
 
 const Layout = ({ currentUrl, pageTitle, children }) => {
+  // keeping this here for now so that it doesn't try to force to an unbracketed arrow structure
+  if (currentUrl === '/' && typeof window !== 'undefined') {
+    currentUrl = window.location.href
+  }
   console.log('currentUrl: ', currentUrl)
   return (
     <main>
