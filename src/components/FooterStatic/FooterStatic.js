@@ -1,6 +1,6 @@
 import * as React from 'react'
 import './FooterStatic.css'
-import { Link } from 'gatsby'
+import MyLink from '../MyLink/MyLink'
 import getPhones from '../../queries/getPhones/getPhones'
 import getLocations from '../../queries/getLocations/getLocations'
 
@@ -13,27 +13,27 @@ const FooterStatic = ({ url }) => {
   const urlParams = url.split('/')
   console.log('urlParams: ', urlParams)
 
-  const phoneLinks = (
+  const phoneMyLinks = (
     <div className="footerListItems">
       <ul className="footerListUL" title="iPhone Models We Fix">
         {nodes.map((phone) => {
           const phoneName = `${phone.make} ${phone.model}`
           return (
-            <Link to={phone.slug} key={phoneName}>
+            <MyLink url={url} to={phone.slug} key={phoneName}>
               <li className="footerListLI">{phoneName}</li>
-            </Link>
+            </MyLink>
           )
         })}
       </ul>
     </div>
   )
-  const locLinks = (
+  const locMyLinks = (
     <div className="footerListItems">
       <ul className="footerListUL" title="Areas We Services">
         {locations.map((name) => (
-          <Link to={`/${name.name.toLowerCase()}/repairs`} key={name.name}>
+          <MyLink url={url} to={`/${name.name.toLowerCase()}/repairs`} key={name.name}>
             <li className="footerListLI">{name.name}</li>
-          </Link>
+          </MyLink>
         ))}
       </ul>
     </div>
@@ -62,11 +62,11 @@ const FooterStatic = ({ url }) => {
             </a>
           </div>
 
-          {phoneLinks}
+          {phoneMyLinks}
         </div>
         <div className="footerListBox">
           <div className="footerListTitleBox">Areas We Service</div>
-          {locLinks}
+          {locMyLinks}
         </div>
         <div className="footerListBox">
           <div className="footerListTitleBox">Repairs We Offer</div>
