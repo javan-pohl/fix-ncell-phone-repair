@@ -7,9 +7,6 @@ import getLocations from '../../queries/getLocations/getLocations'
 // I'm keeping this mostly static and will slowly change it to be fully dynamic
 
 const FooterStatic = ({ url }) => {
-  if (url === '/' && typeof window !== 'undefined') {
-    url = window.location.href
-  }
   const { nodes } = getPhones()
   const { locations } = getLocations()
   const locArray = locations.map((location) => location.name)
