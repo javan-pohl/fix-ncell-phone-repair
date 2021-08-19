@@ -11,7 +11,7 @@ const FooterStatic = ({ url }) => {
   const { locations } = getLocations()
   const locArray = locations.map((location) => location.name)
   const urlParams = url.split('/')
-  console.log('urlParams: ', urlParams)
+  // console.log('urlParams: ', urlParams)
 
   const phoneMyLinks = (
     <div className="footerListItems">
