@@ -4,13 +4,13 @@ import SelectPhone from '../components/SelectPhone/SelectPhone'
 /* eslint-disable react/prop-types */
 
 const IndexPage = ({ location: { pathname }, pageContext: { location } }) => (
-  <Layout pageTitle="About Us" currentUrl={pathname}>
+  <Layout pageTitle={`${location} Phone Repairs`} currentUrl={pathname}>
     <h1>
       {location}
       {' '}
       iPhone Repairs
     </h1>
-    <SelectPhone />
+    <SelectPhone url={pathname} />
   </Layout>
 )
 

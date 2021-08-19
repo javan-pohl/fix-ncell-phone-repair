@@ -14,11 +14,6 @@ const MyLink = ({
     const { locations } = getLocations()
     const pathArr = url.split('/').filter((e) => e !== '')
     const toArr = to.split('/').filter((e) => e !== '')
-    // for the following to work, the location must be the first item in the path
-    // console.log('url: ', url)
-    // console.log('to: ', to)
-    // console.log('MyLink locations: ', locations)
-    // this does not function when url is '/'
     // change this component to take in location from layout... or maybe make location a global variable?
     const pathLoc = locations.some(
       (e) => e.name.toLowerCase() === pathArr[0].toLowerCase(),
@@ -39,22 +34,10 @@ const MyLink = ({
       pathArr.unshift(toLoc)
       to = `/${pathArr.join('/')}`
     } else if (pathLoc && toLoc) {
-      // would this ever happen?
-      // yes,in boulder/repairs/iphone-7 and wanting to go to 'Denver'
       // replace current loc (delete first item and replace with toLoc)
       pathArr[0] = toLoc
       to = `/${pathArr.join('/')}`
     }
-
-    // console.log('pathHasLoc: ', pathLoc)
-    // console.log('pathArr: ', pathArr)
-    // console.log('url: ', url)
-    // console.log('to: ', to)
-    // console.log('toArr: ', toArr)
-    // console.log('to: ', to)
-    // if slug is a location
-    // // check current url for a location and replace if different
-    // // add location if no location present
   }
   return (
     <Link to={to} key={key || to} alt={alt}>

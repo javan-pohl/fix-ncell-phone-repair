@@ -1,7 +1,7 @@
 import * as React from 'react'
-import Layout from '../../components/Layout/Layout'
-import getImages from '../../queries/getSmallPhoneImgs/getSmallPhoneImgs'
-import errImg from '../../images/no_image.jpg'
+import Layout from '../components/Layout/Layout'
+import getImages from '../queries/getSmallPhoneImgs/getSmallPhoneImgs'
+import errImg from '../images/no_image.jpg'
 
 // pageContext comes from gatsby.node.js
 const PhonePage = ({
@@ -19,7 +19,7 @@ const PhonePage = ({
         {' '}
         {name}
         {' '}
-        Repairs
+        Repair
       </h1>
       <img src={imageURL} alt={name} />
     </Layout>

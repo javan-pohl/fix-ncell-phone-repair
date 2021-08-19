@@ -30,7 +30,8 @@ exports.createPages = async function ({ actions, graphql }) {
       }
     }
   `)
-  console.log('pages: ', data.allFile.edges)
+  // console.log('pages: ', data.allFile.edges)
+  // console.log('phones: ', data.allPhonesJson.nodes)
   data.allPhonesJson.nodes.forEach((node) => {
     node.image = `${node.make}-${node.model}-small.jpg`
       .replace(' ', '-')
@@ -39,7 +40,7 @@ exports.createPages = async function ({ actions, graphql }) {
     actions.createPage({
       id: node.id,
       path: node.slug,
-      component: require.resolve('./src/pages/templates/phones.js'),
+      component: require.resolve('./src/pageTemplates/phones.js'),
       context: { phone: node },
     })
     data.allLocationsJson.nodes.forEach((locNode) => {
@@ -48,7 +49,7 @@ exports.createPages = async function ({ actions, graphql }) {
       actions.createPage({
         id: node.id + locNode.id,
         path: urlPath,
-        component: require.resolve('./src/pages/templates/phones.js'),
+        component: require.resolve('./src/pageTemplates/phones.js'),
         context: { phone: node, location: locName },
       })
     })
@@ -56,7 +57,6 @@ exports.createPages = async function ({ actions, graphql }) {
   data.allLocationsJson.nodes.forEach((locNode) => {
     const locName = locNode.name
     const urlPath = `/${locName.toLowerCase()}/repairs/`
-    console.log('urlPath: ', urlPath)
     actions.createPage({
       id: `${locNode.id}/${locName}`,
       path: urlPath,
