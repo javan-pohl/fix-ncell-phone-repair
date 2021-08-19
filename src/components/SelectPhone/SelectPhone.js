@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import MyLink from '../MyLink/MyLink'
 import PhoneCard from '../PhoneCard/PhoneCard'
 import getImages from '../../queries/getSmallPhoneImgs/getSmallPhoneImgs'
 import getPhones from '../../queries/getPhones/getPhones'
@@ -12,12 +12,12 @@ function SelectPhone() {
   const phones = nodes.map((phone) => {
     const phoneName = `iphone-${phone.model.replace(' ', '-').toLowerCase()}`
     return (
-      <Link to={phone.slug} key={phoneName}>
+      <MyLink to={phone.slug} key={phoneName}>
         <PhoneCard
           model={phone.model}
           img={phoneImages[`${phoneName}-small`]}
         />
-      </Link>
+      </MyLink>
     )
   })
   return (
