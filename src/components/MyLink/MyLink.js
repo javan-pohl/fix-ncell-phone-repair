@@ -7,7 +7,7 @@ const MyLink = ({
   url, to, alt, key, children,
 }) => {
   // we're going to take in the current url and the 'to' (which will probably be the slug) and determine if we need to replace an existing element of the current url or create one (e.g. if the slug is a location, replace the existing location or add the param for location)
-  if (url !== '/') {
+  if (url !== '/' && url.includes('repair')) {
     const { locations } = getLocations()
     const pathArr = url.split('/').filter((e) => e !== '')
     const toArr = to.split('/').filter((e) => e !== '')
@@ -54,7 +54,7 @@ const MyLink = ({
     // // add location if no location present
   }
   return (
-    <Link to={to} key={key} alt={alt}>
+    <Link to={to} key={key || to} alt={alt}>
       {children}
     </Link>
   )
