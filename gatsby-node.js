@@ -7,6 +7,11 @@ exports.createPages = async function ({ actions, graphql }) {
           make
           model
           slug
+          repairs {
+            battery_repair_price
+            charging_port_repair_price
+            screen_repair_price
+          }
         }
       }
       allLocationsJson {
@@ -40,7 +45,7 @@ exports.createPages = async function ({ actions, graphql }) {
     actions.createPage({
       id: node.id,
       path: node.slug,
-      component: require.resolve('./src/pageTemplates/phones.js'),
+      component: require.resolve('./src/pageTemplates/phonePage.js'),
       context: { phone: node },
     })
     data.allLocationsJson.nodes.forEach((locNode) => {
@@ -49,7 +54,7 @@ exports.createPages = async function ({ actions, graphql }) {
       actions.createPage({
         id: node.id + locNode.id,
         path: urlPath,
-        component: require.resolve('./src/pageTemplates/phones.js'),
+        component: require.resolve('./src/pageTemplates/phonePage.js'),
         context: { phone: node, location: locName },
       })
     })

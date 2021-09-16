@@ -2,41 +2,81 @@
 	{
 		"make": "iPhone",
 		"model": "6",
-		"slug": "/repairs/iphone/6"
+		"slug": "/repairs/iphone/6",
+		"repairs": {
+			"screen-repair-price": "$109",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		}
 	},
 	{
 		"make": "iPhone",
 		"model": "6 Plus",
-		"slug": "/repairs/iphone/6-plus"
+		"slug": "/repairs/iphone/6-plus",
+		"repairs": {
+			"screen-repair-price": "$119",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		}
 	},
 	{
 		"make": "iPhone",
 		"model": "7",
-		"slug": "/repairs/iphone/7"
+		"slug": "/repairs/iphone/7",
+		"repairs": {
+			"screen-repair-price": "$109",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		}
 	},
 	{
 		"make": "iPhone",
 		"model": "7 Plus",
-		"slug": "/repairs/iphone/7-plus"
+		"slug": "/repairs/iphone/7-plus",
+		"repairs": {
+			"screen-repair-price": "$119",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		}
 	},
 	{
 		"make": "iPhone",
 		"model": "8",
-		"slug": "/repairs/iphone/8"
+		"slug": "/repairs/iphone/8",
+		"repairs": {
+			"screen-repair-price": "$109",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		}
 	},
 	{
 		"make": "iPhone",
 		"model": "8 Plus",
-		"slug": "/repairs/iphone/8-plus"
+		"slug": "/repairs/iphone/8-plus",
+		"repairs": {
+			"screen-repair-price": "$119",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		}
 	},
 	{
 		"make": "iPhone",
 		"model": "X",
-		"slug": "/repairs/iphone/x"
+		"slug": "/repairs/iphone/x",
+		"repairs": {
+			"screen-repair-price": "$149",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		}
 	},
 	{
 		"make": "iPhone",
 		"model": "XS",
-		"slug": "/repairs/iphone/xs"
+		"slug": "/repairs/iphone/xs",
+		"repairs": {
+			"screen-repair-price": "$169",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		}
 	}
 ]

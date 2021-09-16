@@ -10,6 +10,11 @@ function getPhones() {
           make
           model
           slug
+          repairs {
+            battery_repair_price
+            charging_port_repair_price
+            screen_repair_price
+          }
         }
       }
     }
@@ -18,7 +23,7 @@ function getPhones() {
   const {
     allPhonesJson: { nodes },
   } = data
-  // console.log('getPhones Nodes: ', nodes)
+  // console.log('nodes: ', nodes)
   return { nodes }
 }
 

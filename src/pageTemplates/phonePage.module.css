@@ -1,0 +1,16 @@
+.phoneMain {
+	width: 70%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.repairPrices {
+	background-color: none;
+	text-transform: capitalize;
+}
+
+.repairPrices td, th{
+	padding-right: 20px;
+}
