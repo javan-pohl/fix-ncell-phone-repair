@@ -25,7 +25,13 @@ const PhonePage = ({
         </tr>
         {Object.keys(repairs).map((repair, idx) => (
           <tr key={idx}>
-            <td>{`${make} ${model} ${repair}`}</td>
+            <td>
+              {`${make} ${model} ${
+                typeof repair === 'string'
+                  ? repair
+                  : repair.replaceAll('_', ' ')
+              }`}
+            </td>
             {/* <td>{`${make} ${model} ${repair.replaceAll('_', ' ')}`}</td> */}
             <td>{repairs[repair]}</td>
           </tr>
