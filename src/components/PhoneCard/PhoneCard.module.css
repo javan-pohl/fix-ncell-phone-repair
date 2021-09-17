@@ -27,12 +27,13 @@
 
 @media (max-width: 600px) {
 	.card {
-		min-width: 80px;
-		font-size: 15px;
-		margin: 10px;
+		min-width: 60px;
+		font-size: 10px;
+		margin: 6px;
+		padding: 6px;
 	}
 
 	.card img {
-		height: 100px;
+		height: 70px;
 	}
 }
