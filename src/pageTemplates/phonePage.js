@@ -15,7 +15,7 @@ const PhonePage = ({
 }) => {
   const imageURL = getImages(image) || errImg
   const name = `${make} ${model}`
-  console.log('repairs: ', repairs)
+  console.log('make', model, 'repairs: ', repairs)
   function repairTable() {
     return (
       <table className={repairPrices}>
@@ -25,7 +25,8 @@ const PhonePage = ({
         </tr>
         {Object.keys(repairs).map((repair, idx) => (
           <tr key={idx}>
-            <td>{`${make} ${model} ${repair.replaceAll('_', ' ')}`}</td>
+            <td>{`${make} ${model} ${repair}`}</td>
+            {/* <td>{`${make} ${model} ${repair.replaceAll('_', ' ')}`}</td> */}
             <td>{repairs[repair]}</td>
           </tr>
         ))}
