@@ -4,7 +4,7 @@ import MyLink from '../MyLink/MyLink'
 import PhoneCard from '../PhoneCard/PhoneCard'
 import getImages from '../../queries/getSmallPhoneImgs/getSmallPhoneImgs'
 import getPhones from '../../queries/getPhones/getPhones'
-import { selectPhone, heading } from './SelectPhone.module.css'
+import { selectPhone, heading, info } from './SelectPhone.module.css'
 
 function SelectPhone({ url }) {
   const phoneImages = getImages()

@@ -5,7 +5,7 @@ import getLocations from '../../queries/getLocations/getLocations'
 
 function SelectLocation() {
   const { locations } = getLocations()
-  const locArray = locations.map((location) => location.name)
+  const locArray = locations.map((location) => location.name).sort()
   return (
     <div className={locationsMain}>
       <h3>Select Your Location</h3>

@@ -1,9 +1,11 @@
 .locationsMain {
 	width: 90%;
 	margin: auto;
+	padding: 20px;
 }
 
 .locationsMain h3 {
+	font-size: 40px;
 	margin: auto;
 	text-align: center;
 }
@@ -14,6 +16,7 @@
 }
 
 .locsDiv {
+	padding-top: 10px;
 	display: flex;
 	flex-wrap: wrap;
 	margin: auto;
@@ -23,7 +26,8 @@
 .locCard {
 	font-weight: bold;
 	margin: 15px;
-	padding: 15px;
+	padding: 10px 15px;
+  background: #0098ff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	cursor: pointer;
 }
@@ -31,6 +35,18 @@
 
 .locCard:hover {
 	opacity: .9;
-  background: #0098ff;
+  background: rgb(22, 205, 255, 0.9);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
+}
+
+@media (max-width: 600px) {
+	.locCard {
+		margin: 7px;
+		padding: 5px 10px;
+	}
+}
+@media (max-width: 450px) {
+	.locationsMain h3 {
+		font-size: 25px;
+	}
 }
