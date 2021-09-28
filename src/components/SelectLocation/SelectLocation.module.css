@@ -1,0 +1,36 @@
+.locationsMain {
+	width: 90%;
+	margin: auto;
+}
+
+.locationsMain h3 {
+	margin: auto;
+	text-align: center;
+}
+
+.locationsMain a {
+	text-decoration: none;
+	color: black;
+}
+
+.locsDiv {
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	justify-content: center;
+}
+
+.locCard {
+	font-weight: bold;
+	margin: 15px;
+	padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	cursor: pointer;
+}
+
+
+.locCard:hover {
+	opacity: .9;
+  background: #0098ff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
+}
