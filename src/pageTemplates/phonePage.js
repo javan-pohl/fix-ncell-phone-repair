@@ -15,7 +15,6 @@ const PhonePage = ({
 }) => {
   const imageURL = getImages(image) || errImg
   const name = `${make} ${model}`
-  console.log('make', model, 'repairs: ', repairs)
   function repairTable() {
     return (
       <table className={repairPrices}>
@@ -27,9 +26,7 @@ const PhonePage = ({
           <tr key={idx}>
             <td>
               {`${make} ${model} ${
-                typeof repair === 'string'
-                  ? repair
-                  : repair.replaceAll('_', ' ')
+                typeof repair === 'string' ? repair.replace(/\_/g, ' ') : repair
               }`}
             </td>
             {/* <td>{`${make} ${model} ${repair.replaceAll('_', ' ')}`}</td> */}
@@ -39,7 +36,6 @@ const PhonePage = ({
       </table>
     )
   }
-  // console.log('screen repair price: ', screen_repair_price)
   return (
     <Layout pageTitle="Phone Page">
       <h1>

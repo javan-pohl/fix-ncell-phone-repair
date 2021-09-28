@@ -18,7 +18,6 @@ const Layout = ({ currentUrl, pageTitle, children }) => {
   if (currentUrl === '/' && typeof window !== 'undefined') {
     currentUrl = window.location.pathname
   }
-  console.log('currentUrl: ', currentUrl)
   return (
     <main>
       <GlobalStyle />

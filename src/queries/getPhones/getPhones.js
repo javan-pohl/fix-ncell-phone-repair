@@ -23,7 +23,6 @@ function getPhones() {
   const {
     allPhonesJson: { nodes },
   } = data
-  // console.log('nodes: ', nodes)
   return { nodes }
 }
 
