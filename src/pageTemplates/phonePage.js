@@ -5,14 +5,14 @@ import errImg from '../images/no_image.jpg'
 import { phoneMain, repairPrices } from './phonePage.module.css'
 
 // pageContext comes from gatsby.node.js
-const PhonePage = ({
+function PhonePage({
   pageContext: {
     phone: {
       make, model, image, repairs,
     },
     location,
   },
-}) => {
+}) {
   const imageURL = getImages(image) || errImg
   const name = `${make} ${model}`
   function repairTable() {

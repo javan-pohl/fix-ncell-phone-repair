@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import {
   showcaseMobileSection,
   showcaseMobile,
@@ -6,6 +7,7 @@ import {
   showcaseMobileHeader,
   showcaseMobileScheduleButton,
 } from './Showcase.module.css'
+import MyLink from '../MyLink/MyLink'
 
 function Showcase() {
   return (
@@ -15,12 +17,7 @@ function Showcase() {
           <span id={showcaseMobileHeader}>LET US COME TO YOU!</span>
           <p>FixNcell now comes to your location to fix your phone</p>
         </div>
-        <a
-          href="https://www.fixncell.com/schedule-your-repair.html"
-          className={showcaseMobileScheduleButton}
-        >
-          Schedule now
-        </a>
+        <Link to="/schedule-your-repair" className={showcaseMobileScheduleButton}>Schedule now</Link>
       </div>
     </section>
   )

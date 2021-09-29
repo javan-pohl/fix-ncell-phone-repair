@@ -7,7 +7,8 @@
 			"screen-repair-price": "$109",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
-		}
+		},
+		"screenScheduleID": "973022"
 	},
 	{
 		"make": "iPhone",
@@ -17,7 +18,30 @@
 			"screen-repair-price": "$119",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
-		}
+		},
+		"screenScheduleID": "973205"
+	},
+	{
+		"make": "iPhone",
+		"model": "6s",
+		"slug": "/repairs/iphone/6s",
+		"repairs": {
+			"screen-repair-price": "$109",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		},
+		"screenScheduleID": "1277493"
+	},
+	{
+		"make": "iPhone",
+		"model": "6s Plus",
+		"slug": "/repairs/iphone/6s-plus",
+		"repairs": {
+			"screen-repair-price": "$119",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		},
+		"screenScheduleID": "1687859"
 	},
 	{
 		"make": "iPhone",
@@ -27,7 +51,8 @@
 			"screen-repair-price": "$109",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
-		}
+		},
+		"screenScheduleID": "2403652"
 	},
 	{
 		"make": "iPhone",
@@ -37,7 +62,8 @@
 			"screen-repair-price": "$119",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
-		}
+		},
+		"screenScheduleID": "2608726"
 	},
 	{
 		"make": "iPhone",
@@ -47,7 +73,8 @@
 			"screen-repair-price": "$109",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
-		}
+		},
+		"screenScheduleID": "4892925"
 	},
 	{
 		"make": "iPhone",
@@ -57,7 +84,8 @@
 			"screen-repair-price": "$119",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
-		}
+		},
+		"screenScheduleID": "4892967"
 	},
 	{
 		"make": "iPhone",
@@ -67,7 +95,8 @@
 			"screen-repair-price": "$149",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
-		}
+		},
+		"screenScheduleID": "8315872"
 	},
 	{
 		"make": "iPhone",
@@ -77,6 +106,7 @@
 			"screen-repair-price": "$169",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
-		}
+		},
+		"screenScheduleID": "10433804"
 	}
 ]
