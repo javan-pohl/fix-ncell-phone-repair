@@ -7,6 +7,7 @@ function getLocations() {
       allLocationsJson {
         nodes {
           name
+					zips
         }
       }
     }

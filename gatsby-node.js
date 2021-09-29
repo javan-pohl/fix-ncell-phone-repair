@@ -17,6 +17,7 @@ exports.createPages = async function ({ actions, graphql }) {
       allLocationsJson {
         nodes {
           name
+					zips
         }
       }
       allSitePage {
@@ -66,7 +67,7 @@ exports.createPages = async function ({ actions, graphql }) {
       id: `${locNode.id}/${locName}`,
       path: urlPath,
       component: require.resolve('./src/pages/repairs.js'),
-      context: { location: locName },
+      context: { location: locName, zipCodes: locNode.zips },
     })
   })
 }
