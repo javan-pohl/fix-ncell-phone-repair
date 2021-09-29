@@ -74,12 +74,12 @@ const IndexPage = ({
 
         If you don't see the price for the type of repair you need, please give us a call or send us a text.
       </p>
-      <h3 style={header}>
+      {/* <h3 style={header}>
         Some of the Zip Codes We Service in
         {' '}
         {location}
       </h3>
-      <p>{Object.keys(zipCodes).map((key) => ` ${zipCodes[key]} `)}</p>
+      <p>{Object.keys(zipCodes).map((key) => ` ${zipCodes[key]} `)}</p> */}
     </div>
   </Layout>
 )
