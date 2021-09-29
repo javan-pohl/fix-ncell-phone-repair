@@ -70,16 +70,21 @@ const IndexPage = ({
         {' '}
         {location}
         {' '}
-        area varies by type of iPhone and what repair you need. Please select your iPhone model from the list above to see the pricing information for the most common iPhone repairs. Our prices are continuously updated. One thing to keep in mind about screen replacements on an iPhone--they are more expensive the newer the phone is. After about two years, prices for fixing a cracked screen, for example, tend to level out.
-
-        If you don't see the price for the type of repair you need, please give us a call or send us a text.
+        area varies by type
+        of iPhone and what repair you need. Please select your iPhone model from
+        the list above to see the pricing information for the most common iPhone
+        repairs. Our prices are continuously updated. One thing to keep in mind
+        about screen replacements on an iPhone--they are more expensive the
+        newer the phone is. After about two years, prices for fixing a cracked
+        screen, for example, tend to level out. If you don't see the price for
+        the type of repair you need, please give us a call or send us a text.
       </p>
-      {/* <h3 style={header}>
+      <h3 style={header}>
         Some of the Zip Codes We Service in
         {' '}
         {location}
       </h3>
-      <p>{Object.keys(zipCodes).map((key) => ` ${zipCodes[key]} `)}</p> */}
+      <p>{typeof zipCodes !== 'undefined' && Object.keys(zipCodes).map((key) => ` ${zipCodes[key]} `)}</p>
     </div>
   </Layout>
 )
