@@ -78,5 +78,6 @@ module.exports = {
       },
       __key: 'pages',
     },
+
   ],
 }
