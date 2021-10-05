@@ -8,9 +8,9 @@ class EmbedSocialWidget extends React.Component {
   componentDidMount() {
     (function (d, s, id) {
       let js
-      if (d.getElementById(id)) {
-        return
-      }
+      // if (d.getElementById(id)) {
+      //   return
+      // }
       js = d.createElement(s)
       js.id = id
       js.src = 'https://embedsocial.com/embedscript/ri.js'
