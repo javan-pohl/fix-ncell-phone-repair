@@ -1,0 +1,22 @@
+p {margin:  25px}
+
+.headerUnderline {
+	border-bottom: 2px solid black;
+	background-color: yellow;
+}
+
+.pseudo_border {
+	position:relative;
+	display:block;
+}
+.pseudo_border:after {
+	content:'';
+	position:absolute;
+	left:0; right:0;
+	top:100%;
+	margin:0px auto;
+	width:60%;
+	height:5px;
+	background:black;
+	border-radius: 50px;
+}
