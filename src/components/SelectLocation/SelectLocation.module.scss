@@ -1,0 +1,70 @@
+$height:65;
+$depth:6;
+$color: white;
+$text-color: rgb(184, 255, 251);
+$lighten-on-hover:7%;
+$button-speed:.06;
+$timing-function: ease-out;
+
+.locationsMain {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+
+.locationsMain h3 {
+  font-size: 40px;
+  margin: auto;
+  text-align: center;
+}
+
+.locationsMain a {
+  text-decoration: none;
+  color: black;
+}
+
+.locsDiv {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+}
+
+/* .locCard {
+	font-weight: bold;
+	margin: 15px;
+	padding: 10px 15px;
+  background: #0098ff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	cursor: pointer;
+} */
+.locCard {
+	color: rgb(0, 32, 32);
+  margin: 15px;
+  padding: 10px 15px;
+  background: rgb(250, 250, 250);
+  border-radius: 20px;
+	box-shadow: 2px 2px 3px rgb(70, 70, 70), 
+	-2px -2px 3px white;	
+}
+
+.locCard:hover {
+  opacity: 0.9;
+
+	// color: rgb(22,205,255);
+  background: rgb(22, 205, 255);
+  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
+}
+
+@media (max-width: 600px) {
+  .locCard {
+    margin: 7px;
+    padding: 5px 10px;
+  }
+}
+@media (max-width: 450px) {
+  .locationsMain h3 {
+    font-size: 25px;
+  }
+}

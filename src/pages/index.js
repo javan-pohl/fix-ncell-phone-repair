@@ -21,6 +21,9 @@ const IndexPage = ({ location: { pathname } }) => {
     <Layout pageTitle={title} currentUrl={pathname}>
       <Showcase />
       <SelectLocation />
+      <div>
+        <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />
+      </div>
       <div style={backImg}>
         <h1 className="pseudo_border">{title}</h1>
         <p style={{ fontSize: '18px' }}>
@@ -43,9 +46,6 @@ const IndexPage = ({ location: { pathname } }) => {
         worry about in terms of security violations--it's near impossible to
         get past an iPhone's security without the passcode).
       </p>
-      <div>
-        <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />
-      </div>
     </Layout>
   )
 }

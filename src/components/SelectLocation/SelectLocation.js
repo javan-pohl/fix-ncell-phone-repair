@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { locationsMain, locsDiv, locCard } from './SelectLocation.module.css'
+import {
+  locationsMain, locsDiv, locCard, button,
+} from './SelectLocation.module.scss'
 import getLocations from '../../queries/getLocations/getLocations'
 
 function SelectLocation() {
