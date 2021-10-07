@@ -9,7 +9,7 @@ import EmbedSocialWidget from '../components/EmbedSocialWidget/EmbedSocialWidget
 const backImg = {
   color: 'white',
   backgroundImage: `linear-gradient(rgb(0,152,255,0.90),
-	rgb(0,152,255,0.85)), url(https://www.fixncell.com/img/inside_phone_horz.png)`,
+	rgb(0,152,255,0.85)), url(https://www.fixncell.com/img/inside_phone_horz.webp)`,
   backgroundSize: 'cover',
   backgroundRepeat: 'repeat',
   padding: '1px',
