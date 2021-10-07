@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { reviewBadges, reviewBadgesOuter } from './ReviewBadges.module.css'
 import YelpBadge from '../../images/yelp_badge.png'
-import YelpReviews from '../../images/yelp_reviews_transp.png'
-import GoogleReviews from '../../images/google_reviews_transp.png'
+import YelpReviews from '../../images/yelp_reviews_transp_small.png'
+import GoogleReviews from '../../images/google_reviews_transp_small.png'
 
 const ReviewBadges = () => (
   <div className={reviewBadgesOuter}>
