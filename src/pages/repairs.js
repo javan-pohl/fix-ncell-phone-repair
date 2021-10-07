@@ -4,7 +4,6 @@ import SelectPhone from '../components/SelectPhone/SelectPhone'
 /* eslint-disable react/prop-types */
 
 const content = {
-  width: '75%',
   margin: 'auto',
 }
 

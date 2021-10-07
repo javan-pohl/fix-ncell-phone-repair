@@ -1,0 +1,13 @@
+.reviewBadgesOuter {
+  width: 100%;
+}
+.reviewBadges {
+  display: flex;
+  width: 85%;
+	margin: auto;
+  justify-content: space-between;
+}
+
+img {
+  height: 40px;
+}

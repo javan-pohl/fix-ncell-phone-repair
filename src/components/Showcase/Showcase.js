@@ -8,6 +8,7 @@ import {
   showcaseMobileScheduleButton,
 } from './Showcase.module.css'
 import MyLink from '../MyLink/MyLink'
+import ReviewBadges from '../Badges/ReviewBadges'
 
 function Showcase() {
   return (
@@ -19,6 +20,8 @@ function Showcase() {
         </div>
         <Link to="/schedule-your-repair" className={showcaseMobileScheduleButton}>Schedule now</Link>
       </div>
+      <ReviewBadges />
+
     </section>
   )
 }

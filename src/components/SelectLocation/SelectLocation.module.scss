@@ -31,23 +31,28 @@ $timing-function: ease-out;
   justify-content: center;
 }
 
-/* .locCard {
+.locCard {
 	font-weight: bold;
 	margin: 15px;
 	padding: 10px 15px;
   background: #0098ff;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	cursor: pointer;
-} */
-.locCard {
-	color: rgb(0, 32, 32);
-  margin: 15px;
-  padding: 10px 15px;
-  background: rgb(250, 250, 250);
-  border-radius: 20px;
-	box-shadow: 2px 2px 3px rgb(70, 70, 70), 
+  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		box-shadow: 2px 2px 3px rgb(70, 70, 70), 
 	-2px -2px 3px white;	
-}
+	cursor: pointer;
+	border-radius: 10px;
+} 
+
+// .locCard {
+// 	font-weight: bold;
+// 	color: rgb(0, 32, 32);
+//   margin: 15px;
+//   padding: 10px 15px;
+//   background: #0098ff;
+//   border-radius: 20px;
+// 	box-shadow: 2px 2px 3px rgb(70, 70, 70), 
+// 	-2px -2px 3px white;	
+// }
 
 .locCard:hover {
   opacity: 0.9;

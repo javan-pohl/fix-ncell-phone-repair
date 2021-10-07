@@ -35,16 +35,14 @@ const IndexPage = ({ location: { pathname } }) => {
           appointment and our technician will come to your location (work, home,
           or whatever address is convenient for you).
           {' '}
-
         </p>
       </div>
       <p>
-        The technician will work
-        on your phone in their vehicle; however, if you have security concerns
-        you can be present for the repair (granted, we do not typically need
-        your passcode to work on the mobile device so you don't have much to
-        worry about in terms of security violations--it's near impossible to
-        get past an iPhone's security without the passcode).
+        The technician will work on your phone in their vehicle; however, if you
+        have security concerns you can be present for the repair (granted, we do
+        not typically need your passcode to work on the mobile device so you
+        don't have much to worry about in terms of security violations--it's
+        near impossible to get past an iPhone's security without the passcode).
       </p>
     </Layout>
   )
