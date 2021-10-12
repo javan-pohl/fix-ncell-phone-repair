@@ -14,16 +14,10 @@ const backImg = {
   backgroundRepeat: 'repeat',
   padding: '1px',
 }
+
 const IndexPage = ({ location: { pathname } }) => {
-  // useScript('https://reviewsonmywebsite.com/js/embedLoader.js?id=cb477ad3a93eb5d679f0')
-  const title = 'FixNcell Mobile iPhone Repair Service'
-  return (
-    <Layout pageTitle={title} currentUrl={pathname}>
-      <Showcase />
-      <SelectLocation />
-      <div>
-        <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />
-      </div>
+  const IndexMain = () => (
+    <>
       <div style={backImg}>
         <h1 className="pseudo_border">{title}</h1>
         <p style={{ fontSize: '18px' }}>
@@ -44,6 +38,19 @@ const IndexPage = ({ location: { pathname } }) => {
         don't have much to worry about in terms of security violations--it's
         near impossible to get past an iPhone's security without the passcode).
       </p>
+    </>
+  )
+  // useScript('https://reviewsonmywebsite.com/js/embedLoader.js?id=cb477ad3a93eb5d679f0')
+  const title = 'FixNcell Mobile iPhone Repair Service'
+  return (
+    <Layout pageTitle={title} currentUrl={pathname}>
+      <Showcase />
+
+      <SelectLocation />
+      <div>
+        <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />
+      </div>
+      {IndexMain()}
     </Layout>
   )
 }

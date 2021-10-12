@@ -46,7 +46,7 @@ function PhonePage({
         Repair
       </h1>
       <div className={phoneMain}>
-        <img src={imageURL} alt={name} />
+        <img src={imageURL} alt={name} style={{ height: '250px' }} />
         {repairTable()}
       </div>
     </Layout>

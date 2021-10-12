@@ -1,8 +1,13 @@
 import * as React from 'react'
 import Layout from '../components/Layout/Layout'
 import SelectPhone from '../components/SelectPhone/SelectPhone'
+import AtDoorPhoto from '../images/javan_door_99.webp'
 /* eslint-disable react/prop-types */
-
+const main = {
+  display: 'flex',
+  width: '75%',
+  margin: '35px auto',
+}
 const content = {
   margin: 'auto',
 }
@@ -10,24 +15,44 @@ const content = {
 const header = {
   textAlign: 'center',
 }
+
+const backImg = {
+  color: 'white',
+  backgroundImage: `linear-gradient(rgb(0,152,255,0.90),
+	rgb(0,152,255,0.85)), url(https://www.fixncell.com/img/inside_phone_horz.webp)`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'repeat',
+  padding: '1px',
+  paddingBottom: '25px',
+}
 function Repairs({
   location: { pathname },
   pageContext: { location = 'Denver/Boulder Metro', zipCodes },
 }) {
+  const PageTitle = `FixNcell iPhone Repair - ${location}`
   return (
-    <Layout pageTitle={`${location} Phone Repairs`} currentUrl={pathname}>
-      <h1>
-        {location}
-        {' '}
-        iPhone Repairs
-      </h1>
+    <Layout pageTitle={PageTitle} currentUrl={pathname}>
+      <div style={backImg}>
+        <h1 className="pseudo_border">{PageTitle}</h1>
+        <div style={main}>
+          <p style={{ paddingRight: '50px' }}>
+            FixNcell is a mobile iPhone repair service. We go to the customer to
+            fix their phone; however, we do the repair in our vehicle and
+            typically do not need the passcode, so your information is safe with
+            us. We've been in business 7 years, use high quality parts, and have
+            long enjoyed some of the highest customer satisfaction ratings of
+            any cell phone repair business in the
+            {' '}
+            {location}
+            {' '}
+            area.
+          </p>
+          <img src={AtDoorPhoto} style={{ height: '300px', float: 'right' }} />
+        </div>
+      </div>
       <SelectPhone url={pathname} />
       <div style={content}>
-        <h2 style={header}>
-          FixNcell iPhone Repairs -
-          {' '}
-          {location}
-        </h2>
+        <h1 style={header}>{PageTitle}</h1>
         <p>
           If you live in the
           {' '}
@@ -47,7 +72,7 @@ function Repairs({
           {' '}
           {location}
           {' '}
-          Mobile iPhone Repairs - "We Come To You"
+          Mobile iPhone Repair Service - "We Come To You"
         </h3>
         <p>
           No need to come to a store-front and wait for hours to get your cell

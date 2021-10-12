@@ -7,9 +7,11 @@ $button-speed:.06;
 $timing-function: ease-out;
 
 .locationsMain {
-  width: 90%;
-  margin: auto;
-  padding: 20px;
+	width: 90%;
+  margin: 20px auto;
+  padding: 0px;
+	border-left: 3px solid grey;
+	border-right: 3px solid grey;
 }
 
 .locationsMain h3 {
