@@ -9,22 +9,23 @@ import { selectPhone, heading, info } from './SelectPhone.module.css'
 function SelectPhone({ url }) {
   const phoneImages = getImages()
   const { nodes } = getPhones()
-  const phones = nodes.map((phone) => {
+  const phones = nodes.map((phone, index) => {
     const phoneName = `iphone-${phone.model.replace(' ', '-').toLowerCase()}`
     return (
       <MyLink url={url} to={phone.slug} key={phoneName}>
         <PhoneCard
           model={phone.model}
           img={phoneImages[`${phoneName}-small`]}
+          key={index}
         />
       </MyLink>
     )
   })
   return (
-    <>
+    <div data-sal="slide-up" data-sal-easing="ease">
       <div className={heading}>Select Your Phone:</div>
       <section className={selectPhone}>{phones}</section>
-    </>
+    </div>
   )
 }
 

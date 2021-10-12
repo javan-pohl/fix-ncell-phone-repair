@@ -51,7 +51,7 @@ function Repairs({
         <h1 className="pseudo_border">{PageTitle}</h1>
         <div className={main}>
           {MainText()}
-          <img src={AtDoorPhoto} />
+          <img src={AtDoorPhoto} alt="man wearing a shirt with a FixNcell logo at the door of a customer's house enthusiastically ready to fix a phone" />
         </div>
       </div>
       <SelectPhone url={pathname} />
