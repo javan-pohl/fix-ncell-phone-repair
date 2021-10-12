@@ -39,11 +39,14 @@ function PhonePage({
   return (
     <Layout pageTitle="Phone Page">
       <h1>
-        {location}
+        FixNcell
         {' '}
         {name}
         {' '}
-        Repair
+        Repair -
+        {' '}
+        {location}
+        {' '}
       </h1>
       <div className={phoneMain}>
         <img src={imageURL} alt={name} style={{ height: '250px' }} />
