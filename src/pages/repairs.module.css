@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  width: 75%;
+  margin: 35px auto;
+}
+
+.main p {
+  padding-right: 50px;
+}
+
+.main img {
+  height: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    width: 95%;
+    flex-direction: column-reverse;
+		margin-bottom: 0px;
+  }
+  img {
+    align-self: center;
+  }
+
+	.main p {
+		padding: 20px 0px 0 0;
+	}
+}

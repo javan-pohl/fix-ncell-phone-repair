@@ -2,8 +2,9 @@ import * as React from 'react'
 import Layout from '../components/Layout/Layout'
 import SelectPhone from '../components/SelectPhone/SelectPhone'
 import AtDoorPhoto from '../images/javan_door_99.webp'
+import { main } from './repairs.module.css'
 /* eslint-disable react/prop-types */
-const main = {
+const main2 = {
   display: 'flex',
   width: '75%',
   margin: '35px auto',
@@ -30,24 +31,27 @@ function Repairs({
   pageContext: { location = 'Denver/Boulder Metro', zipCodes },
 }) {
   const PageTitle = `FixNcell iPhone Repair - ${location}`
+  const MainText = () => (
+    <p>
+      FixNcell is a mobile iPhone repair service. We go to the customer to fix
+      their phone; however, we do the repair in our vehicle and typically do not
+      need the passcode, so your information is safe with us. We've been in
+      business 7 years, use high quality parts, and have long enjoyed some of
+      the highest customer satisfaction ratings of any cell phone repair
+      business in the
+      {' '}
+      {location}
+      {' '}
+      area.
+    </p>
+  )
   return (
     <Layout pageTitle={PageTitle} currentUrl={pathname}>
       <div style={backImg}>
         <h1 className="pseudo_border">{PageTitle}</h1>
-        <div style={main}>
-          <p style={{ paddingRight: '50px' }}>
-            FixNcell is a mobile iPhone repair service. We go to the customer to
-            fix their phone; however, we do the repair in our vehicle and
-            typically do not need the passcode, so your information is safe with
-            us. We've been in business 7 years, use high quality parts, and have
-            long enjoyed some of the highest customer satisfaction ratings of
-            any cell phone repair business in the
-            {' '}
-            {location}
-            {' '}
-            area.
-          </p>
-          <img src={AtDoorPhoto} style={{ height: '300px', float: 'right' }} />
+        <div className={main}>
+          {MainText()}
+          <img src={AtDoorPhoto} />
         </div>
       </div>
       <SelectPhone url={pathname} />
