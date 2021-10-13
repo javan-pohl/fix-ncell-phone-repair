@@ -108,5 +108,27 @@
 			"charging-port-repair-price": "$109"
 		},
 		"screenScheduleID": "10433804"
+	},
+	{
+		"make": "iPhone",
+		"model": "XS Max",
+		"slug": "/repairs/iphone/xs-max",
+		"repairs": {
+			"screen-repair-price": "$199",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		},
+		"screenScheduleID": "13567850"
+	},
+	{
+		"make": "iPhone",
+		"model": "XR",
+		"slug": "/repairs/iphone/xr",
+		"repairs": {
+			"screen-repair-price": "$149",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		},
+		"screenScheduleID": "10433798"
 	}
 ]
