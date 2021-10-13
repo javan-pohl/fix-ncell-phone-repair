@@ -17,8 +17,8 @@ const backImg = {
 
 const IndexPage = ({ location: { pathname } }) => {
   const IndexMain = () => (
-    <>
-      <div style={backImg} data-sal="slide-left" data-sal-easing="ease" data-sal-duration="1000">
+    <div data-sal="slide-left" data-sal-easing="ease" data-sal-duration="1000">
+      <div style={backImg}>
         <h1 className="pseudo_border">{title}</h1>
         <p style={{ fontSize: '18px' }}>
           FixNcell is a mobile iPhone repair service that travels to your
@@ -31,7 +31,7 @@ const IndexPage = ({ location: { pathname } }) => {
           {' '}
         </p>
       </div>
-    </>
+    </div>
   )
   // useScript('https://reviewsonmywebsite.com/js/embedLoader.js?id=cb477ad3a93eb5d679f0')
   const title = 'FixNcell Mobile iPhone Repair Service'
