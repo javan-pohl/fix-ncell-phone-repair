@@ -63,7 +63,18 @@
 }
 
 @media (max-width: 439px) {
-	
+	.showcaseMobileSection {
+		margin-bottom: 0px;
+		display: inline-block;
+		padding-top: 0px;
+		background: url('https://www.fixncell.com/img/mobile_iphone_screen_repair_bw.webp')
+		no-repeat 0 -70px;
+		background-size: cover;
+		background-position: bottom;
+		height: 300px;
+		width: 100%;
+		text-align: center;
+	}	
 	.showcaseMobileInner {
 		font-size: 125%;
 		padding: 15px 0px 0px 0px;
