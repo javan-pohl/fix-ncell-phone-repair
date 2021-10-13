@@ -18,7 +18,7 @@ const backImg = {
 const IndexPage = ({ location: { pathname } }) => {
   const IndexMain = () => (
     <>
-      <div style={backImg}>
+      <div style={backImg} data-sal="slide-left" data-sal-easing="ease" data-sal-duration="1000">
         <h1 className="pseudo_border">{title}</h1>
         <p style={{ fontSize: '18px' }}>
           FixNcell is a mobile iPhone repair service that travels to your
@@ -31,13 +31,6 @@ const IndexPage = ({ location: { pathname } }) => {
           {' '}
         </p>
       </div>
-      <p>
-        The technician will work on your phone in their vehicle; however, if you
-        have security concerns you can be present for the repair (granted, we do
-        not typically need your passcode to work on the mobile device so you
-        don't have much to worry about in terms of security violations--it's
-        near impossible to get past an iPhone's security without the passcode).
-      </p>
     </>
   )
   // useScript('https://reviewsonmywebsite.com/js/embedLoader.js?id=cb477ad3a93eb5d679f0')
@@ -45,12 +38,11 @@ const IndexPage = ({ location: { pathname } }) => {
   return (
     <Layout pageTitle={title} currentUrl={pathname}>
       <Showcase />
-
       <SelectLocation />
+      {IndexMain()}
       <div>
         <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />
       </div>
-      {IndexMain()}
     </Layout>
   )
 }
