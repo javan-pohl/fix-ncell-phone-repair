@@ -18,7 +18,7 @@ const backImg = {
 const IndexPage = ({ location: { pathname } }) => {
   const IndexMain = () => (
     <div style={backImg}>
-      <div data-sal="slide-left" data-sal-easing="ease" data-sal-duration="1000">
+      <div data-sal="slide-up" data-sal-easing="ease" data-sal-duration="1000">
         <h1 className="pseudo_border">{title}</h1>
         <p style={{ fontSize: '18px' }}>
           FixNcell is a mobile iPhone repair service that travels to your
