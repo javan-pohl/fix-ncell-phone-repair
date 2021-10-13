@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layout from '../components/Layout/Layout'
 import SelectPhone from '../components/SelectPhone/SelectPhone'
 import AtDoorPhoto from '../images/javan_door_99.webp'
-import { main } from './repairs.module.css'
+import { main, mainTagLine, pseudoBorder } from './repairs.module.css'
 /* eslint-disable react/prop-types */
 const main2 = {
   display: 'flex',
@@ -23,7 +23,8 @@ const backImg = {
 	rgb(0,152,255,0.85)), url(https://www.fixncell.com/img/inside_phone_horz.webp)`,
   backgroundSize: 'cover',
   backgroundRepeat: 'repeat',
-  padding: '1px',
+  marginTop: '0px',
+  paddingTop: '1px',
   paddingBottom: '25px',
 }
 function Repairs({
@@ -32,16 +33,9 @@ function Repairs({
 }) {
   const PageTitle = `FixNcell iPhone Repair - ${location}`
   const MainText = () => (
-    <div style={{ marginTop: '0', paddingTop: '0' }}>
-      <p style={{ marginTop: '0', paddingTop: '0' }}>
-        <div
-          style={{
-            textAlign: 'center',
-            margin: '0 0 10px 0',
-            fontSize: '25px',
-            fontWeight: 'bold',
-          }}
-        >
+    <div style={{ margin: '0 auto', padding: '0' }}>
+      <p style={{ margin: '0 auto', padding: '0' }}>
+        <div className={mainTagLine}>
           "We Come To You!"
         </div>
         FixNcell is a mobile iPhone repair service. We go to the customer to fix
@@ -61,7 +55,7 @@ function Repairs({
     <Layout pageTitle={PageTitle} currentUrl={pathname}>
       <div style={backImg}>
         <div data-sal="slide-up" data-sal-easing="ease" data-sal-duration="500">
-          <h1 className="pseudo_border">{PageTitle}</h1>
+          <h1 className={pseudoBorder}>{PageTitle}</h1>
           <div className={main}>
             {MainText()}
             <img
