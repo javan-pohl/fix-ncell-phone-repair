@@ -16,20 +16,17 @@ function PhonePage({
 }) {
   const imageURL = getImages(image) || errImg
   const name = `${make} ${model}`
-  const ButtonFunction = (repair) => {
-    console.log('repair: ', repair)
-    return (
-      <Link
-        to={
+  const ButtonFunction = (repair) => (
+    <Link
+      to={
           repair.includes('screen')
             ? 'schedule-screen-repair'
             : '/schedule-your-repair'
         }
-      >
-        <td>Book</td>
-      </Link>
-    )
-  }
+    >
+      <td>Book</td>
+    </Link>
+  )
   function repairTable() {
     return (
       <table className={repairPrices}>

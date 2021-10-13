@@ -4,10 +4,12 @@ import Layout from '../components/Layout/Layout'
 const ScheduleRepair = ({
   pageContext: {
     phone: { make, model, screenScheduleID },
-    location,
+    location = 'Denver/Boulder Metro',
   },
 }) => (
-  <Layout pageTitle={`Schedule Your ${make} ${model} Screen Repair`}>
+  <Layout
+    pageTitle={`Schedule Your ${make} ${model} Screen Repair - ${location}`}
+  >
     <h1>
       Schedule Your
       {' '}
@@ -15,7 +17,9 @@ const ScheduleRepair = ({
       {' '}
       {model}
       {' '}
-      Screen Repair
+      Screen Repair -
+      {' '}
+      {location}
     </h1>
     <iframe
       src={`https://app.acuityscheduling.com/schedule.php?owner=11997785&appointmentType=${screenScheduleID}`}
