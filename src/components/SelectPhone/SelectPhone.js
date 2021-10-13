@@ -22,9 +22,9 @@ function SelectPhone({ url }) {
     )
   })
   return (
-    <div data-sal="slide-up" data-sal-easing="ease">
+    <div>
       <div className={heading}>Select Your Phone:</div>
-      <section className={selectPhone}>{phones}</section>
+      <section className={selectPhone} data-sal="slide-up" data-sal-easing="ease" data-sal-duration="500">{phones}</section>
     </div>
   )
 }
