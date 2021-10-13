@@ -10,7 +10,7 @@ function PhonePage({
     phone: {
       make, model, image, repairs,
     },
-    location,
+    location = 'Denver/Boulder Metro',
   },
 }) {
   const imageURL = getImages(image) || errImg
