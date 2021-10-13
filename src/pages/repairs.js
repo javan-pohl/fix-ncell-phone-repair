@@ -34,17 +34,21 @@ function Repairs({
   const MainText = () => (
     <div style={{ marginTop: '0', paddingTop: '0' }}>
       <p style={{ marginTop: '0', paddingTop: '0' }}>
-        <div style={{
-          textAlign: 'center', margin: '0 0 10px 0', fontSize: '25px', fontWeight: 'bold',
-        }}
+        <div
+          style={{
+            textAlign: 'center',
+            margin: '0 0 10px 0',
+            fontSize: '25px',
+            fontWeight: 'bold',
+          }}
         >
           "We Come To You!"
         </div>
         FixNcell is a mobile iPhone repair service. We go to the customer to fix
-        their phone; however, we do the repair in our vehicle and typically do not
-        need the passcode, so your information is safe with us. We've been in
-        business 7 years, use high quality parts, and have long enjoyed some of
-        the highest customer satisfaction ratings of any cell phone repair
+        their phone; however, we do the repair in our vehicle and typically do
+        not need the passcode, so your information is safe with us. We've been
+        in business 7 years, use high quality parts, and have long enjoyed some
+        of the highest customer satisfaction ratings of any cell phone repair
         business in the
         {' '}
         {location}
@@ -56,10 +60,15 @@ function Repairs({
   return (
     <Layout pageTitle={PageTitle} currentUrl={pathname}>
       <div style={backImg}>
-        <h1 className="pseudo_border">{PageTitle}</h1>
-        <div className={main}>
-          {MainText()}
-          <img src={AtDoorPhoto} alt="man wearing a shirt with a FixNcell logo at the door of a customer's house enthusiastically ready to fix a phone" />
+        <div data-sal="slide-up" data-sal-easing="ease" data-sal-duration="500">
+          <h1 className="pseudo_border">{PageTitle}</h1>
+          <div className={main}>
+            {MainText()}
+            <img
+              src={AtDoorPhoto}
+              alt="man wearing a shirt with a FixNcell logo at the door of a customer's house enthusiastically ready to fix a phone"
+            />
+          </div>
         </div>
       </div>
       <SelectPhone url={pathname} />
@@ -86,7 +95,9 @@ function Repairs({
           {' '}
           Mobile iPhone Repair Service
         </h2>
-        <h3 style={{ textAlign: 'center', margin: '0px', padding: '0px' }}>"We Come To You"</h3>
+        <h3 style={{ textAlign: 'center', margin: '0px', padding: '0px' }}>
+          "We Come To You"
+        </h3>
         <p>
           No need to come to a store-front and wait for hours to get your cell
           phone repaired. If you live in the
@@ -95,7 +106,9 @@ function Repairs({
           {' '}
           vicinity, then we can
           come to your home, work, or even set up a random location to meet, in
-          order to get your Apple mobile device fixed. The typical time to repair an iPhone screen takes 20 minutes. We'll have your broken phone fixed in no time!
+          order to get your Apple mobile device fixed. The typical time to
+          repair an iPhone screen takes 20 minutes. We'll have your broken phone
+          fixed in no time!
         </p>
         <h3 style={header}>
           How Much Does it Cost to get an iPhone Repaired in

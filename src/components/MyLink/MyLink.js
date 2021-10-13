@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import getLocations from '../../queries/getLocations/getLocations'
 
 const MyLink = ({
-  url, to, alt, key, children,
+  url, to, alt, children,
 }) => {
   if (typeof url === 'undefined' && typeof window !== 'undefined') {
     url = window.location.pathname
@@ -40,7 +40,7 @@ const MyLink = ({
     }
   }
   return (
-    <Link to={to} key={key || to} alt={alt}>
+    <Link to={to} key={to} alt={alt}>
       {children}
     </Link>
   )

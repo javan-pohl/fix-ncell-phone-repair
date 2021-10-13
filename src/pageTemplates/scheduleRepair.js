@@ -3,12 +3,32 @@ import Layout from '../components/Layout/Layout'
 
 const ScheduleRepair = ({
   pageContext: {
-    phone: {
-      make, model, screenScheduleID,
-    },
+    phone: { make, model, screenScheduleID },
     location,
-
   },
-}) => {
+}) => (
+  <Layout pageTitle={`Schedule Your ${make} ${model} Screen Repair`}>
+    <h1>
+      Schedule Your
+      {' '}
+      {make}
+      {' '}
+      {model}
+      {' '}
+      Screen Repair
+    </h1>
+    <iframe
+      src={`https://app.acuityscheduling.com/schedule.php?owner=11997785&appointmentType=${screenScheduleID}`}
+      title="Schedule Appointment"
+      width="100%"
+      height="800"
+      frameBorder="0"
+    />
+    <script
+      src="https://embed.acuityscheduling.com/js/embed.js"
+      type="text/javascript"
+    />
+  </Layout>
+)
 
-}
+export default ScheduleRepair

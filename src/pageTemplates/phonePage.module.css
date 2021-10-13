@@ -7,6 +7,10 @@
 	margin-bottom: 25px;
 }
 
+.phoneMain a {
+	text-decoration: none;
+}
+
 .repairPrices {
   background-color: none;
   border: 0;

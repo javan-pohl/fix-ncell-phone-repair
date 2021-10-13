@@ -12,12 +12,13 @@ exports.createPages = async function ({ actions, graphql }) {
             charging_port_repair_price
             screen_repair_price
           }
+          screenScheduleID
         }
       }
       allLocationsJson {
         nodes {
           name
-					zips
+          zips
         }
       }
       allSitePage {
@@ -49,13 +50,28 @@ exports.createPages = async function ({ actions, graphql }) {
       component: require.resolve('./src/pageTemplates/phonePage.js'),
       context: { phone: node },
     })
+    actions.createPage({
+      id: `schedule${node.id}`,
+      path: `${node.slug}/schedule-screen-repair`,
+      component: require.resolve('./src/pageTemplates/scheduleRepair.js'),
+      context: { phone: node },
+    })
     data.allLocationsJson.nodes.forEach((locNode) => {
       const locName = locNode.name
       const urlPath = `/${locName.toLowerCase()}${node.slug}`
+      const urlScreenPath = `/${locName.toLowerCase()}${
+        node.slug
+      }/schedule-screen-repair`
       actions.createPage({
         id: node.id + locNode.id,
         path: urlPath,
         component: require.resolve('./src/pageTemplates/phonePage.js'),
+        context: { phone: node, location: locName },
+      })
+      actions.createPage({
+        id: `schedule${node.id}${locNode.id}`,
+        path: urlScreenPath,
+        component: require.resolve('./src/pageTemplates/scheduleRepair.js'),
         context: { phone: node, location: locName },
       })
     })
