@@ -9,6 +9,9 @@ import {
 } from './Showcase.module.css'
 import MyLink from '../MyLink/MyLink'
 import ReviewBadges from '../Badges/ReviewBadges'
+import calendar from '../../images/calendar_transp.png'
+import phone from '../../images/phone.png'
+import getNum from '../../queries/getNum/getNum'
 
 const BackImg = {
   margin: '0px',
@@ -24,10 +27,9 @@ const BackImg = {
 }
 
 function Showcase() {
+  const num = getNum()
   return (
-    <section
-      className={showcaseMobileSection}
-    >
+    <section className={showcaseMobileSection}>
       <div className={showcaseMobile}>
         <div className={showcaseMobileInner}>
           <span id={showcaseMobileHeader}>LET US COME TO YOU!</span>
@@ -37,8 +39,22 @@ function Showcase() {
           to="/schedule-your-repair"
           className={showcaseMobileScheduleButton}
         >
-          Schedule now
+          <img src={calendar} style={{ height: '15px', verticalAlign: '-6.5%', horizontalAlign: '5%' }} />
+          {' '}
+          Book Appointment
         </Link>
+        <br />
+        <a
+          style={{
+            display: 'inline-block', marginTop: '10px', padding: '1px 9px 3px 3px',
+          }}
+          className={showcaseMobileScheduleButton}
+          href={`tel:${num}`}
+        >
+          <img src={phone} style={{ height: '18px', verticalAlign: '-10%' }} />
+          {' '}
+          <span style={{ paddingLeft: '5px' }}>Call Us For Quote</span>
+        </a>
       </div>
       <ReviewBadges />
     </section>

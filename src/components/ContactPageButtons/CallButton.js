@@ -2,24 +2,7 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { contactButton } from './ContactPage.module.css'
 import phoneIcon from '../../images/call.png'
-
-function getNum() {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          phone
-        }
-      }
-    }
-  `)
-  const {
-    site: {
-      siteMetadata: { phone },
-    },
-  } = data
-  return phone
-}
+import getNum from '../../queries/getNum/getNum.js'
 
 const CallButton = () => {
   const num = getNum()

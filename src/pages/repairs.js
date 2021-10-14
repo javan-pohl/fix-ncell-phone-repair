@@ -35,9 +35,7 @@ function Repairs({
   const MainText = () => (
     <div style={{ margin: '0 auto', padding: '0' }}>
       <p style={{ margin: '0 auto', padding: '0' }}>
-        <div className={mainTagLine}>
-          "We Come To You!"
-        </div>
+        <div className={mainTagLine}>"We Come To You!"</div>
         FixNcell is a mobile iPhone repair service. We go to the customer to fix
         their phone; however, we do the repair in our vehicle and typically do
         not need the passcode, so your information is safe with us. We've been
@@ -48,6 +46,66 @@ function Repairs({
         {location}
         {' '}
         area.
+      </p>
+    </div>
+  )
+  const Services = () => (
+    <div>
+      <h2>
+        Services at FixNcell in
+        {' '}
+        {location}
+        {' '}
+        Include:
+      </h2>
+      <p>
+        <ul style={{ paddingLeft: '20px' }}>
+          <li>
+            <span style={{ fontWeight: 'bold' }}>
+              Phone Screen Replacement:
+              {' '}
+            </span>
+            Whether you have cracked glass, a touchscreen that is not responding
+            to touch in certain areas, or the LCD / OLED display is damaged and
+            parts of the image are distorted or blank (or even if the screen is
+            completely blank) - FixNcell
+            {' '}
+            {location}
+            {' '}
+            can replace your damaged
+            phone screen and have your device back to working condition again.
+          </li>
+          <li>
+            <span style={{ fontWeight: 'bold' }}>
+              Charging / Lightning Port Repair:
+              {' '}
+            </span>
+            Having trouble getting your phone to charge? With time, the charging
+            ports on phones tend to wear out or get filled with debris. Easy as
+            it may sound, it's best to leave issues like this to professionals
+            like FixNcell iPhone technicians. If it feels like the charging
+            cable isn't inserting into the phone like it should, of if the phone
+            is dead and not turning on, give us a call. FixNcell
+            {' '}
+            {location}
+            {' '}
+            can
+            repair or replace the lighting port in your iPhone.
+          </li>
+          <li>
+            <span style={{ fontWeight: 'bold' }}>Battery Replacement: </span>
+            Is
+            your iPhone not holding a charge like it used to? iPhone batteries
+            typically need to be replaced every two years to maintain peak
+            performance. Lithiom-ion batteries depreciate with age. Schedule
+            your iPhone battery replacement at FixNcell
+            {' '}
+            {location}
+            {' '}
+            and have your
+            phone back to the way it used to be.
+          </li>
+        </ul>
       </p>
     </div>
   )
@@ -104,6 +162,7 @@ function Repairs({
           repair an iPhone screen takes 20 minutes. We'll have your broken phone
           fixed in no time!
         </p>
+        {Services()}
         <h3 style={header}>
           How Much Does it Cost to get an iPhone Repaired in
           {' '}

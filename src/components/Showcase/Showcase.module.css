@@ -10,7 +10,7 @@
 	no-repeat 0 -70px;
   background-size: cover;
   background-position: bottom;
-  height: 300px;
+  height: 330px;
   width: 100%;
   text-align: center;
 }
@@ -24,7 +24,7 @@
   text-align: center;
   /*border: 5px solid grey;*/
   margin: 7% auto auto auto;
-  padding-bottom: 15px;
+  padding-bottom: 0px;
 }
 
 .showcaseMobileInner {
@@ -46,6 +46,7 @@
   padding-bottom: 15px;
 }
 .showcaseMobileScheduleButton {
+	width: 181px;
   text-decoration: none;
   color: white;
   font-size: 17px;

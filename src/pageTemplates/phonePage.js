@@ -16,13 +16,15 @@ function PhonePage({
 }) {
   const imageURL = getImages(image) || errImg
   const name = `${make} ${model}`
+  const PageName = `FixNcell ${name} Repair - ${location}`
+
   const ButtonFunction = (repair) => (
     <Link
       to={
-          repair.includes('screen')
-            ? 'schedule-screen-repair'
-            : '/schedule-your-repair'
-        }
+        repair.includes('screen')
+          ? 'schedule-screen-repair'
+          : '/schedule-your-repair'
+      }
     >
       <td>Book</td>
     </Link>
@@ -49,22 +51,69 @@ function PhonePage({
       </table>
     )
   }
+  const iPhoneScreenRepair = () => <div />
   return (
-    <Layout pageTitle="Phone Page">
-      <h1>
-        FixNcell
-        {' '}
-        {name}
-        {' '}
-        Repair -
-        {' '}
-        {location}
-        {' '}
-      </h1>
+    <Layout pageTitle="FixNcell">
+      <h1>{PageName}</h1>
       <div className={phoneMain}>
         <img src={imageURL} alt={name} style={{ height: '250px' }} />
         {repairTable()}
       </div>
+      <section>
+        <h1>{PageName}</h1>
+        <p>
+          For most
+          {' '}
+          {name}
+          {' '}
+          repairs at FixNcell
+          {' '}
+          {location}
+          , we provide upfront
+          pricing. If you don't see the particular
+          {' '}
+          {name}
+          {' '}
+          repair you need or are
+          unsure of what is wrong with your
+          {' '}
+          {name}
+          , please contact us and we'll
+          help you figure out what kind of service you need.
+        </p>
+        <h2>
+          {location}
+          {' '}
+          {name}
+          {' '}
+          Screen Repair
+        </h2>
+        <p>
+          Have you got an
+          {' '}
+          {name}
+          {' '}
+          screen that isn't working properly? Maybe it's
+          glass that's cutting your fingers or just driving your crazy. Or maybe
+          your
+          {' '}
+          {name}
+          {' '}
+          display isn't showing the image properly or responding to
+          touch. FixNcell
+          {' '}
+          {location}
+          {' '}
+          provides high-quality screen replacement
+          service that will have your
+          {' '}
+          {name}
+          {' '}
+          functioning and looking the
+          way it should.
+          {' '}
+        </p>
+      </section>
     </Layout>
   )
 }
