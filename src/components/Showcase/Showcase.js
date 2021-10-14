@@ -38,6 +38,8 @@ function Showcase() {
         <Link
           to="/schedule-your-repair"
           className={showcaseMobileScheduleButton}
+          data-sal="fade"
+          data-sal-duration="1000"
         >
           <img src={calendar} style={{ height: '15px', verticalAlign: '-6.5%', horizontalAlign: '5%' }} />
           {' '}
@@ -50,6 +52,9 @@ function Showcase() {
           }}
           className={showcaseMobileScheduleButton}
           href={`tel:${num}`}
+          data-sal="fade"
+          data-sal-duration="1000"
+          data-sal-delay="500"
         >
           <img src={phone} style={{ height: '18px', verticalAlign: '-10%' }} />
           {' '}
