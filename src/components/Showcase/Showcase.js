@@ -54,7 +54,7 @@ function Showcase() {
           href={`tel:${num}`}
           data-sal="fade"
           data-sal-duration="1000"
-          data-sal-delay="500"
+          data-sal-delay="200"
         >
           <img src={phone} style={{ height: '18px', verticalAlign: '-10%' }} />
           {' '}
