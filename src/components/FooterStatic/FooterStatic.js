@@ -31,7 +31,7 @@ const FooterStatic = ({ url }) => {
     <div className="footerListItems">
       <ul className="footerListUL" title="Areas We Services">
         {locations.map((name) => (
-          <MyLink url={url} to={`/${name.name.toLowerCase()}/repairs`} key={name.name}>
+          <MyLink url={url} to={`/${name.name.toLowerCase()}/repairs/iphone`} key={name.name}>
             <li className="footerListLI">{name.name}</li>
           </MyLink>
         ))}

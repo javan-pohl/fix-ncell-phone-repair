@@ -43,6 +43,7 @@ const IndexPage = ({ location: { pathname } }) => {
       <div>
         <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />
       </div>
+	
     </Layout>
   )
 }

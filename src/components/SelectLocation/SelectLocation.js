@@ -14,7 +14,7 @@ function SelectLocation() {
       <h3>Select Your Location to Get Started</h3>
       <div className={locsDiv}>
         {locArray.map((loc, index) => (
-          <Link to={`/${loc.toLowerCase()}/repairs`} key={loc}>
+          <Link to={`/${loc.toLowerCase()}/repairs/iphone`} key={loc}>
             <div className={locCard} data-sal="fade" data-sal-duration="1000" data-sal-delay={index * (100)}>{loc}</div>
           </Link>
         ))}

@@ -78,7 +78,7 @@ exports.createPages = async function ({ actions, graphql }) {
   })
   data.allLocationsJson.nodes.forEach((locNode) => {
     const locName = locNode.name
-    const urlPath = `/${locName.toLowerCase()}/repairs/`
+    const urlPath = `/${locName.toLowerCase()}/repairs/iphone/`
     actions.createPage({
       id: `${locNode.id}/${locName}`,
       path: urlPath,
