@@ -4,20 +4,23 @@ import Showcase from '../components/Showcase/Showcase'
 import SelectLocation from '../components/SelectLocation/SelectLocation'
 import useScript from '../hooks/useScript'
 import EmbedSocialWidget from '../components/EmbedSocialWidget/EmbedSocialWidget'
+import ContactForm from '../components/ContactForm/ContactForm'
 
 /* eslint-disable react/prop-types */
-const backImg = {
+const phoneImg = 'https://www.fixncell.com/img/inside_phone_horz.webp'
+const westyImg = 'https://www.fixncell.com/img/westy.webp'
+const backImg = (img, opac = 0.90) => ({
   color: 'white',
-  backgroundImage: `linear-gradient(rgb(0,152,255,0.90),
-	rgb(0,152,255,0.85)), url(https://www.fixncell.com/img/inside_phone_horz.webp)`,
+  backgroundImage: `linear-gradient(rgb(0,152,255,${opac}),
+	rgb(0,152,255,${opac - 0.05})), url(${img})`,
   backgroundSize: 'cover',
   backgroundRepeat: 'repeat',
   padding: '1px',
-}
+})
 
 const IndexPage = ({ location: { pathname } }) => {
   const IndexMain = () => (
-    <div style={backImg}>
+    <div style={backImg(phoneImg)}>
       <div data-sal="slide-up" data-sal-easing="ease" data-sal-duration="1000">
         <h1 className="pseudo_border">{title}</h1>
         <p style={{ fontSize: '18px' }}>
@@ -40,10 +43,12 @@ const IndexPage = ({ location: { pathname } }) => {
       <Showcase />
       <SelectLocation />
       {IndexMain()}
-      <div>
+      <div style={{ marginBottom: '0px' }}>
         <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />
       </div>
-	
+      <div style={backImg(westyImg, 0.80)} role="img" aria-label="picture of Westminster, Colorado">
+        <ContactForm />
+      </div>
     </Layout>
   )
 }

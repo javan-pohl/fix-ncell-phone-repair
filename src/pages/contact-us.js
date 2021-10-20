@@ -2,6 +2,7 @@ import * as React from 'react'
 import Layout from '../components/Layout/Layout'
 import CallButton from '../components/ContactPageButtons/CallButton'
 import EmailButton from '../components/ContactPageButtons/EmailButton'
+import ContactForm from '../components/ContactForm/ContactForm'
 /* eslint-disable react/prop-types */
 
 const contactButtons = {
@@ -9,7 +10,7 @@ const contactButtons = {
   flexWrap: 'wrap',
   justifyContent: 'center',
   margin: 'auto',
-  paddingTop: '12%',
+  paddingTop: '5%',
   width: '100%',
 }
 
@@ -19,6 +20,7 @@ const ContactPage = ({ location: { pathname } }) => (
       <CallButton />
       <EmailButton />
     </div>
+    <ContactForm />
   </Layout>
 )
 

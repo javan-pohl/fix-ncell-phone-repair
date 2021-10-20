@@ -112,7 +112,7 @@ function Repairs({
   return (
     <Layout pageTitle={PageTitle} currentUrl={pathname}>
       <div style={backImg}>
-        <div data-sal="slide-up" data-sal-easing="ease" data-sal-duration="500">
+        <div data-sal="fade-in" data-sal-easing="ease" data-sal-duration="500">
           <h1 className={pseudoBorder}>{PageTitle}</h1>
           <div className={main}>
             {MainText()}

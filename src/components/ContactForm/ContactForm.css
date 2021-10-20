@@ -1,0 +1,31 @@
+form {
+	background: white;
+	color: rgb(87, 87, 87);
+	max-width: 400px;
+	margin: 5% auto;
+	border-radius: 10px;
+	padding: 20px 5%;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+input {
+	display: block;
+	margin: 5px 0px;
+	padding: 3px;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid grey;
+	width: 98%;
+	word-wrap: break-word;
+	word-break: break-all;
+	overflow-wrap: break-word;
+}
+
+input[name=message] {
+	height: 100px;
+}
+
+textarea {
+	border-bottom: 1px solid grey;
+	width: 100%;
+}

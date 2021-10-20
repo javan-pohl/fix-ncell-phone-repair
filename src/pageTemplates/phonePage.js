@@ -41,7 +41,7 @@ function PhonePage({
           <tr key={idx}>
             <td>
               {`${make} ${model} ${
-                typeof repair === 'string' ? repair.replace(/\_/g, ' ') : repair
+                typeof repair === 'string' ? repair.replace(/\_/g, ' ').replace('price', '') : repair
               }`}
             </td>
             <td>{repairs[repair]}</td>

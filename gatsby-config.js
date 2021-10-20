@@ -24,9 +24,9 @@ module.exports = {
       },
       {
         testid: 'contactLink',
-        link: '/contact',
+        link: '/contact-us',
         text: 'Contact',
-        pageURL: 'https://www.fixncell.com/contact',
+        pageURL: 'https://www.fixncell.com/contact-us',
       },
     ],
     siteUrl: 'https://www.fixncell.com',
