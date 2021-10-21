@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout/Layout'
 import Showcase from '../components/Showcase/Showcase'
 import SelectLocation from '../components/SelectLocation/SelectLocation'
@@ -40,13 +41,19 @@ const IndexPage = ({ location: { pathname } }) => {
   const title = 'FixNcell Mobile iPhone Repair Service'
   return (
     <Layout pageTitle={title} currentUrl={pathname}>
+      <Helmet>
+        <meta
+          name="description"
+          content="Get your broken iPhone fixed with our mobile iphone repair service that operates in the Westminster, Boulder, and Denver metro areas. Our technicians come to your location to repair your device."
+        />
+        <title>{title}</title>
+      </Helmet>
       <Showcase />
       <SelectLocation />
       {IndexMain()}
       <div style={{ marginBottom: '0px' }}>
         <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />
         {/* <EmbedSocialRaw refId="290bdda409a96a5c382887408438f18ddeabb3ab" /> */}
-
       </div>
       <div
         style={backImg(westyImg, 0.8)}

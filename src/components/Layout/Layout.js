@@ -19,6 +19,7 @@ const Layout = ({ currentUrl, pageTitle, children }) => {
     currentUrl = window.location.pathname
   }
   return (
+
     <main>
       <GlobalStyle />
       <title>{pageTitle}</title>
