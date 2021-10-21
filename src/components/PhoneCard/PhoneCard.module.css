@@ -1,38 +1,46 @@
 .card {
   font-size: 15px;
+  background-color: white;
   color: black;
   border-radius: 5px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 15px;
-	padding: 10px;
-	cursor: pointer;
-	text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
 }
 .card:hover {
   box-shadow: rgba(3, 118, 185, 0.35) 0px 5px 15px;
 }
 
 .card h3 {
-	margin: 10px auto 5px auto;
-	text-align: center;
+  margin: 10px auto 5px auto;
+  text-align: center;
 }
 
 .card img {
-	display: block;
-	height: 150px;
-	margin: auto;
+  display: block;
+  height: 150px;
+  margin: auto;
 }
 
 @media (max-width: 600px) {
-	.card {
-		min-width: 60px;
-		font-size: 10px;
-		margin: 6px;
-		padding: 6px;
-	}
+  .card {
+    min-width: 60px;
+    font-size: 10px;
+    margin: 6px;
+    padding: 6px;
+  }
 
-	.card img {
-		height: 70px;
-	}
+  .card img {
+    height: 70px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: white;
+    color: black;
+  }
 }

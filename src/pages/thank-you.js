@@ -14,11 +14,11 @@ const Thanks = {
   width: '50%',
   boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
 }
-const backImg = (img, opac = 0.9) => ({
+const backImg = (img, opac = 0.9, col = '0, 152, 255') => ({
   color: 'white',
   height: '400px',
-  backgroundImage: `linear-gradient(rgb(0,152,255,${opac}),
-	rgb(0,152,255,${opac - 0.05})), url(${img})`,
+  backgroundImage: `linear-gradient(rgb(${col},${opac}),
+	rgb(${col},${opac - 0.05})), url(${img})`,
   backgroundSize: 'cover',
   backgroundRepeat: 'repeat',
   padding: '1px',
@@ -29,7 +29,12 @@ const westyImg = 'https://www.fixncell.com/img/westy.webp'
 const ThankYou = () => (
   <Layout>
     <div style={backImg(westyImg, 0.7)}>
-      <div style={Thanks} data-sal="fade-in" data-sal-easing="ease" data-sal-duration="1000">
+      <div
+        style={Thanks}
+        data-sal="fade-in"
+        data-sal-easing="ease"
+        data-sal-duration="1000"
+      >
         <h1>Thank You For Contacting Us</h1>
         <p>We will get back to you as soon as possible</p>
       </div>

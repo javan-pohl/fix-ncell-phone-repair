@@ -1,8 +1,11 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import Layout from '../components/Layout/Layout'
 import SelectPhone from '../components/SelectPhone/SelectPhone'
 import AtDoorPhoto from '../images/javan_door_99.webp'
-import { main, mainTagLine, pseudoBorder } from './repairs.module.css'
+import {
+  main, mainTagLine, pseudoBorder, scheduleButton,
+} from './repairs.module.css'
 /* eslint-disable react/prop-types */
 const main2 = {
   display: 'flex',
@@ -94,16 +97,15 @@ function Repairs({
           </li>
           <li>
             <span style={{ fontWeight: 'bold' }}>Battery Replacement: </span>
-            Is
-            your iPhone not holding a charge like it used to? iPhone batteries
-            typically need to be replaced every two years to maintain peak
-            performance. Lithiom-ion batteries depreciate with age. Schedule
-            your iPhone battery replacement at FixNcell
+            Is your iPhone not holding a charge like it used to? iPhone
+            batteries typically need to be replaced every two years to maintain
+            peak performance. Lithiom-ion batteries depreciate with age.
+            Schedule your iPhone battery replacement at FixNcell
             {' '}
             {location}
             {' '}
-            and have your
-            phone back to the way it used to be.
+            and
+            have your phone back to the way it used to be.
           </li>
         </ul>
       </p>
@@ -141,16 +143,34 @@ function Repairs({
           your phone. However, you may remember us from our store location on
           100th and Wadsworth in Westminster where we opened in 2015.
         </p>
-        <h2 style={{ textAlign: 'center', margin: '0px', padding: '0px' }}>
+        <h2>
+          {location}
+          's Top-Rated iPhone Repair Service
+        </h2>
+        <p>
+          We provide
+          many services at FixNcell
+          {' '}
+          {location}
+          , but
+          {' '}
+          <span style={{ fontWeight: 'bold' }}>
+            we are renowned for our high-quality iPhone screen repair service
+          </span>
+          . We can replace your damaged iPhone screen typically in 20 minutes.
+          Rest assured that your new screen will function like it should--our
+          apple screen replacements are covered by a warranty!
+        </p>
+        <h3 style={{ textAlign: 'center', margin: '0px', padding: '0px' }}>
           {' '}
           {location}
           {' '}
           Mobile iPhone Repair Service
-        </h2>
-        <h3 style={{ textAlign: 'center', margin: '0px', padding: '0px' }}>
-          "We Come To You"
         </h3>
-        <p>
+        <h4 style={{ textAlign: 'center', margin: '0px', padding: '0px' }}>
+          "We Come To You"
+        </h4>
+        <p style={{ marginBottom: '5px' }}>
           No need to come to a store-front and wait for hours to get your cell
           phone repaired. If you live in the
           {' '}
@@ -162,6 +182,8 @@ function Repairs({
           repair an iPhone screen takes 20 minutes. We'll have your broken phone
           fixed in no time!
         </p>
+        <Link to="schedule-your-repair" class={scheduleButton}>Click to Schedule Your iPhone Screen Repair</Link>
+
         {Services()}
         <h3 style={header}>
           How Much Does it Cost to get an iPhone Repaired in

@@ -18,7 +18,7 @@ const ContactForm = () => {
         data-sal-easing="ease"
         data-sal-duration="1000"
       >
-        <h3>Contact FixNcell or Request a Quote</h3>
+        <h2>Contact FixNcell or Request a Quote</h2>
         <p>If you can't find the repair information you need on this site or have any other questions or concerns for us, please let us know by filling out this contact form. We'll get back to you as soon as possible. Thanks!</p>
         <label>Name</label>
         <input type="text" name="name" placeholder="Keyser Soze" />

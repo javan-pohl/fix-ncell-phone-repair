@@ -9,10 +9,10 @@ import ContactForm from '../components/ContactForm/ContactForm'
 /* eslint-disable react/prop-types */
 const phoneImg = 'https://www.fixncell.com/img/inside_phone_horz.webp'
 const westyImg = 'https://www.fixncell.com/img/westy.webp'
-const backImg = (img, opac = 0.90) => ({
+const backImg = (img, opac = 0.9, col = '0, 152, 255') => ({
   color: 'white',
-  backgroundImage: `linear-gradient(rgb(0,152,255,${opac}),
-	rgb(0,152,255,${opac - 0.05})), url(${img})`,
+  backgroundImage: `linear-gradient(rgb(${col},${opac}),
+	rgb(${col},${opac - 0.05})), url(${img})`,
   backgroundSize: 'cover',
   backgroundRepeat: 'repeat',
   padding: '1px',
@@ -46,7 +46,11 @@ const IndexPage = ({ location: { pathname } }) => {
       <div style={{ marginBottom: '0px' }}>
         <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />
       </div>
-      <div style={backImg(westyImg, 0.80)} role="img" aria-label="picture of Westminster, Colorado">
+      <div
+        style={backImg(westyImg, 0.8)}
+        role="img"
+        aria-label="picture of Westminster, Colorado"
+      >
         <ContactForm />
       </div>
     </Layout>
