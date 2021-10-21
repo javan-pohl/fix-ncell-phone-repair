@@ -45,6 +45,8 @@ const IndexPage = ({ location: { pathname } }) => {
       {IndexMain()}
       <div style={{ marginBottom: '0px' }}>
         <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />
+        {/* <EmbedSocialRaw refId="290bdda409a96a5c382887408438f18ddeabb3ab" /> */}
+
       </div>
       <div
         style={backImg(westyImg, 0.8)}
