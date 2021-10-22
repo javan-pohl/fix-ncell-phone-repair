@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout/Layout'
 import Showcase from '../components/Showcase/Showcase'
 import SelectLocation from '../components/SelectLocation/SelectLocation'
+import WhyFixNcell from '../components/WhyFixNcell/WhyFixNcell'
 import useScript from '../hooks/useScript'
 import EmbedSocialWidget from '../components/EmbedSocialWidget/EmbedSocialWidget'
 import ContactForm from '../components/ContactForm/ContactForm'
@@ -55,6 +56,7 @@ const IndexPage = ({ location: { pathname } }) => {
         <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />
         {/* <EmbedSocialRaw refId="290bdda409a96a5c382887408438f18ddeabb3ab" /> */}
       </div>
+      {WhyFixNcell()}
       <div
         style={backImg(westyImg, 0.8)}
         role="img"

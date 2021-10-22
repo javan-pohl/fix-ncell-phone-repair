@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Helmet } from 'react-helmet'
 import { Link } from 'gatsby'
 import Layout from '../components/Layout/Layout'
 import SelectPhone from '../components/SelectPhone/SelectPhone'
@@ -111,8 +112,16 @@ function Repairs({
       </p>
     </div>
   )
+  const metaDesc = `Information on our ${location} iPhone repairs and services, including cracked screen repair. Select your iPhone model to get your repair started.`
   return (
     <Layout pageTitle={PageTitle} currentUrl={pathname}>
+      <Helmet>
+        <meta
+          name="description"
+          content={metaDesc}
+        />
+        <title>{PageTitle}</title>
+      </Helmet>
       <div style={backImg}>
         <div data-sal="fade-in" data-sal-easing="ease" data-sal-duration="500">
           <h1 className={pseudoBorder}>{PageTitle}</h1>

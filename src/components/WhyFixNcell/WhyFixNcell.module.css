@@ -1,0 +1,35 @@
+.whyMain {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: auto;
+	margin-bottom: 20px;
+	width: 90%;
+	max-width: 900px;
+}
+
+.whyCard {
+	font-family: 'Source Sans Pro', sans-serif;
+	width: 40%;
+	margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 15px;
+}
+
+.whyCard h3 {
+	text-align: left;
+	padding: 0px 65px 0px 25px;
+}
+
+.whyCard p {
+	color: rgb(66, 66, 66);
+}
+
+@media (max-width: 750px) {
+	.whyMain {
+		justify-content: center;
+	}
+	.whyCard {
+		width: 100%;
+	}
+}
