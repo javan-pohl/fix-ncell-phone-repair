@@ -49,7 +49,7 @@ const IndexPage = ({ location: { pathname } }) => {
       <Helmet>
         <meta
           name="description"
-          content="Get your broken iPhone fixed with our mobile iphone repair service that operates in the Westminster, Boulder, and Denver metro areas. Our technicians come to your location to repair your device."
+          content="Get your broken iPhone fixed with our mobile iPhone repair service that operates in the Westminster, Boulder, and Denver metro areas. We come to you."
         />
         <title>{title}</title>
       </Helmet>
