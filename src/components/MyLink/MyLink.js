@@ -50,7 +50,6 @@ MyLink.propTypes = {
   url: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
   alt: PropTypes.string,
-  key: PropTypes.string,
 }
 
 export default MyLink

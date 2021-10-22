@@ -191,7 +191,7 @@ function Repairs({
           repair an iPhone screen takes 20 minutes. We'll have your broken phone
           fixed in no time!
         </p>
-        <Link to="schedule-your-repair" class={scheduleButton}>Click to Schedule Your iPhone Screen Repair</Link>
+        <Link to="/schedule-your-repair" class={scheduleButton}>Click to Schedule Your iPhone Screen Repair</Link>
 
         {Services()}
         <h3 style={header}>

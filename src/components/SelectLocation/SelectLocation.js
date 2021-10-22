@@ -8,7 +8,6 @@ import getLocations from '../../queries/getLocations/getLocations'
 function SelectLocation() {
   const { locations } = getLocations()
   const locArray = locations.map((location) => location.name).sort()
-  console.log('locArray length: ', 1000 / locArray.length)
   return (
     <div className={locationsMain}>
       <h3>Select Your Location to Get Started</h3>

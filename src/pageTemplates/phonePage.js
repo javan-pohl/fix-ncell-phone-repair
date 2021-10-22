@@ -32,22 +32,28 @@ function PhonePage({
   function repairTable() {
     return (
       <table className={repairPrices}>
-        <tr>
-          <th>Repair</th>
-          <th>Price</th>
-          <th>Book</th>
-        </tr>
-        {Object.keys(repairs).map((repair, idx) => (
-          <tr key={idx}>
-            <td>
-              {`${make} ${model} ${
-                typeof repair === 'string' ? repair.replace(/\_/g, ' ').replace('price', '') : repair
-              }`}
-            </td>
-            <td>{repairs[repair]}</td>
-            {ButtonFunction(repair)}
+        <thead>
+          <tr>
+            <th>Repair</th>
+            <th>Price</th>
+            <th>Book</th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          {Object.keys(repairs).map((repair, idx) => (
+            <tr key={idx}>
+              <td>
+                {`${make} ${model} ${
+                  typeof repair === 'string'
+                    ? repair.replace(/\_/g, ' ').replace('price', '')
+                    : repair
+                }`}
+              </td>
+              <td>{repairs[repair]}</td>
+              {ButtonFunction(repair)}
+            </tr>
+          ))}
+        </tbody>
       </table>
     )
   }
@@ -109,8 +115,8 @@ function PhonePage({
           {' '}
           {name}
           {' '}
-          functioning and looking the
-          way it should.
+          functioning and looking the way it
+          should.
           {' '}
         </p>
       </section>

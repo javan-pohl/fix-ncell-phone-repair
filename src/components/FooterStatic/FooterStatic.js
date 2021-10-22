@@ -31,7 +31,11 @@ const FooterStatic = ({ url }) => {
     <div className="footerListItems">
       <ul className="footerListUL" title="Areas We Services">
         {locations.map((name) => (
-          <MyLink url={url} to={`/${name.name.toLowerCase()}/repairs/iphone`} key={name.name}>
+          <MyLink
+            url={url}
+            to={`/${name.name.toLowerCase()}/repairs/iphone`}
+            key={name.name}
+          >
             <li className="footerListLI">{name.name}</li>
           </MyLink>
         ))}
@@ -120,34 +124,36 @@ const FooterStatic = ({ url }) => {
                 <th>Hours</th>
               </tr>
             </thead>
-            <tr>
-              <td className="footerTableDayOfWeek">Monday</td>
-              <td>8:00am - 8:00pm</td>
-            </tr>
-            <tr>
-              <td className="footerTableDayOfWeek">Tuesday</td>
-              <td>8:00am - 8:00pm</td>
-            </tr>
-            <tr>
-              <td className="footerTableDayOfWeek">Wednesday</td>
-              <td>8:00am - 8:00pm</td>
-            </tr>
-            <tr>
-              <td className="footerTableDayOfWeek">Thursday</td>
-              <td>8:00am - 8:00pm</td>
-            </tr>
-            <tr>
-              <td className="footerTableDayOfWeek">Friday</td>
-              <td>8:00am - 6:00pm</td>
-            </tr>
-            <tr>
-              <td className="footerTableDayOfWeek">Saturday</td>
-              <td>10:00am - 4:00pm</td>
-            </tr>
-            <tr>
-              <td className="footerTableDayOfWeek">Sunday</td>
-              <td>Closed</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td className="footerTableDayOfWeek">Monday</td>
+                <td>8:00am - 8:00pm</td>
+              </tr>
+              <tr>
+                <td className="footerTableDayOfWeek">Tuesday</td>
+                <td>8:00am - 8:00pm</td>
+              </tr>
+              <tr>
+                <td className="footerTableDayOfWeek">Wednesday</td>
+                <td>8:00am - 8:00pm</td>
+              </tr>
+              <tr>
+                <td className="footerTableDayOfWeek">Thursday</td>
+                <td>8:00am - 8:00pm</td>
+              </tr>
+              <tr>
+                <td className="footerTableDayOfWeek">Friday</td>
+                <td>8:00am - 6:00pm</td>
+              </tr>
+              <tr>
+                <td className="footerTableDayOfWeek">Saturday</td>
+                <td>10:00am - 4:00pm</td>
+              </tr>
+              <tr>
+                <td className="footerTableDayOfWeek">Sunday</td>
+                <td>Closed</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
