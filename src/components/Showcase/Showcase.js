@@ -1,13 +1,13 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import {
+  backImg,
   showcaseMobileSection,
   showcaseMobile,
   showcaseMobileInner,
   showcaseMobileHeader,
   showcaseMobileScheduleButton,
 } from './Showcase.module.css'
-import MyLink from '../MyLink/MyLink'
 import ReviewBadges from '../Badges/ReviewBadges'
 import calendar from '../../images/calendar_transp.png'
 import phone from '../../images/phone.png'
@@ -30,6 +30,7 @@ function Showcase() {
   const num = getNum()
   return (
     <section className={showcaseMobileSection}>
+      <span role="img" aria-label="FixNcell technician Javan Pohl doing an iPhone repair in the driver's seat of a car" />
       <div className={showcaseMobile}>
         <div className={showcaseMobileInner}>
           <span id={showcaseMobileHeader}>LET US COME TO YOU!</span>
@@ -41,7 +42,7 @@ function Showcase() {
           data-sal="fade"
           data-sal-duration="1000"
         >
-          <img src={calendar} style={{ height: '15px', verticalAlign: '-6.5%', horizontalAlign: '5%' }} />
+          <img src={calendar} alt="calendar icon" style={{ height: '15px', verticalAlign: '-6.5%', horizontalAlign: '5%' }} />
           {' '}
           Book Appointment
         </Link>
@@ -56,7 +57,7 @@ function Showcase() {
           data-sal-duration="1000"
           data-sal-delay="200"
         >
-          <img src={phone} style={{ height: '18px', verticalAlign: '-10%' }} />
+          <img src={phone} alt="phone icon" style={{ height: '18px', verticalAlign: '-10%' }} />
           {' '}
           <span style={{ paddingLeft: '5px' }}>Call Us For Quote</span>
         </a>

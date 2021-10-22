@@ -46,7 +46,10 @@ const FooterStatic = ({ url }) => {
     <div className="footerContainer">
       <div className="footerLogoContainer">
         <div className="footerLogo">
-          <img src="https://www.fixncell.com/img/logo.webp" />
+          <img
+            src="https://www.fixncell.com/img/logo.webp"
+            alt="FixNcell logo that has the words 'Fix N cell' where the letter N is the image of a phone"
+          />
           <a href="tel:3034216499" className="footerContactButton">
             &#9742; Call (303)421-6499
           </a>
@@ -92,28 +95,40 @@ const FooterStatic = ({ url }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src="https://www.fixncell.com/img/facebook.webp" />
+            <img
+              src="https://www.fixncell.com/img/facebook.webp"
+              alt="Facebook icon"
+            />
           </a>
           <a
             href="https://twitter.com/FixNcell"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="https://www.fixncell.com/img/twitter.webp" />
+            <img
+              src="https://www.fixncell.com/img/twitter.webp"
+              alt="Twitter icon"
+            />
           </a>
           <a
             href="https://www.yelp.com/biz/fixncell-broomfield-9"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="https://www.fixncell.com/img/yelpTrans2.webp" />
+            <img
+              src="https://www.fixncell.com/img/yelpTrans2.webp"
+              alt="Yelp icon"
+            />
           </a>
           <a
             href="https://foursquare.com/fixncell"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="https://www.fixncell.com/img/foursquare.webp" />
+            <img
+              src="https://www.fixncell.com/img/foursquare.webp"
+              alt="Foursquare icon"
+            />
           </a>
         </div>
         <div className="footerStoreHoursContainer">

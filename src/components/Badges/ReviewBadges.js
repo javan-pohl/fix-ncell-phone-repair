@@ -11,10 +11,10 @@ const ReviewBadges = () => (
       <img src={YelpBadge} />
       <img src="https://embedsocial.com/api/source_image_badges/badge-3-f/en/facebook/90654" /> */}
       <a href="https://g.page/fixncell?share">
-        <img src={GoogleReviews} />
+        <img src={GoogleReviews} alt="google logo with 4.8 stars highlighted underneath" />
       </a>
       <a href="https://www.yelp.com/biz/fixncell-phone-repair-westminster?osq=fixncell">
-        <img src={YelpReviews} />
+        <img src={YelpReviews} alt="yelp logo with 4.5 stars highlighted underneath" />
       </a>
     </div>
   </div>

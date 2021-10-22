@@ -23,6 +23,10 @@ const backImg = (img, opac = 0.9, col = '0, 152, 255') => ({
 const IndexPage = ({ location: { pathname } }) => {
   const IndexMain = () => (
     <div style={backImg(phoneImg)}>
+      <span
+        role="img"
+        aria-label="a FixNcell workstation that has an opened iPhone that is being worked"
+      />
       <div data-sal="slide-up" data-sal-easing="ease" data-sal-duration="1000">
         <h1 className="pseudo_border">{title}</h1>
         <p style={{ fontSize: '18px' }}>
@@ -62,6 +66,10 @@ const IndexPage = ({ location: { pathname } }) => {
         role="img"
         aria-label="picture of Westminster, Colorado"
       >
+        <span
+          role="img"
+          aria-label="A mountain-facing view of Westminster, Colorado, including a park and some related buildings in the foreground"
+        />
         <ContactForm />
       </div>
     </Layout>

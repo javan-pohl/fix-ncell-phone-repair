@@ -6,15 +6,28 @@
 	margin-bottom: 0px;
   display: inline-block;
 	padding-top: 0px;
-  background: url('https://www.fixncell.com/img/mobile_iphone_screen_repair_bw.jpg')
+	background: url('https://www.fixncell.com/img/mobile_iphone_screen_repair_bw.jpg')
 	no-repeat 0 -70px;
-  background-size: cover;
   background-position: bottom;
+	background-size: cover;
   height: 330px;
   width: 100%;
   text-align: center;
 }
-
+.backImg {
+	margin-bottom: 0px;
+	position: absolute;
+	padding-top: 0px;
+  background: url('https://www.fixncell.com/img/mobile_iphone_screen_repair_bw.jpg')
+	no-repeat 0 -70px;
+  background-position: bottom;
+	background-size: cover;
+	left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+	z-index: -2;
+}
 .showcaseMobile {
 	position: relative;
 

@@ -5,7 +5,10 @@ import Layout from '../components/Layout/Layout'
 import SelectPhone from '../components/SelectPhone/SelectPhone'
 import AtDoorPhoto from '../images/javan_door_99.webp'
 import {
-  main, mainTagLine, pseudoBorder, scheduleButton,
+  main,
+  mainTagLine,
+  pseudoBorder,
+  scheduleButton,
 } from './repairs.module.css'
 /* eslint-disable react/prop-types */
 const main2 = {
@@ -116,13 +119,14 @@ function Repairs({
   return (
     <Layout pageTitle={PageTitle} currentUrl={pathname}>
       <Helmet>
-        <meta
-          name="description"
-          content={metaDesc}
-        />
+        <meta name="description" content={metaDesc} />
         <title>{PageTitle}</title>
       </Helmet>
       <div style={backImg}>
+        <span
+          role="img"
+          aria-label="a FixNcell workstation with an iPhone X that has been opened for a screen replacement"
+        />
         <div data-sal="fade-in" data-sal-easing="ease" data-sal-duration="500">
           <h1 className={pseudoBorder}>{PageTitle}</h1>
           <div className={main}>
@@ -157,8 +161,7 @@ function Repairs({
           's Top-Rated iPhone Repair Service
         </h2>
         <p>
-          We provide
-          many services at FixNcell
+          We provide many services at FixNcell
           {' '}
           {location}
           , but
@@ -191,7 +194,9 @@ function Repairs({
           repair an iPhone screen takes 20 minutes. We'll have your broken phone
           fixed in no time!
         </p>
-        <Link to="/schedule-your-repair" class={scheduleButton}>Click to Schedule Your iPhone Screen Repair</Link>
+        <Link to="/schedule-your-repair" class={scheduleButton}>
+          Click to Schedule Your iPhone Screen Repair
+        </Link>
 
         {Services()}
         <h3 style={header}>
