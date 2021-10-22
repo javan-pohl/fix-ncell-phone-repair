@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 import Header2 from '../Header2/Header2'
 import FooterStatic from '../FooterStatic/FooterStatic'
 
@@ -19,8 +20,10 @@ const Layout = ({ currentUrl, pageTitle, children }) => {
     currentUrl = window.location.pathname
   }
   return (
-
     <main>
+      <Helmet>
+        <html lang="en" />
+      </Helmet>
       <GlobalStyle />
       <title>{pageTitle}</title>
       <Header2 currentUrl={currentUrl} />
