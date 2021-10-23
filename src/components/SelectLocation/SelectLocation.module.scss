@@ -12,8 +12,8 @@ $timing-function: ease-out;
   padding: 0px;
 }
 
-.locationsMain h3 {
-  font-size: 40px;
+.locationsMain h2 {
+  font-size: 2em;
   margin: auto;
   text-align: center;
 }
@@ -63,14 +63,16 @@ $timing-function: ease-out;
 }
 
 @media (max-width: 600px) {
-
+	.locationsMain h2 {
+    font-size: 35px;
+  }
   .locCard {
     margin: 7px;
     padding: 5px 10px;
   }
 }
 @media (max-width: 450px) {
-  .locationsMain h3 {
+  .locationsMain h2 {
     font-size: 25px;
   }
 }

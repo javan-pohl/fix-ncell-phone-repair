@@ -10,7 +10,7 @@ function SelectLocation() {
   const locArray = locations.map((location) => location.name).sort()
   return (
     <div className={locationsMain}>
-      <h3>Select Your Location to Get Started</h3>
+      <h2>Select Your City to Get Phone Repair Details</h2>
       <div className={locsDiv}>
         {locArray.map((loc, index) => (
           <Link to={`/${loc.toLowerCase()}/repairs/iphone`} key={loc}>
