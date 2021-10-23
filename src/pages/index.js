@@ -7,6 +7,7 @@ import WhyFixNcell from '../components/WhyFixNcell/WhyFixNcell'
 import useScript from '../hooks/useScript'
 import EmbedSocialWidget from '../components/EmbedSocialWidget/EmbedSocialWidget'
 import ContactForm from '../components/ContactForm/ContactForm'
+import OurServices from '../components/OurServices/OurServices'
 
 /* eslint-disable react/prop-types */
 const phoneImg = 'https://www.fixncell.com/img/inside_phone_horz.webp'
@@ -61,6 +62,7 @@ const IndexPage = ({ location: { pathname } }) => {
         {/* <EmbedSocialRaw refId="290bdda409a96a5c382887408438f18ddeabb3ab" /> */}
       </div>
       {WhyFixNcell()}
+      <OurServices />
       <div
         style={backImg(westyImg, 0.8)}
         role="img"

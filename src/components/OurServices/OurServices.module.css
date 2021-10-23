@@ -1,0 +1,42 @@
+.ourServices {
+  padding-bottom: 40px;
+}
+.serviceCards {
+  display: flex;
+  justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.servicesInner {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.serviceCard {
+	width: 25%;
+	width: 250px;
+}
+.serviceCardBody {
+  background-color: white;
+  padding-top: 20px;
+}
+.iconSection {
+  height: 45px;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+}
+
+.serviceIcon {
+  background-color: rgb(22, 205, 255);
+  height: 70px;
+  width: 70px;
+  border-radius: 35px;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+
+.serviceIcon img {
+}
