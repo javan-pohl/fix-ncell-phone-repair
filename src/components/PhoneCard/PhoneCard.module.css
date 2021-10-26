@@ -8,6 +8,7 @@
   padding: 10px;
   cursor: pointer;
   text-decoration: none;
+  box-shadow: rgba(104, 104, 104, 0.6) 0px 5px 15px;
 }
 .card:hover {
   box-shadow: rgba(3, 118, 185, 0.35) 0px 5px 15px;
