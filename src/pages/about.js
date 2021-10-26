@@ -13,18 +13,47 @@ import {
   reviewBadges,
   facebook,
   google,
+  teamFlex,
   teamText,
   teamBlock,
 } from './about.module.css'
 import ReviewBadges from '../components/Badges/ReviewBadges'
+import useWindowSize from '../hooks/useWindowSize'
 
 /* eslint-disable react/prop-types */
+const mainBackImg = (
+  img,
 
-const backImg = (img, isFlex = true, opac = 0.9, col = '0, 152, 255') => {
-  const myDisplay = isFlex ? 'flex' : ''
+  opac = 0.9,
+  col = '0, 152, 255',
+) => ({
+  display: 'relative',
+  height: '400px',
+  color: 'white',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundImage: `linear-gradient(rgb(${col},${opac}),
+	rgb(${col},${opac - 0.05})), url(${img})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'repeat',
+  backgroundPosition: 'center',
+  padding: '1px',
+  marginBottom: '0px',
+})
+const backImg = (
+  img,
+  mobileHeight = true,
+  isFlex = true,
+  opac = 0.9,
+  col = '0, 152, 255',
+) => {
+  const { height, width } = useWindowSize()
+  const myHeight = width < 961 && mobileHeight ? '700px' : '400px'
+  const myDisplay = isFlex && mobileHeight ? 'flex' : ''
   return {
     display: 'relative',
-    height: '400px',
+    height: myHeight,
     color: 'white',
     display: myDisplay,
     alignItems: 'center',
@@ -40,6 +69,7 @@ const backImg = (img, isFlex = true, opac = 0.9, col = '0, 152, 255') => {
 }
 
 const aboutHeading = {
+  maxHeight: '350px',
   margin: '5vw 0',
   padding: '1vw 2vw',
   lineHeight: '10vw',
@@ -55,7 +85,7 @@ const aboutHeading = {
 const AboutPage = ({ location: { pathname } }) => (
   <Layout pageTitle="About Us" currentUrl={pathname}>
     <section>
-      <div style={backImg(phone, true, 0.7, '0,0,0')}>
+      <div style={mainBackImg(phone, 0.7, '0,0,0')}>
         <span
           role="img"
           aria-label="interior shot of an iPhone 8 Plus that is opened and with a new screen installed"
@@ -123,14 +153,19 @@ const AboutPage = ({ location: { pathname } }) => (
       </div>
     </section>
     <section className={meetTeam}>
-      <div style={backImg(insidePhone, false)}>
+      <div style={backImg(insidePhone, true, false)}>
         <h2>Meet the Team</h2>
         <div className={teamBlock}>
+          <img src={headshot} />
           <div className={teamText}>
             <h3>Javan Pohl - Founder</h3>
-            <p>Phone Wizard. Pun Master.</p>
+            <p>
+              Phone Wizard. Pun Master. Obsessed with the customer experience.
+              Javan started FixNcell in 2014. Now, he is on a journey to expand
+              our service area and help others realize the convenience of mobile
+              service phone repair.
+            </p>
           </div>
-          <img src={headshot} />
         </div>
       </div>
     </section>
