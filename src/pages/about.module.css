@@ -1,0 +1,135 @@
+.mainText {
+  background: rgb(230, 228, 228);
+  margin-top: 0px;
+  padding-top: 0px;
+  font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
+    serif;
+}
+
+.mainText h1 {
+  font-size: 40px;
+}
+.mainText h1,
+h2 {
+  margin-top: 0px;
+  padding-top: 20px;
+}
+
+.mainText p {
+  font-size: 18px;
+  padding: 0px;
+}
+.meetTeam {
+  font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
+    serif;
+  margin-top: 0px;
+  padding-top: 0px;
+  font-size: 20px;
+}
+.meetTeam h2 {
+  font-size: 45px;
+}
+.meetTeam img {
+  position: absolute;
+  top: -12px;
+  left: 475px;
+  height: 250px;
+  border-radius: 250px;
+}
+.reviews {
+}
+.reviewBadges {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.reviewBadge {
+  -webkit-user-select: none;
+  margin: auto;
+  background-color: hsl(0, 0%, 90%);
+  transition: background-color 300ms;
+  display: flex;
+  flex-direction: column;
+}
+.facebook {
+  width: 220px;
+  height: 240px;
+  border: 0px;
+  overflow: hidden;
+}
+.google {
+  width: 220px;
+  height: 240px;
+  border: 0px;
+  overflow: hidden;
+}
+.reviews img {
+  height: 300px;
+}
+.teamBlock {
+  position: relative;
+  margin: auto;
+  width: 75%;
+}
+.teamText {
+  position: absolute;
+  left: 0px;
+  color: black;
+  background: white;
+  height: fit-content;
+  width: 500px;
+  padding-right: 50px;
+}
+
+.fadeText {
+  animation: fadeIn linear 3s;
+  -webkit-animation: fadeIn linear 3s;
+  -moz-animation: fadeIn linear 3s;
+  -o-animation: fadeIn linear 3s;
+  -ms-animation: fadeIn linear 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

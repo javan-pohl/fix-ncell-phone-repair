@@ -3,33 +3,33 @@
 }
 
 .showcaseMobileSection {
-	margin-bottom: 0px;
+  margin-bottom: 0px;
   display: inline-block;
-	padding-top: 0px;
-	background: url('https://www.fixncell.com/img/mobile_iphone_screen_repair_bw.jpg')
-	no-repeat 0 -70px;
+  padding-top: 0px;
+  background: url('https://www.fixncell.com/img/mobile_iphone_screen_repair_bw.jpg')
+    no-repeat 0 -70px;
   background-position: bottom;
-	background-size: cover;
-  height: 330px;
+  background-size: cover;
+  height: 350px;
   width: 100%;
   text-align: center;
 }
 .backImg {
-	margin-bottom: 0px;
-	position: absolute;
-	padding-top: 0px;
+  margin-bottom: 0px;
+  position: absolute;
+  padding-top: 0px;
   background: url('https://www.fixncell.com/img/mobile_iphone_screen_repair_bw.jpg')
-	no-repeat 0 -70px;
+    no-repeat 0 -70px;
   background-position: bottom;
-	background-size: cover;
-	left: 0;
+  background-size: cover;
+  left: 0;
   height: 100%;
   width: 100%;
   text-align: center;
-	z-index: -2;
+  z-index: -2;
 }
 .showcaseMobile {
-	position: relative;
+  position: relative;
 
   display: block;
   color: white;
@@ -59,7 +59,7 @@
   padding-bottom: 15px;
 }
 .showcaseMobileScheduleButton {
-	width: 181px;
+  width: 181px;
   text-decoration: none;
   color: white;
   font-size: 17px;
@@ -77,21 +77,27 @@
 }
 
 @media (max-width: 439px) {
-	.showcaseMobileSection {
-		margin-bottom: 0px;
-		display: inline-block;
-		padding-top: 0px;
-		background: url('https://www.fixncell.com/img/mobile_iphone_screen_repair_bw.webp')
-		no-repeat 0 -70px;
-		background-size: cover;
-		background-position: bottom;
-		height: 300px;
-		width: 100%;
-		text-align: center;
-	}	
-	.showcaseMobileInner {
-		font-size: 125%;
-		padding: 15px 0px 0px 0px;
-		width: 90%;
+  .showcaseMobileSection {
+    margin-bottom: 0px;
+    display: inline-block;
+    padding-top: 0px;
+    background: url('https://www.fixncell.com/img/mobile_iphone_screen_repair_bw.webp')
+      no-repeat 0 -70px;
+    background-size: cover;
+    background-position: bottom;
+    height: 300px;
+    width: 100%;
+    text-align: center;
+  }
+  .showcaseMobileInner {
+    font-size: 125%;
+    padding: 15px 0px 0px 0px;
+    width: 90%;
+  }
+
 }
+@media (min-width: 1190px) {
+	.showcaseMobileSection {
+		height: 370px;
+	}
 }

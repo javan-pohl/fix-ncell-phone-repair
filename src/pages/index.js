@@ -8,10 +8,9 @@ import useScript from '../hooks/useScript'
 import EmbedSocialWidget from '../components/EmbedSocialWidget/EmbedSocialWidget'
 import ContactForm from '../components/ContactForm/ContactForm'
 import OurServices from '../components/OurServices/OurServices'
-
+import insidePhone from '../images/inside_phone_horz.webp'
+import westy from '../images/westy.webp'
 /* eslint-disable react/prop-types */
-const phoneImg = 'https://www.fixncell.com/img/inside_phone_horz.webp'
-const westyImg = 'https://www.fixncell.com/img/westy.webp'
 const backImg = (img, opac = 0.9, col = '0, 152, 255') => ({
   color: 'white',
   backgroundImage: `linear-gradient(rgb(${col},${opac}),
@@ -23,7 +22,7 @@ const backImg = (img, opac = 0.9, col = '0, 152, 255') => ({
 
 const IndexPage = ({ location: { pathname } }) => {
   const IndexMain = () => (
-    <div style={backImg(phoneImg)}>
+    <div style={backImg(insidePhone)}>
       <span
         role="img"
         aria-label="a FixNcell workstation that has an opened iPhone that is being worked"
@@ -64,7 +63,7 @@ const IndexPage = ({ location: { pathname } }) => {
       {WhyFixNcell()}
       <OurServices />
       <div
-        style={backImg(westyImg, 0.8)}
+        style={backImg(westy, 0.8)}
         role="img"
         aria-label="picture of Westminster, Colorado"
       >

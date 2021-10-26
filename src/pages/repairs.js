@@ -41,18 +41,10 @@ function Repairs({
   const PageTitle = `FixNcell iPhone Repair - ${location}`
   const MainText = () => (
     <div style={{ margin: '0 auto', padding: '0' }}>
-      <p style={{ margin: '0 auto', padding: '0' }}>
+      <p>
         <div className={mainTagLine}>"We Come To You!"</div>
-        FixNcell is a mobile iPhone repair service. We go to the customer to fix
-        their phone; however, we do the repair in our vehicle and typically do
-        not need the passcode, so your information is safe with us. We've been
-        in business 7 years, use high quality parts, and have long enjoyed some
-        of the highest customer satisfaction ratings of any cell phone repair
-        business in the
-        {' '}
-        {location}
-        {' '}
-        area.
+        FixNcell is a mobile iPhone repair service that goes to the customer's
+        location to fix the broken device. Select your iPhone model below to get your repair started.
       </p>
     </div>
   )
