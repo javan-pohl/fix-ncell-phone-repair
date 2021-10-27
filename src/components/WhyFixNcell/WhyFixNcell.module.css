@@ -1,54 +1,53 @@
 .whyMain {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	margin: auto;
-	margin-bottom: 20px;
-	width: 90%;
-	max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 900px;
 }
 
 h2 {
-	font-size: 2em;
-	padding-top: 20px;
-	margin: 20px auto;
-	width: fit-content;
+  font-size: 2em;
+  padding-top: 20px;
+  margin: 20px auto;
+  width: fit-content;
 }
 
 .whyCard {
-	display: flex;
-	align-items: center;
-	font-family: 'Source Sans Pro', sans-serif;
-	width: 40%;
-	margin: 20px;
-	padding-top: 20px;
-	border-radius: 15px;
-	background: rgba(0, 152, 255, 0.5);
+  display: flex;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 40%;
+  margin: 20px;
+  padding-top: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .whyCard h3 {
-	text-align: left;
-	margin-top: 0px;
-	padding: 0px 65px 0px 25px;
-
+  text-align: left;
+  margin-top: 0px;
+  padding: 0px 65px 0px 25px;
 }
 .whyCard img {
-	padding: 20px;
+  padding: 20px;
 }
 .whyCard p {
-	color: rgb(66, 66, 66);
+  color: rgb(66, 66, 66);
 }
 
 .whyCardInner {
-	padding: 0px;
+  padding: 0px;
 }
 
 @media (max-width: 750px) {
-	.whyMain {
-		justify-content: center;
-	}
-	.whyCard {
-		width: 100%;
-	}
+  .whyMain {
+    justify-content: center;
+  }
+  .whyCard {
+    width: 100%;
+  }
 }

@@ -6,8 +6,16 @@ import dataSecure from '../../images/data_secure.webp'
 import noDollars from '../../images/no_dollars.webp'
 import warrantyIcon from '../../images/warranty_icon.webp'
 
+const backImg = (img, opac = 0.6, col = '0, 152, 255') => ({
+  backgroundImage: `linear-gradient(rgb(${col},${opac}),
+	rgb(${col},${opac - 0.05})), url(${img})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'repeat',
+  padding: '1px',
+})
+
 const WhyFixNcell = () => (
-  <div style={{ backgroundImage: `url(${background})` }}>
+  <div style={backImg(background)}>
     <h2 className="pseudo_border_small_center">Why Choose FixNcell?</h2>
     <div className={whyMain}>
       <div
