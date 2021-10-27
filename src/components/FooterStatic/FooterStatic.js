@@ -7,6 +7,7 @@ import facebook from '../../images/facebook.webp'
 import foursquare from '../../images/foursquare.webp'
 import twitter from '../../images/twitter.webp'
 import yelp from '../../images/yelpTrans2.webp'
+import logo from '../../images/logo.webp'
 
 // I'm keeping this mostly static and will slowly change it to be fully dynamic
 
@@ -51,7 +52,7 @@ const FooterStatic = ({ url }) => {
       <div className="footerLogoContainer">
         <div className="footerLogo">
           <img
-            src="https://www.fixncell.com/img/logo.webp"
+            src={logo}
             alt="FixNcell logo that has the words 'Fix N cell' where the letter N is the image of a phone"
           />
           <a href="tel:3034216499" className="footerContactButton">
