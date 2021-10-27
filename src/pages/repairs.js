@@ -7,6 +7,7 @@ import AtDoorPhoto from '../images/javan_door_99.webp'
 import {
   main,
   mainTagLine,
+  mainTextBody,
   pseudoBorder,
   scheduleButton,
 } from './repairs.module.css'
@@ -40,11 +41,12 @@ function Repairs({
 }) {
   const PageTitle = `FixNcell iPhone Repair - ${location}`
   const MainText = () => (
-    <div style={{ margin: '0 auto', padding: '0' }}>
+    <div className={mainTextBody}>
+      <div className={mainTagLine}>"We Come To You!"</div>
       <p>
-        <div className={mainTagLine}>"We Come To You!"</div>
         FixNcell is a mobile iPhone repair service that goes to the customer's
-        location to fix the broken device. Select your iPhone model below to get your repair started.
+        location to fix the broken device. Select your iPhone model below to get
+        your repair started.
       </p>
     </div>
   )

@@ -3,6 +3,10 @@ import './FooterStatic.css'
 import MyLink from '../MyLink/MyLink'
 import getPhones from '../../queries/getPhones/getPhones'
 import getLocations from '../../queries/getLocations/getLocations'
+import facebook from '../../images/facebook.webp'
+import foursquare from '../../images/foursquare.webp'
+import twitter from '../../images/twitter.webp'
+import yelp from '../../images/yelpTrans2.webp'
 
 // I'm keeping this mostly static and will slowly change it to be fully dynamic
 
@@ -95,20 +99,14 @@ const FooterStatic = ({ url }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              src="https://www.fixncell.com/img/facebook.webp"
-              alt="Facebook icon"
-            />
+            <img src={facebook} alt="Facebook icon" />
           </a>
           <a
             href="https://twitter.com/FixNcell"
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              src="https://www.fixncell.com/img/twitter.webp"
-              alt="Twitter icon"
-            />
+            <img src={twitter} alt="Twitter icon" />
           </a>
           <a
             href="https://www.yelp.com/biz/fixncell-broomfield-9"
@@ -116,7 +114,7 @@ const FooterStatic = ({ url }) => {
             rel="noreferrer"
           >
             <img
-              src="https://www.fixncell.com/img/yelpTrans2.webp"
+              src={yelp}
               alt="Yelp icon"
             />
           </a>
@@ -126,7 +124,7 @@ const FooterStatic = ({ url }) => {
             rel="noreferrer"
           >
             <img
-              src="https://www.fixncell.com/img/foursquare.webp"
+              src={foursquare}
               alt="Foursquare icon"
             />
           </a>

@@ -4,12 +4,12 @@ import Layout from '../components/Layout/Layout'
 import Showcase from '../components/Showcase/Showcase'
 import SelectLocation from '../components/SelectLocation/SelectLocation'
 import WhyFixNcell from '../components/WhyFixNcell/WhyFixNcell'
-import useScript from '../hooks/useScript'
 import EmbedSocialWidget from '../components/EmbedSocialWidget/EmbedSocialWidget'
 import ContactForm from '../components/ContactForm/ContactForm'
 import ServiceCards from '../components/ServiceCards/ServiceCards'
 import insidePhone from '../images/inside_phone_horz.webp'
 import westy from '../images/westy.webp'
+
 /* eslint-disable react/prop-types */
 const backImg = (img, opac = 0.9, col = '0, 152, 255') => ({
   color: 'white',
@@ -62,7 +62,7 @@ const IndexPage = ({ location: { pathname } }) => {
     {
       cardTitle: 'iPhone Battery Replacement',
       cardBody:
-        'Your iPhone may not be holding a charge like it used to, or you may noticed imgText:swelling coming from typically the left side of the screen, where the glass is bulging away from the frame--these are both signs that you may need a new iPhone battery.',
+        'Your iPhone may not be holding a charge like it used to, or you may noticed swelling coming from typically the left side of the screen, where the glass is bulging away from the frame--these are both signs that you may need a new iPhone battery.',
       imgText: 'the battery icon found on an iPhone',
       link: '/iphone-battery-replacement',
     },
@@ -81,7 +81,6 @@ const IndexPage = ({ location: { pathname } }) => {
       {IndexMain()}
       <div style={{ marginBottom: '0px' }}>
         <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />
-        {/* <EmbedSocialRaw refId="290bdda409a96a5c382887408438f18ddeabb3ab" /> */}
       </div>
       {WhyFixNcell()}
       <ServiceCards services={servicesList} />

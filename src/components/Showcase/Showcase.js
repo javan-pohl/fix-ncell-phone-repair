@@ -9,28 +9,43 @@ import {
   showcaseMobileScheduleButton,
 } from './Showcase.module.css'
 import ReviewBadges from '../Badges/ReviewBadges'
+import background from '../../images/mobile_iphone_screen_repair_bw.webp'
+import backgroundLg from '../../images/mobile_iphone_screen_repair_bw_lg.webp'
 import calendar from '../../images/calendar_transp.png'
 import phone from '../../images/phone.png'
 import getNum from '../../queries/getNum/getNum'
+import useWindowSize from '../../hooks/useWindowSize'
 
-const BackImg = {
-  margin: '0px',
-  display: 'inlineBlock',
-  paddingTop: '0px',
-  background: `url(\'https://www.fixncell.com/img/mobile_iphone_screen_repair_bw.jpg\')
-	noRepeat 0 -70px'`,
+const BackImg = () => ({
+  padding: '1px',
+  backgroundImage: `url(${background})`,
   backgroundSize: 'cover',
-  backgroundPosition: 'bottom',
-  height: '300px',
+  backgroundRepeat: 'no-repeat',
+  height: myHeight,
   width: '100%',
-  textAlign: 'center,',
+})
+const BackImg2 = (img) => {
+  const { width } = useWindowSize()
+  const myImg = width < 440 ? background : backgroundLg
+  return {
+    backgroundImage: ` url(${myImg})`,
+    backgroundPosition: '0 -490px',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    padding: '1px',
+    width: '100%',
+  }
 }
 
 function Showcase() {
   const num = getNum()
   return (
-    <section className={showcaseMobileSection}>
-      <span role="img" aria-label="FixNcell technician Javan Pohl doing an iPhone repair in the driver's seat of a car" />
+    // <section className={showcaseMobileSection}>
+    <section style={BackImg2(background)}>
+      <span
+        role="img"
+        aria-label="FixNcell technician Javan Pohl doing an iPhone repair in the driver's seat of a car"
+      />
       <div className={showcaseMobile}>
         <div className={showcaseMobileInner}>
           <span id={showcaseMobileHeader}>LET US COME TO YOU!</span>
@@ -42,14 +57,24 @@ function Showcase() {
           data-sal="fade"
           data-sal-duration="1000"
         >
-          <img src={calendar} alt="calendar icon" style={{ height: '15px', verticalAlign: '-6.5%', horizontalAlign: '5%' }} />
+          <img
+            src={calendar}
+            alt="calendar icon"
+            style={{
+              height: '15px',
+              verticalAlign: '-6.5%',
+              horizontalAlign: '5%',
+            }}
+          />
           {' '}
           Book Appointment
         </Link>
         <br />
         <a
           style={{
-            display: 'inline-block', marginTop: '10px', padding: '1px 9px 3px 3px',
+            display: 'inline-block',
+            marginTop: '10px',
+            padding: '1px 9px 3px 3px',
           }}
           className={showcaseMobileScheduleButton}
           href={`tel:${num}`}
@@ -57,7 +82,11 @@ function Showcase() {
           data-sal-duration="1000"
           data-sal-delay="200"
         >
-          <img src={phone} alt="phone icon" style={{ height: '18px', verticalAlign: '-10%' }} />
+          <img
+            src={phone}
+            alt="phone icon"
+            style={{ height: '18px', verticalAlign: '-10%' }}
+          />
           {' '}
           <span style={{ paddingLeft: '5px' }}>Call Us For Quote</span>
         </a>

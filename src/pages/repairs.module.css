@@ -1,8 +1,8 @@
 .main {
   display: flex;
+	width: 75%;
   justify-content: space-around;
   align-items: center;
-  width: 7%;
   margin: 35px auto;
   padding: 0;
   gap: 20px;
@@ -12,14 +12,17 @@
   margin-block-start: 0;
   margin-block-end: 0;
 }
-.main p {
-  width: 400px;
+.mainTextBody {
+	width: 400px;
   padding-right: 50px;
   font-size: 18px;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   padding: 15px;
   margin: 0px 20px;
+}
+.main p {
+ 
 }
 
 .main img {
@@ -28,6 +31,7 @@
 }
 
 .mainTagLine {
+	position: inline-block;
   text-align: center;
   margin: 0 0 10px 0;
   font-size: 25px;
@@ -97,14 +101,14 @@
     height: 200px;
   }
 
-  .main p {
+  .mainTextBody {
     font-size: 18px;
 		margin: auto;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .main p {
+  .mainTextBody {
     width: 90%;
   }
 }
