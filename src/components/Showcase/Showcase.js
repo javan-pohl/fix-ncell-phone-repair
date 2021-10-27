@@ -27,9 +27,10 @@ const BackImg = () => ({
 const BackImg2 = (img) => {
   const { width } = useWindowSize()
   const myImg = width < 440 ? background : backgroundLg
+  const myPos = width < 440 ? '-490px' : '0'
   return {
     backgroundImage: ` url(${myImg})`,
-    backgroundPosition: '0 -490px',
+    backgroundPosition: `0 ${myPos}`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     padding: '1px',
