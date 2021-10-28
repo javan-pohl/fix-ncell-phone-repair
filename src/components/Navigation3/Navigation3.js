@@ -19,8 +19,7 @@ export default function Navigation3({ currentUrl, menuLinks }) {
           testid: 'iphone-screen-repair',
           link: '/repairs/iphone-screen-repair',
           text: 'iPhone Screen Repair',
-          pageURL:
-            'https://www.fixncell.com/repairs/iphone-screen-repair',
+          pageURL: 'https://www.fixncell.com/repairs/iphone-screen-repair',
         },
         {
           testid: 'iphone-charging-port-repair',
@@ -40,34 +39,26 @@ export default function Navigation3({ currentUrl, menuLinks }) {
     }
     return val
   })
-  const links = menuLinks.map((link) => {
-    console.log(link.sublinks !== undefined)
-
-    return link.sublinks !== undefined ? (
-      <div className={dropDown}>
-        <li key={link.testid}>
-          <span>{link.text}</span>
-        </li>
-        <div className={dropMenu}>
-          {link.sublinks.map((subLink) => (
-            <Link className={dropMenuItem} to={subLink.link}>{subLink.text}</Link>
-          ))}
-        </div>
-      </div>
-    ) : (
-      <li className={noDropDown} key={link.testid}>
-        <Link
-          style={{
-            color: `${currentUrl === link.link ? 'white' : 'black'}`,
-          }}
-          data-testid={link.testid}
-          to={link.link}
-        >
-          {link.text}
-        </Link>
+  const links = menuLinks.map((link) => (link.sublinks !== undefined ? (
+    <div className={dropDown}>
+      <li key={link.testid}>
+        <span>{link.text}</span>
       </li>
-    )
-  })
+      <div className={dropMenu}>
+        {link.sublinks.map((subLink) => (
+          <Link className={dropMenuItem} to={subLink.link}>
+            {subLink.text}
+          </Link>
+        ))}
+      </div>
+    </div>
+  ) : (
+    <li className={noDropDown} key={link.testid}>
+      <Link data-testid={link.testid} to={link.link}>
+        {link.text}
+      </Link>
+    </li>
+  )))
   return (
     <div className={navigation}>
       <nav>
