@@ -8,15 +8,19 @@ import {
   dropMenu,
   dropMenuItem,
 } from './Navigation3.module.css'
+import getLocations from '../../queries/getLocations/getLocations'
 
 export default function Navigation3({ currentUrl, menuLinks }) {
   const secSlash = currentUrl.indexOf('/', 2)
   const shortUrl = currentUrl.length > 1 && secSlash !== -1
     ? currentUrl.slice(0, secSlash)
     : currentUrl
-  console.log('shortUrl: ', shortUrl, currentUrl)
-
-  console.log('menuLinks: ', menuLinks)
+  const { locations } = getLocations()
+  const urlCap = shortUrl.charAt(1).toLocaleUpperCase() + shortUrl.slice(2)
+  const pageIsLoc = locations.some((loc) => loc.name === urlCap)
+  // console.log('pageIsloc: ', pageIsLoc)
+  // console.log('urlCap: ', urlCap)
+  // console.log('locations: ', locations)
   menuLinks = menuLinks.map((val) => {
     if (val.text === 'Repairs') {
       val.sublinks = [
@@ -41,12 +45,32 @@ export default function Navigation3({ currentUrl, menuLinks }) {
             'https://www.fixncell.com/repairs/iphone-battery-replacement',
         },
       ]
+    } else if (val.text === 'Locations') {
+      val.sublinks = locations.map((loc) => {
+        const locLowerCase = loc.name.toLowerCase()
+        return {
+          testid: locLowerCase,
+          link: `/${locLowerCase}/repairs/iphone`,
+          text: loc.name,
+          pageURL: `https://www.fixncell.com/${locLowerCase}/repairs/iphone`,
+        }
+      })
     }
     return val
   })
   const links = menuLinks.map((link) => (link.sublinks !== undefined ? (
     <div className={dropDown}>
-      <li style={{ color: `${link.link === shortUrl ? 'white' : 'black'}` }} key={link.testid}>
+      <li
+        style={{
+          color: `${
+            link.link === shortUrl
+              || link.text === 'Locations' && locations.some((loc) => loc.name.toLowerCase() === shortUrl.slice(1))
+              ? 'white'
+              : 'black'
+          }`,
+        }}
+        key={link.testid}
+      >
         <span>{link.text}</span>
       </li>
       <div className={dropMenu}>
@@ -60,7 +84,14 @@ export default function Navigation3({ currentUrl, menuLinks }) {
   ) : (
     <li className={noDropDown} key={link.testid}>
       <Link
-        style={{ color: `${link.link === shortUrl ? 'white' : 'black'}` }}
+        style={{
+          color: `${
+            link.link === shortUrl
+              || locations.some((loc) => loc.name === link.text)
+              ? 'white'
+              : ''
+          }`,
+        }}
         data-testid={link.testid}
         to={link.link}
       >

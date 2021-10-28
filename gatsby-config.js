@@ -24,6 +24,12 @@ module.exports = {
 
       },
       {
+        testid: 'locationsLink',
+        link: '/locations',
+        text: 'Locations',
+        pageURL: 'https://www.fixncell.com/locations',
+
+      }, {
         testid: 'contactLink',
         link: '/contact-us',
         text: 'Contact',
