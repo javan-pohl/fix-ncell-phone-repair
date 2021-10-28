@@ -59,7 +59,7 @@ export default function Navigation3({ currentUrl, menuLinks }) {
     return val
   })
   const links = menuLinks.map((link) => (link.sublinks !== undefined ? (
-    <div className={dropDown}>
+    <div className={dropDown} key={link.text}>
       <li
         style={{
           color: `${
@@ -73,9 +73,9 @@ export default function Navigation3({ currentUrl, menuLinks }) {
       >
         <span>{link.text}</span>
       </li>
-      <div className={dropMenu}>
+      <div className={dropMenu} key={link.text}>
         {link.sublinks.map((subLink) => (
-          <Link className={dropMenuItem} to={subLink.link}>
+          <Link className={dropMenuItem} to={subLink.link} key={subLink.text}>
             {subLink.text}
           </Link>
         ))}

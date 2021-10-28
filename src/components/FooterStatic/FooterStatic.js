@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './FooterStatic.css'
+import { Link } from 'gatsby'
 import MyLink from '../MyLink/MyLink'
 import getPhones from '../../queries/getPhones/getPhones'
 import getLocations from '../../queries/getLocations/getLocations'
@@ -36,13 +37,13 @@ const FooterStatic = ({ url }) => {
     <div className="footerListItems">
       <ul className="footerListUL" title="Areas We Services">
         {locations.map((name) => (
-          <MyLink
+          <Link
             url={url}
             to={`/${name.name.toLowerCase()}/repairs/iphone`}
             key={name.name}
           >
             <li className="footerListLI">{name.name}</li>
-          </MyLink>
+          </Link>
         ))}
       </ul>
     </div>
@@ -114,20 +115,14 @@ const FooterStatic = ({ url }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              src={yelp}
-              alt="Yelp icon"
-            />
+            <img src={yelp} alt="Yelp icon" />
           </a>
           <a
             href="https://foursquare.com/fixncell"
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              src={foursquare}
-              alt="Foursquare icon"
-            />
+            <img src={foursquare} alt="Foursquare icon" />
           </a>
         </div>
         <div className="footerStoreHoursContainer">

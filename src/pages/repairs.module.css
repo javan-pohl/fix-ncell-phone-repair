@@ -69,7 +69,12 @@
   animation: blinker 2s linear infinite;
   border: 2px solid white;
 }
-
+.servicesBody {
+	margin: auto;
+  width: 85%;
+  padding-bottom: 15px;
+  margin: 10px auto 15px auto;
+}
 @keyframes blinker {
   50% {
     border: 2px solid black;

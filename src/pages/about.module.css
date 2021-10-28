@@ -84,20 +84,13 @@ h2 {
   padding-right: 50px;
 }
 
-.fadeText {
-  animation: fadeIn linear 3s;
-  -webkit-animation: fadeIn linear 3s;
-  -moz-animation: fadeIn linear 3s;
-  -o-animation: fadeIn linear 3s;
-  -ms-animation: fadeIn linear 3s;
-}
 @media (max-width: 960px) {
-  .meetTeam h2 {
+	.meetTeam h2 {
     margin: 0px auto;
     padding: 0px;
   }
   .teamBlock {
-    width: 100%;
+		width: 100%;
     position: static;
     display: flex;
     flex-direction: column;
@@ -105,29 +98,36 @@ h2 {
     align-items: center;
   }
   .teamFlex {
-    display: flex;
+		display: flex;
     flex-direction: column;
   }
   .teamText {
-    position: static;
+		position: static;
     width: 90%;
     padding: 50px 0px 0px 0px;
     text-align: center;
   }
   .meetTeam img {
-    margin: 20px auto -50px auto;
+		margin: 20px auto -50px auto;
     z-index: 2;
     position: static;
   }
 }
 
 @media (max-width: 700px) {
-  .reviewBadges {
-    flex-direction: column;
+	.reviewBadges {
+		flex-direction: column;
   }
 }
+.fadeText {
+	animation: fadeIn linear 3s;
+	-webkit-animation: fadeIn linear 3s;
+	-moz-animation: fadeIn linear 3s;
+	-o-animation: fadeIn linear 3s;
+	-ms-animation: fadeIn linear 3s;
+}
 @keyframes fadeIn {
-  0% {
+	0% {
     opacity: 0;
   }
   100% {

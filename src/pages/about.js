@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout/Layout'
 import MyMap from '../components/MyMap/MyMap'
 import phone from '../images/iphone-8-plus-repair-int-b&w.webp'
@@ -83,7 +84,15 @@ const aboutHeading = {
   whiteSpace: 'nowrap',
 }
 const AboutPage = ({ location: { pathname } }) => (
-  <Layout pageTitle="About Us" currentUrl={pathname}>
+  <Layout pageTitle="About Us | FixNcell" currentUrl={pathname}>
+    <Helmet>
+      <meta
+        name="description"
+        content="About FixNcell and why we should be your first choice for getting your cracked iPhone screen fixed."
+      />
+      <title>About Us | FixNcell</title>
+    </Helmet>
+
     <section>
       <div style={mainBackImg(phone, 0.7, '0,0,0')}>
         <span

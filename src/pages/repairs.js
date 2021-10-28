@@ -10,6 +10,7 @@ import {
   mainTextBody,
   pseudoBorder,
   scheduleButton,
+  servicesBody,
 } from './repairs.module.css'
 /* eslint-disable react/prop-types */
 const main2 = {
@@ -59,7 +60,7 @@ function Repairs({
         {' '}
         Include:
       </h2>
-      <p>
+      <div className={servicesBody}>
         <ul style={{ paddingLeft: '20px' }}>
           <li>
             <span style={{ fontWeight: 'bold' }}>
@@ -106,7 +107,7 @@ function Repairs({
             have your phone back to the way it used to be.
           </li>
         </ul>
-      </p>
+      </div>
     </div>
   )
   const metaDesc = `Information on our ${location} iPhone repairs and services, including cracked screen repair. Select your iPhone model to get your repair started.`
@@ -188,7 +189,7 @@ function Repairs({
           repair an iPhone screen takes 20 minutes. We'll have your broken phone
           fixed in no time!
         </p>
-        <Link to="/schedule-your-repair" class={scheduleButton}>
+        <Link to="/schedule-your-repair" className={scheduleButton}>
           Click to Schedule Your iPhone Screen Repair
         </Link>
 

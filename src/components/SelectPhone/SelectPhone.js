@@ -16,7 +16,7 @@ function SelectPhone({ url }) {
         <PhoneCard
           model={phone.model}
           img={phoneImages[`${phoneName}-small`]}
-          key={index}
+          myKey={index}
         />
       </MyLink>
     )
