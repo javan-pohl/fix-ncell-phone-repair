@@ -10,7 +10,12 @@ import {
 } from './Navigation3.module.css'
 
 export default function Navigation3({ currentUrl, menuLinks }) {
-  console.log('url: ', currentUrl)
+  const secSlash = currentUrl.indexOf('/', 2)
+  const shortUrl = currentUrl.length > 1 && secSlash !== -1
+    ? currentUrl.slice(0, secSlash)
+    : currentUrl
+  console.log('shortUrl: ', shortUrl, currentUrl)
+
   console.log('menuLinks: ', menuLinks)
   menuLinks = menuLinks.map((val) => {
     if (val.text === 'Repairs') {
@@ -41,7 +46,7 @@ export default function Navigation3({ currentUrl, menuLinks }) {
   })
   const links = menuLinks.map((link) => (link.sublinks !== undefined ? (
     <div className={dropDown}>
-      <li key={link.testid}>
+      <li style={{ color: `${link.link === shortUrl ? 'white' : 'black'}` }} key={link.testid}>
         <span>{link.text}</span>
       </li>
       <div className={dropMenu}>
@@ -54,7 +59,11 @@ export default function Navigation3({ currentUrl, menuLinks }) {
     </div>
   ) : (
     <li className={noDropDown} key={link.testid}>
-      <Link data-testid={link.testid} to={link.link}>
+      <Link
+        style={{ color: `${link.link === shortUrl ? 'white' : 'black'}` }}
+        data-testid={link.testid}
+        to={link.link}
+      >
         {link.text}
       </Link>
     </li>
