@@ -21,6 +21,7 @@ module.exports = {
         link: '/repairs',
         text: 'Repairs',
         pageURL: 'https://www.fixncell.com/repairs',
+
       },
       {
         testid: 'contactLink',
@@ -95,6 +96,13 @@ module.exports = {
       },
       __key: 'pages',
     },
-
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'repairs',
+        path: './src/pages/repairs',
+      },
+      __key: 'repairs',
+    },
   ],
 }

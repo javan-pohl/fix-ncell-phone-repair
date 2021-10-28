@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import { navigation } from './Navigation2.module.css'
 
 export default function Navigation2({ currentUrl, menuLinks }) {
+  console.log('url: ', currentUrl)
+  console.log('menuLinks: ', menuLinks)
   const links = menuLinks.map((link) => (
     <li key={link.testid}>
       <Link

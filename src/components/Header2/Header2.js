@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import CallBar from '../CallBar/CallBar'
-import Navigation2 from '../Navigation2/Navigation2'
+import Navigation3 from '../Navigation3/Navigation3'
 import {
   header,
   headerContainer,
@@ -50,7 +50,7 @@ function Header2({ currentUrl }) {
             <span>iPhone Repair</span>
           </Link>
         </div>
-        <Navigation2 menuLinks={menuLinks} currentUrl={currentUrl} />
+        <Navigation3 menuLinks={menuLinks} currentUrl={currentUrl} />
       </div>
     </header>
   )
