@@ -27,7 +27,7 @@
 .dropMenu {
   display: none;
 	color: white;
-	width: 250px;
+	width: 275px;
 	flex-direction: column;
 	background: black;
   position: absolute;
@@ -35,9 +35,13 @@
 	z-index: 3;
 }
 .dropMenuItem {
+	text-align: left;
 	padding: 4px;
+	padding-left: 15px;
+	font-size: 15px;
 }
 .dropDown:hover .dropMenu {
+	cursor: pointer;
 	padding-top: 5px;
 	top: 17px;
 	display: flex;

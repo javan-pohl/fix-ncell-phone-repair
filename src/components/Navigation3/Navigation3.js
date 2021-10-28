@@ -16,11 +16,11 @@ export default function Navigation3({ currentUrl, menuLinks }) {
     if (val.text === 'Repairs') {
       val.sublinks = [
         {
-          testid: 'iphone-charging-port-repair',
-          link: '/repairs/iphone-charging-port-repair',
+          testid: 'iphone-screen-repair',
+          link: '/repairs/iphone-screen-repair',
           text: 'iPhone Screen Repair',
           pageURL:
-            'https://www.fixncell.com/repairs/iphone-charging-port-repair',
+            'https://www.fixncell.com/repairs/iphone-screen-repair',
         },
         {
           testid: 'iphone-charging-port-repair',
@@ -49,9 +49,9 @@ export default function Navigation3({ currentUrl, menuLinks }) {
           <span>{link.text}</span>
         </li>
         <div className={dropMenu}>
-          <div className={dropMenuItem}>iPhone Screen Repairs</div>
-          <div className={dropMenuItem}>iPhone Screen Repairs</div>
-          <div className={dropMenuItem}>iPhone Screen Repairs</div>
+          {link.sublinks.map((subLink) => (
+            <Link className={dropMenuItem} to={subLink.link}>{subLink.text}</Link>
+          ))}
         </div>
       </div>
     ) : (
