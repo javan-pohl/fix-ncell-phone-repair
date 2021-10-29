@@ -2,6 +2,7 @@
   display: inline;
 }
 .navigation li {
+	font-size: 18px;
 }
 
 .navigation a {

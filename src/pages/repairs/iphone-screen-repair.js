@@ -18,6 +18,7 @@ import iphoneXsMobile from '../../images/iphone-xs-screen-replacement-mobile.web
 import EmbedSocialWidget from '../../components/EmbedSocialWidget/EmbedSocialWidget'
 
 const blueBackImg = (img, opac = 0.9, col = '0, 152, 255') => ({
+  margin: '0 0 25px 0',
   float: 'left',
   fontSize: '20px',
   color: 'white',
