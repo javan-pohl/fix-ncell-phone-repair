@@ -33,7 +33,8 @@
   }
   .mobileImg {
     display: block;
-    height: 300px;
+		height: auto;
+		width: 80%;
     margin: 20px auto;
     align-items: center;
 		align-content: center;
