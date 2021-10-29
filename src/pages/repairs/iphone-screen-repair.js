@@ -7,11 +7,13 @@ import phoneRepairSm from '../../images/iphone_screen_repair_439_b&w.webp'
 import {
   darkBackground,
   desktopImg,
+  repairProcess,
   mobileCenter,
   mobileImg,
   sideBySide,
   fadeText,
 } from './iphone-screen-repair.module.css'
+import './iphone-screen-repair.css'
 import insidePhone from '../../images/inside_phone_horz.webp'
 import iphoneXS from '../../images/iphone-xs-screen-replacement.webp'
 import iphoneXsMobile from '../../images/iphone-xs-screen-replacement-mobile.webp'
@@ -138,26 +140,34 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
         <div>
           <EmbedSocialWidget refId="e35bba2e39f8fa0f19ee05532fb6c8816178ae55" />
         </div>
-        <h2>The Screen Repair Process</h2>
-        <ol>
-          <li>Schedule Your Repair</li>
-          <p>
-            You can book your iPhone Screen repair through the website
-            {' '}
-            <Link to="/schedule-your-repair">here</Link>
-            , by giving us a call at
-            {' '}
-            <a href="tel:3034216499">303-421-6499</a>
-            .
-          </p>
-          <li>Make Sure Your iPhone is Charged</li>
-          <p>
-            It makes the repair process go much more smoothly if your iPhone is
-            charged. That way our technician can do a test of your device to
-            make sure everything is working properly when they install the new
-            screen.
-          </p>
-        </ol>
+        <div className={repairProcess}>
+          <h2>The Screen Repair Process</h2>
+          <ol className="list_style">
+            <li>
+              <h3>Schedule Your Repair</h3>
+              <p>
+                You can book your iPhone Screen repair appointment through the
+                website
+                {' '}
+                <Link to="/schedule-your-repair">here</Link>
+                , by giving
+                us a call at
+                {' '}
+                <a href="tel:3034216499">303-421-6499</a>
+                .
+              </p>
+            </li>
+            <li>
+              <h3>Make Sure Your iPhone is Charged</h3>
+              <p>
+                It makes the repair process go much more smoothly if your iPhone
+                is charged. That way our technician can do a test of your device
+                to make sure everything is working properly when they install
+                the new screen.
+              </p>
+            </li>
+          </ol>
+        </div>
       </div>
     </Layout>
   )
