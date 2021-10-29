@@ -10,6 +10,23 @@ p {
   background-color: yellow;
 }
 
+.pseudo_border_green {
+  position: relative;
+  display: block;
+}
+.pseudo_border_green:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin: 0px auto;
+  padding: 0;
+  width: 80%;
+  height: 3px;
+  background: rgb(0, 229, 245);
+  border-radius: 5px;
+}
 .pseudo_border {
   position: relative;
   display: block;
@@ -36,7 +53,7 @@ p {
   position: absolute;
   left: 0;
   right: 0;
-	margin: 5px auto 0px 25px;
+  margin: 5px auto 0px 25px;
   top: 100%;
   padding: 0;
   width: 70%;
@@ -45,16 +62,16 @@ p {
   border-radius: 5px;
 }
 .pseudo_border_small_center {
-	position: relative;
+  position: relative;
   display: block;
 }
 .pseudo_border_small_center:after {
-	content: '';
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
   top: 100%;
-	margin: 0px auto;
+  margin: 0px auto;
   padding: 0;
   width: 70%;
   height: 2px;

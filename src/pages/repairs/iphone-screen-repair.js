@@ -18,9 +18,10 @@ import insidePhone from '../../images/inside_phone_horz.webp'
 import iphoneXS from '../../images/iphone-xs-screen-replacement.webp'
 import iphoneXsMobile from '../../images/iphone-xs-screen-replacement-mobile.webp'
 import EmbedSocialWidget from '../../components/EmbedSocialWidget/EmbedSocialWidget'
+import SelectLocation from '../../components/SelectLocation/SelectLocation'
 
 const blueBackImg = (img, opac = 0.9, col = '0, 152, 255') => ({
-  margin: '0 0 25px 0',
+  margin: '0 0 0 0',
   float: 'left',
   fontSize: '20px',
   color: 'white',
@@ -137,37 +138,93 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
             <img src={iphoneXS} className={desktopImg} />
           </div>
         </div>
-        <div>
-          <EmbedSocialWidget refId="e35bba2e39f8fa0f19ee05532fb6c8816178ae55" />
-        </div>
-        <div className={repairProcess}>
-          <h2>The Screen Repair Process</h2>
-          <ol className="list_style">
-            <li>
-              <h3>Schedule Your Repair</h3>
-              <p>
-                You can book your iPhone Screen repair appointment through the
-                website
-                {' '}
-                <Link to="/schedule-your-repair">here</Link>
-                , by giving
-                us a call at
-                {' '}
-                <a href="tel:3034216499">303-421-6499</a>
-                .
-              </p>
-            </li>
-            <li>
-              <h3>Make Sure Your iPhone is Charged</h3>
-              <p>
-                It makes the repair process go much more smoothly if your iPhone
-                is charged. That way our technician can do a test of your device
-                to make sure everything is working properly when they install
-                the new screen.
-              </p>
-            </li>
-          </ol>
-        </div>
+        <section>
+          <div>
+            <h2 className="pseudo_border_green">Reviews From Some of our Screen Repair Customers</h2>
+            <div>
+              <EmbedSocialWidget refId="e35bba2e39f8fa0f19ee05532fb6c8816178ae55" />
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className={repairProcess}>
+            <h2>
+              The FixNcell Screen Repair Process
+            </h2>
+            <ol>
+              <li>
+                <h3>Schedule Your Repair</h3>
+                <p>
+                  You can book your iPhone Screen repair appointment through the
+                  website
+                  {' '}
+                  <Link to="/schedule-your-repair">here</Link>
+                  , or by
+                  giving us a call at
+                  {' '}
+                  <a href="tel:3034216499">303-421-6499</a>
+                  .
+                </p>
+              </li>
+              <li>
+                <h3>Make Sure Your iPhone is Charged</h3>
+                <p>
+                  It makes the repair process go much more smoothly if your
+                  iPhone is charged. That way our technician can do a test of
+                  your device to make sure everything is working properly when
+                  they install the new screen.
+                </p>
+              </li>
+              <li>
+                <h3>Meet the Technician at the Designated Time and Place</h3>
+                <p>
+                  While our iPhone repair technicians can meet you anywhere, we
+                  typically go to your work or home to fix your broken phone.
+                </p>
+                <p>
+                  In most cases, the technician will perform the iPhone screen
+                  replacement in their vehicle, but if you have any privacy
+                  concerns, they can do the repair in your home.
+                  <span style={{ fontWeight: 'bold' }}>
+                    (*Note that the repair tech does not need your iPhone
+                    passcode in most cases, so your data is safe.)
+                  </span>
+                </p>
+              </li>
+              <li>
+                <h3>Wait for the Tech to Perform Their Phone Repair Magic</h3>
+                <p>
+                  FixNcell technicians typically require about 15 - 30 minutes
+                  to install a new iPhone screen.
+                </p>
+              </li>
+              <li>
+                <h3>Check Your iPhone Screen After the Repair</h3>
+                <p>
+                  Make sure the new iPhone display is functioning properly, that
+                  there are no dead touchscreen spots, screen freezing, or
+                  damage to the LCD display.
+                </p>
+              </li>
+              <li>
+                <h3>Pay</h3>
+                <p>
+                  The last thing to do is to pay for the screen repair. We
+                  accept cash and any major credit card as payment.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </section>
+        <section>
+          <h2>Get More Information</h2>
+          <p>
+            To get more information, including pricing and available of iPhone
+            screen repairs for your particular iPhone model, please select your
+            location below:
+          </p>
+          <SelectLocation />
+        </section>
       </div>
     </Layout>
   )
