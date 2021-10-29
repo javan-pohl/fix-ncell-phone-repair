@@ -7,6 +7,14 @@
 .sideBySide img {
   height: 400px;
 }
+.darkBackground {
+	width: 80%;
+	margin: auto;
+  padding: 30px;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
 .fadeText {
   animation: fadeIn linear 3s;
   -webkit-animation: fadeIn linear 3s;

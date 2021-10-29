@@ -4,7 +4,11 @@ import { Helmet } from 'react-helmet'
 import Layout from '../../components/Layout/Layout'
 import useWindowSize from '../../hooks/useWindowSize'
 import phoneRepairSm from '../../images/iphone_screen_repair_439_b&w.webp'
-import { sideBySide, fadeText } from './iphone-screen-repair.module.css'
+import {
+  darkBackground,
+  sideBySide,
+  fadeText,
+} from './iphone-screen-repair.module.css'
 import insidePhone from '../../images/inside_phone_horz.webp'
 import iphoneXS from '../../images/iphone-xs-screen-replacement.webp'
 import EmbedSocialWidget from '../../components/EmbedSocialWidget/EmbedSocialWidget'
@@ -113,8 +117,8 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
           data-sal-duration="1000"
         >
           <div style={blueBackImg(insidePhone)}>
-            <h1>iPhone Screen Repair</h1>
-            <p>
+            <h1 className="pseudo_border">iPhone Screen Repair</h1>
+            <p className={darkBackground}>
               We are a mobile iPhone Repair service that goes to the customer's
               location to fix their phone. With certified technicians,
               hi-quality parts, thousands of happy customers, you can trust
