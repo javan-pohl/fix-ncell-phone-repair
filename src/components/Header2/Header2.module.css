@@ -54,3 +54,7 @@ header a:hover {
     margin: 0px;
   }
 }
+
+@media (max-width: 600px) {
+ .header {font-size: 14px;}
+}
