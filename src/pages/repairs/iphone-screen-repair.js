@@ -6,11 +6,15 @@ import useWindowSize from '../../hooks/useWindowSize'
 import phoneRepairSm from '../../images/iphone_screen_repair_439_b&w.webp'
 import {
   darkBackground,
+  desktopImg,
+  mobileCenter,
+  mobileImg,
   sideBySide,
   fadeText,
 } from './iphone-screen-repair.module.css'
 import insidePhone from '../../images/inside_phone_horz.webp'
 import iphoneXS from '../../images/iphone-xs-screen-replacement.webp'
+import iphoneXsMobile from '../../images/iphone-xs-screen-replacement-mobile.webp'
 import EmbedSocialWidget from '../../components/EmbedSocialWidget/EmbedSocialWidget'
 
 const blueBackImg = (img, opac = 0.9, col = '0, 152, 255') => ({
@@ -124,9 +128,10 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
               hi-quality parts, thousands of happy customers, you can trust
               FixNcell to fix your broken iPhone screen.
             </p>
+            <img src={iphoneXS} className={mobileImg} />
           </div>
           <div>
-            <img src={iphoneXS} />
+            <img src={iphoneXS} className={desktopImg} />
           </div>
         </div>
         <div>
