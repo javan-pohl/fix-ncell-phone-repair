@@ -1,9 +1,24 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from '../../components/Layout/Layout'
 import useWindowSize from '../../hooks/useWindowSize'
 import phoneRepairSm from '../../images/iphone_screen_repair_439_b&w.webp'
-import { fadeText } from './iphone-screen-repair.module.css'
+import { sideBySide, fadeText } from './iphone-screen-repair.module.css'
+import insidePhone from '../../images/inside_phone_horz.webp'
+import iphoneXS from '../../images/iphone-xs-screen-replacement.webp'
+import EmbedSocialWidget from '../../components/EmbedSocialWidget/EmbedSocialWidget'
+
+const blueBackImg = (img, opac = 0.9, col = '0, 152, 255') => ({
+  float: 'left',
+  fontSize: '20px',
+  color: 'white',
+  backgroundImage: `linear-gradient(rgb(${col},${opac}),
+	rgb(${col},${opac - 0.05})), url(${img})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'repeat',
+  padding: '1px',
+})
 
 const mainBackImg = (
   img,
@@ -84,14 +99,55 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
         />
         <div style={aboutHeading} className={fadeText}>
           <h3>
-            iPhone Screen Repairs
+            We'll Come To You
             <br />
-            At FixNcell
+            To Fix Your iPhone Screen
           </h3>
         </div>
       </div>
-      <div style={{ margin: '0' }}>
-        <h1>iPhone Screen Repair</h1>
+      <div>
+        <div
+          className={sideBySide}
+          data-sal="slide-up"
+          data-sal-easing="ease"
+          data-sal-duration="1000"
+        >
+          <div style={blueBackImg(insidePhone)}>
+            <h1>iPhone Screen Repair</h1>
+            <p>
+              We are a mobile iPhone Repair service that goes to the customer's
+              location to fix their phone. With certified technicians,
+              hi-quality parts, thousands of happy customers, you can trust
+              FixNcell to fix your broken iPhone screen.
+            </p>
+          </div>
+          <div>
+            <img src={iphoneXS} />
+          </div>
+        </div>
+        <div>
+          <EmbedSocialWidget refId="e35bba2e39f8fa0f19ee05532fb6c8816178ae55" />
+        </div>
+        <h2>The Screen Repair Process</h2>
+        <ol>
+          <li>Schedule Your Repair</li>
+          <p>
+            You can book your iPhone Screen repair through the website
+            {' '}
+            <Link to="/schedule-your-repair">here</Link>
+            , by giving us a call at
+            {' '}
+            <a href="tel:3034216499">303-421-6499</a>
+            .
+          </p>
+          <li>Make Sure Your iPhone is Charged</li>
+          <p>
+            It makes the repair process go much more smoothly if your iPhone is
+            charged. That way our technician can do a test of your device to
+            make sure everything is working properly when they install the new
+            screen.
+          </p>
+        </ol>
       </div>
     </Layout>
   )

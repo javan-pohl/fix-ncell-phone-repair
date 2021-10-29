@@ -1,13 +1,21 @@
-
+.sideBySide {
+	margin-top: 50px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+.sideBySide img {
+  height: 400px;
+}
 .fadeText {
-	animation: fadeIn linear 3s;
-	-webkit-animation: fadeIn linear 3s;
-	-moz-animation: fadeIn linear 3s;
-	-o-animation: fadeIn linear 3s;
-	-ms-animation: fadeIn linear 3s;
+  animation: fadeIn linear 3s;
+  -webkit-animation: fadeIn linear 3s;
+  -moz-animation: fadeIn linear 3s;
+  -o-animation: fadeIn linear 3s;
+  -ms-animation: fadeIn linear 3s;
 }
 @keyframes fadeIn {
-	0% {
+  0% {
     opacity: 0;
   }
   100% {

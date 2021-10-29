@@ -50,21 +50,21 @@ const IndexPage = ({ location: { pathname } }) => {
       cardBody:
         'At FixNcell, we perform our iPhone screen repairs by replacing the entire iPhone screen assembly, including the glass, digitizer (touch-screen), and display (LCD or OLED). This allows for a timely and quality repair.',
       imgText: 'iPhone with cracked screen',
-      link: '/iphone-screen-repair',
+      link: '/repairs/iphone-screen-repair',
     },
     {
       cardTitle: 'iPhone Charging Port Repair',
       cardBody:
         "If you are struggling to get a good connection with your iPhone's lightning charging port and the charging cable, it could be time for a new charging port. The charging port of iPhones and every other device wear out over time, but this is an issue that we can take care of for you.",
       imgText: 'icon of iphone charging port',
-      link: '/iphone-charging-port-repair',
+      link: '/repairs/iphone-charging-port-repair',
     },
     {
       cardTitle: 'iPhone Battery Replacement',
       cardBody:
         'Your iPhone may not be holding a charge like it used to, or you may noticed swelling coming from typically the left side of the screen, where the glass is bulging away from the frame--these are both signs that you may need a new iPhone battery.',
       imgText: 'the battery icon found on an iPhone',
-      link: '/iphone-battery-replacement',
+      link: '/repairs/iphone-battery-replacement',
     },
   ]
   return (
