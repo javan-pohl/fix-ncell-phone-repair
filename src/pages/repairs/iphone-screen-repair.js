@@ -7,6 +7,7 @@ import phoneRepairSm from '../../images/iphone_screen_repair_439_b&w.webp'
 import {
   darkBackground,
   desktopImg,
+  h1Section,
   repairProcess,
   mobileCenter,
   mobileImg,
@@ -22,7 +23,10 @@ import SelectLocation from '../../components/SelectLocation/SelectLocation'
 
 const blueBackImg = (img, opac = 0.9, col = '0, 152, 255') => ({
   margin: '0 0 0 0',
-  float: 'left',
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   fontSize: '20px',
   color: 'white',
   backgroundImage: `linear-gradient(rgb(${col},${opac}),
@@ -38,8 +42,7 @@ const mainBackImg = (
   opac = 0.9,
   col = '0, 152, 255',
 ) => ({
-  display: 'relative',
-  height: '400px',
+  height: 'auto',
   color: 'white',
   display: 'flex',
   alignItems: 'center',
@@ -117,115 +120,136 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
           </h3>
         </div>
       </div>
-      <div>
-        <div
-          className={sideBySide}
-          data-sal="slide-up"
-          data-sal-easing="ease"
-          data-sal-duration="1000"
-        >
-          <div style={blueBackImg(insidePhone)}>
-            <h1 className="pseudo_border">iPhone Screen Repair</h1>
-            <p className={darkBackground}>
-              We are a mobile iPhone Repair service that goes to the customer's
-              location to fix their phone. With certified technicians,
-              hi-quality parts, thousands of happy customers, you can trust
-              FixNcell to fix your broken iPhone screen.
-            </p>
+      <section
+        data-sal="slide-up"
+        data-sal-easing="ease"
+        data-sal-duration="1000"
+      >
+        <div style={blueBackImg(insidePhone)}>
+          <div className={sideBySide}>
+            <div className={h1Section}>
+              <h1 className="pseudo_border">iPhone Screen Repair</h1>
+              <div className={darkBackground}>
+                On this page, we'll provide more detail about the iPhone screen
+                repair process at FixNcell, reviews from past screen repair
+                customers, information about iPhone screens in general, and how
+                you can learn more about getting your screen replaced.
+              </div>
+            </div>
+            <img src={iphoneXS} className={desktopImg} />
             <img src={iphoneXS} className={mobileImg} />
           </div>
-          <div>
-            <img src={iphoneXS} className={desktopImg} />
+        </div>
+        <div style={blueBackImg(insidePhone)}>
+          <div className={sideBySide}>
+            <h2 className="pseudo_border">Mobile iPhone Repairs</h2>
+            <p className={darkBackground}>
+              The first thing to know about getting your iPhone screen replaced
+              with FixNcell is that we are a mobile service: we go to you! While
+              we used to have a store-front, we switched to mobile only repairs
+              in 2020.
+            </p>
+            <h2 className="pseudo_border">
+              "iPhone Screen Repair" or "iPhone Screen Replacement"
+            </h2>
+            <p className={darkBackground}>
+              Something that's important to note is that the terms "iPhone
+              Screen Repair" and "iPhone Screen Replacement" will be used
+              interchangeably. Technically it IS possible to repair an iPhone
+              screen, but in most every case (with FixNcell and cell phone
+              repair shops in general), the entire screen assembly will be
+              replaced.
+            </p>
           </div>
         </div>
-        <section>
+      </section>
+      <section>
+        <div>
+          <h2 className="pseudo_border_green">
+            Reviews From Some of our Screen Repair Customers
+          </h2>
           <div>
-            <h2 className="pseudo_border_green">Reviews From Some of our Screen Repair Customers</h2>
-            <div>
-              <EmbedSocialWidget refId="e35bba2e39f8fa0f19ee05532fb6c8816178ae55" />
-            </div>
+            <EmbedSocialWidget refId="e35bba2e39f8fa0f19ee05532fb6c8816178ae55" />
           </div>
-        </section>
-        <section>
-          <div className={repairProcess}>
-            <h2>
-              The FixNcell Screen Repair Process
-            </h2>
-            <ol>
-              <li>
-                <h3>Schedule Your Repair</h3>
-                <p>
-                  You can book your iPhone Screen repair appointment through the
-                  website
-                  {' '}
-                  <Link to="/schedule-your-repair">here</Link>
-                  , or by
-                  giving us a call at
-                  {' '}
-                  <a href="tel:3034216499">303-421-6499</a>
-                  .
-                </p>
-              </li>
-              <li>
-                <h3>Make Sure Your iPhone is Charged</h3>
-                <p>
-                  It makes the repair process go much more smoothly if your
-                  iPhone is charged. That way our technician can do a test of
-                  your device to make sure everything is working properly when
-                  they install the new screen.
-                </p>
-              </li>
-              <li>
-                <h3>Meet the Technician at the Designated Time and Place</h3>
-                <p>
-                  While our iPhone repair technicians can meet you anywhere, we
-                  typically go to your work or home to fix your broken phone.
-                </p>
-                <p>
-                  In most cases, the technician will perform the iPhone screen
-                  replacement in their vehicle, but if you have any privacy
-                  concerns, they can do the repair in your home.
-                  <span style={{ fontWeight: 'bold' }}>
-                    (*Note that the repair tech does not need your iPhone
-                    passcode in most cases, so your data is safe.)
-                  </span>
-                </p>
-              </li>
-              <li>
-                <h3>Wait for the Tech to Perform Their Phone Repair Magic</h3>
-                <p>
-                  FixNcell technicians typically require about 15 - 30 minutes
-                  to install a new iPhone screen.
-                </p>
-              </li>
-              <li>
-                <h3>Check Your iPhone Screen After the Repair</h3>
-                <p>
-                  Make sure the new iPhone display is functioning properly, that
-                  there are no dead touchscreen spots, screen freezing, or
-                  damage to the LCD display.
-                </p>
-              </li>
-              <li>
-                <h3>Pay</h3>
-                <p>
-                  The last thing to do is to pay for the screen repair. We
-                  accept cash and any major credit card as payment.
-                </p>
-              </li>
-            </ol>
-          </div>
-        </section>
-        <section>
-          <h2>Get More Information</h2>
-          <p>
-            To get more information, including pricing and available of iPhone
-            screen repairs for your particular iPhone model, please select your
-            location below:
-          </p>
-          <SelectLocation />
-        </section>
-      </div>
+        </div>
+      </section>
+      <section>
+        <div className={repairProcess}>
+          <h2>The FixNcell Screen Repair Process</h2>
+          <ol>
+            <li>
+              <h3>Schedule Your Repair</h3>
+              <p>
+                You can book your iPhone Screen repair appointment through the
+                website
+                {' '}
+                <Link to="/schedule-your-repair">here</Link>
+                , or by
+                giving us a call at
+                {' '}
+                <a href="tel:3034216499">303-421-6499</a>
+                .
+              </p>
+            </li>
+            <li>
+              <h3>Make Sure Your iPhone is Charged</h3>
+              <p>
+                It makes the repair process go much more smoothly if your iPhone
+                is charged. That way our technician can do a test of your device
+                to make sure everything is working properly when they install
+                the new screen.
+              </p>
+            </li>
+            <li>
+              <h3>Meet the Technician at the Designated Time and Place</h3>
+              <p>
+                While our iPhone repair technicians can meet you anywhere, we
+                typically go to your work or home to fix your broken phone.
+              </p>
+              <p>
+                In most cases, the technician will perform the iPhone screen
+                replacement in their vehicle, but if you have any privacy
+                concerns, they can do the repair in your home.
+                <span style={{ fontWeight: 'bold' }}>
+                  (*Note that the repair tech does not need your iPhone passcode
+                  in most cases, so your data is safe.)
+                </span>
+              </p>
+            </li>
+            <li>
+              <h3>Wait for the Tech to Perform Their Phone Repair Magic</h3>
+              <p>
+                FixNcell technicians typically require about 15 - 30 minutes to
+                install a new iPhone screen.
+              </p>
+            </li>
+            <li>
+              <h3>Check Your iPhone Screen After the Repair</h3>
+              <p>
+                Make sure the new iPhone display is functioning properly, that
+                there are no dead touchscreen spots, screen freezing, or damage
+                to the LCD display.
+              </p>
+            </li>
+            <li>
+              <h3>Pay</h3>
+              <p>
+                The last thing to do is to pay for the screen repair. We accept
+                cash and any major credit card as payment.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section>
+        <h2>Get More Information</h2>
+        <p>
+          To get more information, including pricing and available of iPhone
+          screen repairs for your particular iPhone model, please select your
+          location below:
+        </p>
+        <SelectLocation />
+      </section>
     </Layout>
   )
 }
