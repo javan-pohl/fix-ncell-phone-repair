@@ -45,8 +45,11 @@ function Repairs({
     <div className={mainTextBody}>
       <div className={mainTagLine}>"We Come To You!"</div>
       <p>
-        FixNcell is a mobile iPhone repair service that goes to the customer's
-        location to fix the broken device. Select your iPhone model below to get
+        FixNcell is a mobile iPhone repair service that travels to the customer's location in
+        {' '}
+        {location}
+        {' '}
+        to fix the broken device. Select your iPhone model below to get
         your repair started.
       </p>
     </div>

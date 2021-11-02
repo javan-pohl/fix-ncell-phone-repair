@@ -1,39 +1,81 @@
 .sideBySide {
+  color: black;
   margin: 5% auto;
-  width: 80%;
+  background: none;
+  width: 90%;
   display: flex;
-	padding: 0;
-	gap: 5%;
+  padding: 0;
+  gap: 5%;
 }
 .h1Section {
-	display: inline-block;
-height: auto;
-background: green;
-	margin: 0px;
-	padding: 0px;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  box-shadow: rgba(0, 0, 0, 0.9) 1px 1px 10px;
+}
+.faqSection {
+	width: 85%;
+	margin: auto;
+}
+.faqOuter {
+	background: white;
+}
+.sideBySide img {
+  box-shadow: rgba(0, 0, 0, 0.9) 1px 1px 10px;
+}
+.cards {
+  display: flex;
+  background: white;
+  width: 80%;
+  margin: auto;
+  gap: 10%;
+}
+.sectionCard {
+  flex: 1;
+  width: 60%;
+  margin: auto;
+  box-shadow: rgba(104, 104, 104, 0.6) 1px 1px 6px;
 }
 .darkBackground {
   font-size: 18px;
-	margin: auto;
-	padding: 15px;
-	width: 100%;
+  margin: auto;
+  padding: 15px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 15px;
 }
 .desktopImg {
-	width: 70%;
+  height: auto;
+  width: 70%;
 }
 
 h1 {
   padding-top: 0px;
-	margin-top: 0px;
+  margin-top: 0px;
+}
+.sectionCard h2 {
+  font-size: 30px;
+  margin-top: 0px;
+  padding: 5px;
+}
+.h1Section h2 {
+  font-size: 35px;
+  padding-top: 0px;
+  margin-top: 0px;
 }
 .mobileImg {
   display: none;
 }
 .repairProcess {
   background-color: white;
-  padding: 0 10%;
+  padding: 0 10% 5% 10%;
 }
 .repairProcess h3 {
   font-weight: bold;
@@ -73,10 +115,17 @@ h1 {
   height: 75px;
 }
 
-
 @media only screen and (max-width: 800px) {
   h1 {
     font-size: 30px;
+  }
+  .cards {
+    flex-direction: column;
+    width: 100%;
+  }
+  .sectionCard {
+    width: 90%;
+    margin: 20px;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -84,17 +133,17 @@ h1 {
     font-size: 35px;
   }
   .sideBySide {
-		width: 100%;
+    width: 90%;
     flex-direction: column;
-		align-items: center;
+    align-items: center;
   }
-	.darkBackground {
-		width: 90%;
-	}
-	.sideBySide h2 {
-		margin-top: 0px;
-		font-size: 30px;
-	}
+  .darkBackground {
+    width: 90%;
+  }
+  .sideBySide h2 {
+    margin-top: 0px;
+    font-size: 30px;
+  }
   .mobileCenter {
     display: flex;
     justify-content: center;
@@ -121,10 +170,9 @@ h1 {
   }
 }
 @media only screen and (max-width: 500px) {
-
-	.sideBySide {
-		width: 100%;
-	}
+  .sideBySide {
+    width: 100%;
+  }
 }
 
 .fadeText {
