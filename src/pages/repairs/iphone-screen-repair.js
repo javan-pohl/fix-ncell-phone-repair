@@ -38,7 +38,8 @@ const faqData = {
         'Will I notice a difference in quality with the screen you install?',
       content: `This is a multi-layered question. The first answer is "No--you likely won't notice a differnce in quality between your original screen and the one we put on." 
 				
-				Related to this question is "Yes, we do typically use after-market screens, but we can install original quality Apple screens if you so desire. If, after having FixNcell repair your screen, you're unhappy with the quality of the after-market screen, we will install the original grade screen for only the difference in price of the after-market screen vs the original `,
+				Related to this question is "Yes, we do typically use after-market screens, but we can install original quality Apple screens if you so desire."
+				\n If, after having FixNcell repair your screen, you're unhappy with the quality of the after-market screen, we will install the original grade screen for only the difference in price of the after-market screen vs the original `,
     },
     {
       title: 'Is is possible for me to replace my iPhone screen myself?',
@@ -122,6 +123,76 @@ const aboutHeading = {
   alignItems: 'center',
   whiteSpace: 'nowrap',
 }
+const processSection = () => (
+  <section>
+    <div className={repairProcess}>
+      <h2>The FixNcell Screen Repair Process</h2>
+      <ol>
+        <li data-sal="slide-up" data-sal-easing="ease" data-sal-duration="1000">
+          <h3>Schedule Your Repair</h3>
+          <p>
+            You can book your iPhone Screen repair appointment through the
+            website
+            {' '}
+            <Link to="/schedule-your-repair">here</Link>
+            , or by giving
+            us a call at
+            {' '}
+            <a href="tel:3034216499">303-421-6499</a>
+            .
+          </p>
+        </li>
+        <li data-sal="slide-up" data-sal-easing="ease" data-sal-duration="1000">
+          <h3>Make Sure Your iPhone is Charged</h3>
+          <p>
+            It makes the repair process go much more smoothly if your iPhone is
+            charged. That way our technician can do a test of your device to
+            make sure everything is working properly when they install the new
+            screen.
+          </p>
+        </li>
+        <li data-sal="slide-up" data-sal-easing="ease" data-sal-duration="1000">
+          <h3>Meet the Technician at the Designated Time and Place</h3>
+          <p>
+            While our iPhone repair technicians can meet you anywhere, we
+            typically go to your work or home to fix your broken phone.
+          </p>
+          <p>
+            In most cases, the technician will perform the iPhone screen
+            replacement in their vehicle, but if you have any privacy concerns,
+            they can do the repair in your home.
+            <span style={{ fontWeight: 'bold' }}>
+              (*Note that the repair tech does not need your iPhone passcode in
+              most cases, so your data is safe.)
+            </span>
+          </p>
+        </li>
+        <li data-sal="slide-up" data-sal-easing="ease" data-sal-duration="1000">
+          <h3>Wait for the Tech to Perform Their Phone Repair Magic</h3>
+          <p>
+            FixNcell technicians typically require about 15 - 30 minutes to
+            install a new iPhone screen.
+          </p>
+        </li>
+        <li data-sal="slide-up" data-sal-easing="ease" data-sal-duration="1000">
+          <h3>Check Your iPhone Screen After the Repair</h3>
+          <p>
+            Make sure the new iPhone display is functioning properly, that there
+            are no dead touchscreen spots, screen freezing, or damage to the LCD
+            display.
+          </p>
+        </li>
+        <li data-sal="slide-up" data-sal-easing="ease" data-sal-duration="1000">
+          <h3>Pay</h3>
+          <p>
+            The last thing to do is to pay for the screen repair. We accept cash
+            and any major credit card as payment.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+)
 const iPhoneScreenRepair = ({ location: { pathname } }) => {
   const title = 'FixNcell iPhone Screen Repairs'
 
@@ -200,6 +271,7 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
           </p>
         </div>
       </div>
+      {processSection()}
       <section>
         <div>
           <h2 className="pseudo_border_green">
@@ -208,98 +280,6 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
           <div>
             <EmbedSocialWidget refId="e35bba2e39f8fa0f19ee05532fb6c8816178ae55" />
           </div>
-        </div>
-      </section>
-      <section>
-        <div className={repairProcess}>
-          <h2>The FixNcell Screen Repair Process</h2>
-          <ol>
-            <li
-              data-sal="slide-up"
-              data-sal-easing="ease"
-              data-sal-duration="1000"
-            >
-              <h3>Schedule Your Repair</h3>
-              <p>
-                You can book your iPhone Screen repair appointment through the
-                website
-                {' '}
-                <Link to="/schedule-your-repair">here</Link>
-                , or by
-                giving us a call at
-                {' '}
-                <a href="tel:3034216499">303-421-6499</a>
-                .
-              </p>
-            </li>
-            <li
-              data-sal="slide-up"
-              data-sal-easing="ease"
-              data-sal-duration="1000"
-            >
-              <h3>Make Sure Your iPhone is Charged</h3>
-              <p>
-                It makes the repair process go much more smoothly if your iPhone
-                is charged. That way our technician can do a test of your device
-                to make sure everything is working properly when they install
-                the new screen.
-              </p>
-            </li>
-            <li
-              data-sal="slide-up"
-              data-sal-easing="ease"
-              data-sal-duration="1000"
-            >
-              <h3>Meet the Technician at the Designated Time and Place</h3>
-              <p>
-                While our iPhone repair technicians can meet you anywhere, we
-                typically go to your work or home to fix your broken phone.
-              </p>
-              <p>
-                In most cases, the technician will perform the iPhone screen
-                replacement in their vehicle, but if you have any privacy
-                concerns, they can do the repair in your home.
-                <span style={{ fontWeight: 'bold' }}>
-                  (*Note that the repair tech does not need your iPhone passcode
-                  in most cases, so your data is safe.)
-                </span>
-              </p>
-            </li>
-            <li
-              data-sal="slide-up"
-              data-sal-easing="ease"
-              data-sal-duration="1000"
-            >
-              <h3>Wait for the Tech to Perform Their Phone Repair Magic</h3>
-              <p>
-                FixNcell technicians typically require about 15 - 30 minutes to
-                install a new iPhone screen.
-              </p>
-            </li>
-            <li
-              data-sal="slide-up"
-              data-sal-easing="ease"
-              data-sal-duration="1000"
-            >
-              <h3>Check Your iPhone Screen After the Repair</h3>
-              <p>
-                Make sure the new iPhone display is functioning properly, that
-                there are no dead touchscreen spots, screen freezing, or damage
-                to the LCD display.
-              </p>
-            </li>
-            <li
-              data-sal="slide-up"
-              data-sal-easing="ease"
-              data-sal-duration="1000"
-            >
-              <h3>Pay</h3>
-              <p>
-                The last thing to do is to pay for the screen repair. We accept
-                cash and any major credit card as payment.
-              </p>
-            </li>
-          </ol>
         </div>
       </section>
       <div className={faqOuter}>
