@@ -22,11 +22,11 @@
   box-shadow: rgba(0, 0, 0, 0.9) 1px 1px 10px;
 }
 .faqSection {
-	width: 85%;
-	margin: auto;
+  width: 85%;
+  margin: auto;
 }
 .faqOuter {
-	background: white;
+  background: white;
 }
 .sideBySide img {
   box-shadow: rgba(0, 0, 0, 0.9) 1px 1px 10px;
@@ -56,6 +56,38 @@
   width: 70%;
 }
 
+.repairTypes {
+	margin: 20px auto;
+	width: 85%;
+}
+
+.repairTypes ul {
+  list-style-type: none;
+}
+
+.repairTypes img {
+	height: 190px;
+	margin: 0 15px 0 0;
+}
+.repairTypes h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+	margin: 0 auto 15px auto;
+}
+
+
+.repairTypes p {
+  font: 200 14px/1.5 Georgia, Times New Roman, serif;
+}
+
+.repairTypes li {
+	display: flex;
+  padding: 10px;
+  overflow: auto;
+	align-items: center;
+}
+.rowReversed {
+	flex-direction: row-reverse;
+}
 h1 {
   padding-top: 0px;
   margin-top: 0px;
@@ -129,6 +161,9 @@ h1 {
   }
 }
 @media only screen and (max-width: 900px) {
+	.repairTypes {
+		width: 100%;
+	}
   h1 {
     font-size: 35px;
   }
@@ -170,6 +205,9 @@ h1 {
   }
 }
 @media only screen and (max-width: 500px) {
+	.repairTypes li {
+		flex-direction: column;
+	}
   .sideBySide {
     width: 100%;
   }

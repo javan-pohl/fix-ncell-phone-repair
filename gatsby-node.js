@@ -19,6 +19,7 @@ exports.createPages = async function ({ actions, graphql }) {
         nodes {
           name
           zips
+					calID
         }
       }
       allSitePage {
@@ -72,7 +73,7 @@ exports.createPages = async function ({ actions, graphql }) {
         id: `schedule${node.id}${locNode.id}`,
         path: urlScreenPath,
         component: require.resolve('./src/pageTemplates/scheduleRepair.js'),
-        context: { phone: node, location: locName },
+        context: { phone: node, location: locName, cal: locNode.calID },
       })
     })
   })

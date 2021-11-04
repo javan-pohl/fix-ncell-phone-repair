@@ -11,17 +11,22 @@ import {
   desktopImg,
   faqSection,
   faqOuter,
+  rowReversed,
   h1Section,
   repairProcess,
   mobileCenter,
   mobileImg,
   sectionCard,
+  repairTypes,
   sideBySide,
   fadeText,
 } from './iphone-screen-repair.module.css'
 import insidePhone from '../../images/inside_phone_horz.webp'
 import iphoneXS from '../../images/iphone-xs-screen-replacement.webp'
 import iphoneXsMobile from '../../images/iphone-xs-screen-replacement-mobile.webp'
+import crackedLcd from '../../images/iphone-xr-broken-lcd.webp'
+import crackedGlass from '../../images/iphone-cracked-glass.webp'
+import damagedDisplay from '../../images/iphone-damaged-display.webp'
 import EmbedSocialWidget from '../../components/EmbedSocialWidget/EmbedSocialWidget'
 import SelectLocation from '../../components/SelectLocation/SelectLocation'
 
@@ -36,7 +41,7 @@ const faqData = {
     {
       title:
         'Will I notice a difference in quality with the screen you install?',
-      content: `This is a multi-layered question. The first answer is "No--you likely won't notice a differnce in quality between your original screen and the one we put on." 
+      content: `This is a multi-layered question. The first answer is "No--you likely won't notice a difference in quality between your original screen and the one we put on." 
 				
 				Related to this question is "Yes, we do typically use after-market screens, but we can install original quality Apple screens if you so desire."
 				\n If, after having FixNcell repair your screen, you're unhappy with the quality of the after-market screen, we will install the original grade screen for only the difference in price of the after-market screen vs the original `,
@@ -126,7 +131,7 @@ const aboutHeading = {
 const processSection = () => (
   <section>
     <div className={repairProcess}>
-      <h2>The FixNcell Screen Repair Process</h2>
+      <h2>FixNcell iPhone Screen Replacement Process</h2>
       <ol>
         <li data-sal="slide-up" data-sal-easing="ease" data-sal-duration="1000">
           <h3>Schedule Your Repair</h3>
@@ -269,6 +274,81 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
             screen, but in most every case (with FixNcell and cell phone repair
             shops in general), the entire screen assembly will be replaced.
           </p>
+        </div>
+        <div className={repairTypes}>
+          <h2 className="pseudo_border_green">
+            Types of Broken iPhone Screens
+          </h2>
+          <ul>
+            <li>
+              <div>
+                <img src={crackedGlass} alt="iPhone with Apple logo on screen and spider web like crack in the glass at the top" />
+              </div>
+              <div>
+                <h3>Cracked Glass</h3>
+                <p>
+                  In these cases, the iPhone glass is cracked or shattered but
+                  the display and touchscreen underneath are still working
+                  correctly. Cracked glass can be a nuisance in that it: 1)
+                  cosmetically not appealing; 2) can cause you to cut your
+                  fingers or face; 3) can make it more likely for your screen to
+                  break entirely--leaving you unable to use your iPhone. If your
+                  iPhone screen suffers from this issue, we recommend that you
+                  schedule a screen repair with FixNcell today to have a new
+                  glass screen installed.
+                </p>
+              </div>
+            </li>
+
+            <li className={rowReversed}>
+              <div>
+                <img src={crackedLcd} alt="iphone screen with vertical white lines cover the left half of the screen" />
+              </div>
+              <div>
+                <h3>Display Damage</h3>
+                <p>
+                  iPhones can have either a liquid-crystal display (LCD) or
+                  organic light-emitting diode (OLED) screen. If the display
+                  portion of your iPhone screen has been damaged, that means
+                  certain ports of the screen may be blank or distorted.
+                  Thankfully, getting your iPhone screen replaced at FixNcell
+                  means that your iPhone display will be back to normal.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <img src={damagedDisplay} alt="iPhone xr with cracked glass and most of the display blank" />
+              </div>
+              <div>
+                <h3>Touch Screen Issues</h3>
+                <p>
+                  People often use the term "digitizer" to mean the display of
+                  the device, but that is actually a misnomer as "digitizer"
+                  means "touch screen" (or "touch monitor" or "touch panel"). To
+                  "digitize", in this case, means to convert the physical
+                  touches to digital signals. If your touch screen is not
+                  working correctly, that could mean you: 1) have "dead spots"
+                  on your iPhone screen that do not respond to touch, 2) that
+                  the screen is pressing itself ("ghost touch" or "phantom
+                  touches"--see an example of ghost touch
+                  {' '}
+                  <Link to="https://www.youtube.com/watch?v=vjVOpkcvkE4&t=10s&ab_channel=LiWang">
+                    here
+                  </Link>
+                  ), 3) or that the screen does not respond to touches at all.
+                </p>
+                <p>
+                  It is very important to replace your screen if you are
+                  experiencing phantom touches because it can lead to too many
+                  failed passcode attempts and the disabling of your iPhone.
+                  Give us a call today so we can fix your iPhone touchscreen
+                  issue.
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
       {processSection()}

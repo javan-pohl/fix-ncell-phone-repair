@@ -3,14 +3,14 @@ import { Helmet } from 'react-helmet'
 import Layout from '../../components/Layout/Layout'
 
 const iPhoneBattery = ({ location: { pathname } }) => {
-  const title = 'FixNcell iPhone Charging Port Repair'
+  const title = 'FixNcell iPhone Battery Replacement'
 
   return (
     <Layout pageTitle={title} currentUrl={pathname}>
       <Helmet>
         <meta
           name="description"
-          content="Information getting an iPhone charging port repaired through FixNcell."
+          content="Information getting an iPhone battery replaced through FixNcell."
         />
         <title>{title}</title>
       </Helmet>

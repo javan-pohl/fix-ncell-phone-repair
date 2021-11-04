@@ -1,0 +1,119 @@
+.main {
+  display: flex;
+	width: 75%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 35px auto;
+  padding: 0;
+  gap: 20px;
+}
+
+.main h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.mainTextBody {
+	width: 400px;
+  padding-right: 50px;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  padding: 15px;
+  margin: 0px 20px;
+}
+.main p {
+ 
+}
+
+.main img {
+  margin: 0;
+  height: 300px;
+}
+
+.mainTagLine {
+	position: inline-block;
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+.pseudoBorder {
+  position: relative;
+  display: block;
+}
+.pseudoBorder:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin: 0px auto;
+  padding: 0;
+  width: 60%;
+  height: 5px;
+  background: black;
+  border-radius: 5px;
+}
+.scheduleButton {
+  text-align: center;
+  display: block;
+  width: 181px;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  font-weight: bold;
+  background: rgb(22, 205, 255, 0.9);
+  margin: 0px auto 35px auto;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  animation: blinker 2s linear infinite;
+  border: 2px solid white;
+}
+.servicesBody {
+	margin: auto;
+  width: 85%;
+  padding-bottom: 15px;
+  margin: 10px auto 15px auto;
+}
+@keyframes blinker {
+  50% {
+    border: 2px solid black;
+  }
+  100% {
+    border: 2px solid white;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main {
+    width: 95%;
+    flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+    margin-bottom: 0px;
+  }
+
+  .pseudoBorder {
+    margin: 0;
+    padding: 10px 0 0 0;
+    font-size: 25px;
+  }
+  img {
+    align-self: center;
+  }
+
+  .main img {
+    height: 200px;
+  }
+
+  .mainTextBody {
+    font-size: 18px;
+		margin: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mainTextBody {
+    width: 90%;
+  }
+}

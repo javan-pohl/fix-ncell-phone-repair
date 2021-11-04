@@ -5,6 +5,7 @@ const ScheduleRepair = ({
   pageContext: {
     phone: { make, model, screenScheduleID },
     location = 'Denver/Boulder Metro',
+    cal = '445985',
   },
 }) => (
   <Layout
@@ -23,7 +24,7 @@ const ScheduleRepair = ({
     </h1>
     <div style={{ height: '100%' }}>
       <iframe
-        src={`https://app.acuityscheduling.com/schedule.php?owner=11997785&appointmentType=${screenScheduleID}`}
+        src={`https://app.acuityscheduling.com/schedule.php?owner=11997785&appointmentType=${screenScheduleID}&calendarID=${cal}`}
         title="Schedule Appointment"
         width="100%"
         height="800"
