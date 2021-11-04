@@ -39,6 +39,7 @@ module.exports = {
     siteUrl: 'https://www.fixncell.com',
   },
   plugins: [
+    'gatsby-plugin-robots-txt',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
