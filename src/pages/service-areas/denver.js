@@ -45,12 +45,13 @@ function Westminster({
     <div className={mainTextBody}>
       <div className={mainTagLine}>"We Come To You!"</div>
       <p>
-        FixNcell is a mobile iPhone repair service that travels to the customer's location in
+        FixNcell is a mobile iPhone repair service that travels to the
+        customer's location in
         {' '}
         {location}
         {' '}
-        to fix the broken device. Select your iPhone model below to get
-        your repair started.
+        to fix the broken device. Select your
+        iPhone model below to get your repair started.
       </p>
     </div>
   )
@@ -164,9 +165,9 @@ function Westminster({
           {location}
           , but
           {' '}
-          <span style={{ fontWeight: 'bold' }}>
+          <strong>
             we are renowned for our high-quality iPhone screen repair service
-          </span>
+          </strong>
           . We can replace your damaged iPhone screen typically in 20 minutes.
           Rest assured that your new screen will function like it should--our
           apple screen replacements are covered by a warranty!

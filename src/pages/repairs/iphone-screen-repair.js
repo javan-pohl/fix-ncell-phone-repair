@@ -166,10 +166,10 @@ const processSection = () => (
             In most cases, the technician will perform the iPhone screen
             replacement in their vehicle, but if you have any privacy concerns,
             they can do the repair in your home.
-            <span style={{ fontWeight: 'bold' }}>
+            <strong>
               (*Note that the repair tech does not need your iPhone passcode in
               most cases, so your data is safe.)
-            </span>
+            </strong>
           </p>
         </li>
         <li data-sal="slide-up" data-sal-easing="ease" data-sal-duration="1000">
@@ -282,7 +282,10 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
           <ul>
             <li>
               <div>
-                <img src={crackedGlass} alt="iPhone with Apple logo on screen and spider web like crack in the glass at the top" />
+                <img
+                  src={crackedGlass}
+                  alt="iPhone with Apple logo on screen and spider web like crack in the glass at the top"
+                />
               </div>
               <div>
                 <h3>Cracked Glass</h3>
@@ -302,7 +305,10 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
 
             <li className={rowReversed}>
               <div>
-                <img src={crackedLcd} alt="iphone screen with vertical white lines cover the left half of the screen" />
+                <img
+                  src={crackedLcd}
+                  alt="iphone screen with vertical white lines cover the left half of the screen"
+                />
               </div>
               <div>
                 <h3>Display Damage</h3>
@@ -319,7 +325,10 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
 
             <li>
               <div>
-                <img src={damagedDisplay} alt="iPhone xr with cracked glass and most of the display blank" />
+                <img
+                  src={damagedDisplay}
+                  alt="iPhone xr with cracked glass and most of the display blank"
+                />
               </div>
               <div>
                 <h3>Touch Screen Issues</h3>

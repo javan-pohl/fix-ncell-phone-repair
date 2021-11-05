@@ -87,7 +87,7 @@ const IndexPage = ({ location: { pathname } }) => {
       <div
         style={backImg(westy, 0.8)}
         role="img"
-        aria-label="picture of Westminster, Colorado"
+        aria-label="view of the mountains from Westminster, Colorado"
       >
         <span
           role="img"

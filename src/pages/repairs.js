@@ -43,14 +43,15 @@ function Repairs({
   const PageTitle = `FixNcell iPhone Repair - ${location}`
   const MainText = () => (
     <div className={mainTextBody}>
-      <div className={mainTagLine}>"We Come To You!"</div>
+      <h3 className={mainTagLine}>"We Come To You!"</h3>
       <p>
-        FixNcell is a mobile iPhone repair service that travels to the customer's location in
+        FixNcell is a mobile iPhone repair service that travels to the
+        customer's location in
         {' '}
         {location}
         {' '}
-        to fix the broken device. Select your iPhone model below to get
-        your repair started.
+        to fix the broken device. Select your
+        iPhone model below to get your repair started.
       </p>
     </div>
   )
@@ -163,10 +164,9 @@ function Repairs({
           {' '}
           {location}
           , but
-          {' '}
-          <span style={{ fontWeight: 'bold' }}>
+          <strong>
             we are renowned for our high-quality iPhone screen repair service
-          </span>
+          </strong>
           . We can replace your damaged iPhone screen typically in 20 minutes.
           Rest assured that your new screen will function like it should--our
           apple screen replacements are covered by a warranty!
