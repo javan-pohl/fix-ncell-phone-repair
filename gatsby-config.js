@@ -94,6 +94,13 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        resolveSiteUrl: () => 'https://www.fixncell.com',
+      },
+    },
+
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/favicon.ico',
