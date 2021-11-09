@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'FixNcell Phone Repair',
+    title: 'FixNcell iPhone Repair',
+    siteName: 'FixNcell iPhone Repair',
     phone: '3034216499',
     email: 'fixncellllc@gmail.com',
     menuLinks: [
@@ -39,6 +40,29 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-robots-txt',
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: './sitemap.xml',
+        query: `
+					{
+							site {
+									siteMetadata {
+											siteUrl
+									}
+							}
+							allSitePage {
+									edges {
+											node {
+													path
+											}
+									}
+							}
+					}
+					`,
+      },
+    },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
@@ -92,14 +116,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-sitemap',
-      options: {
-        resolveSiteUrl: () => 'https://www.fixncell.com',
-      },
-    },
-
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
