@@ -196,7 +196,6 @@ function Repairs({
           Click to Schedule Your iPhone Screen Repair
         </Link>
 
-        {Services()}
         <h3 style={header}>
           How Much Does it Cost to get an iPhone Repaired in
           {' '}

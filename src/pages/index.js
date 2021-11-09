@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout/Layout'
 import Showcase from '../components/Showcase/Showcase'
+import SelectPhone from '../components/SelectPhone/SelectPhone'
 import SelectLocation from '../components/SelectLocation/SelectLocation'
 import WhyFixNcell from '../components/WhyFixNcell/WhyFixNcell'
 import EmbedSocialWidget from '../components/EmbedSocialWidget/EmbedSocialWidget'
@@ -43,7 +44,7 @@ const IndexPage = ({ location: { pathname } }) => {
     </div>
   )
   // useScript('https://reviewsonmywebsite.com/js/embedLoader.js?id=cb477ad3a93eb5d679f0')
-  const title = 'FixNcell Mobile iPhone Repair Service'
+  const title = 'FixNcell iPhone Repair'
   const servicesList = [
     {
       cardTitle: 'iPhone Screen Repair',
