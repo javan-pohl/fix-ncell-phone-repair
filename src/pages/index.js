@@ -44,7 +44,7 @@ const IndexPage = ({ location: { pathname } }) => {
     </div>
   )
   // useScript('https://reviewsonmywebsite.com/js/embedLoader.js?id=cb477ad3a93eb5d679f0')
-  const title = 'FixNcell iPhone Repair | Westminster, C0 80021'
+  const title = 'FixNcell iPhone Repair | Westminster, CO 80021'
   const servicesList = [
     {
       cardTitle: 'iPhone Screen Repair',
