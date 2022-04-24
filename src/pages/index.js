@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
+import { LocalBusinessJsonLd } from 'gatsby-plugin-next-seo'
 import Layout from '../components/Layout/Layout'
 import Showcase from '../components/Showcase/Showcase'
 import SelectPhone from '../components/SelectPhone/SelectPhone'
@@ -10,7 +11,6 @@ import ContactForm from '../components/ContactForm/ContactForm'
 import ServiceCards from '../components/ServiceCards/ServiceCards'
 import insidePhone from '../images/inside_phone_horz.webp'
 import westy from '../images/westy.webp'
-
 /* eslint-disable react/prop-types */
 const backImg = (img, opac = 0.9, col = '0, 152, 255') => ({
   color: 'white',
@@ -56,27 +56,68 @@ const IndexPage = ({ location: { pathname } }) => {
     {
       cardTitle: 'iPhone Charging Port Repair',
       cardBody:
-        "If you are struggling to get a good connection with your iPhone's lightning charging port and the charging cable, it could be time for a new charging port. The charging port of iPhones and every other device wear out over time, but this is an issue that we can take care of for you.",
+			"If you are struggling to get a good connection with your iPhone's lightning charging port and the charging cable, it could be time for a new charging port. The charging port of iPhones and every other device wear out over time, but this is an issue that we can take care of for you.",
       imgText: 'icon of iphone charging port',
       link: '/repairs/iphone-charging-port-repair',
     },
     {
       cardTitle: 'iPhone Battery Replacement',
       cardBody:
-        'Your iPhone may not be holding a charge like it used to, or you may noticed swelling coming from typically the left side of the screen, where the glass is bulging away from the frame--these are both signs that you may need a new iPhone battery.',
+			'Your iPhone may not be holding a charge like it used to, or you may noticed swelling coming from typically the left side of the screen, where the glass is bulging away from the frame--these are both signs that you may need a new iPhone battery.',
       imgText: 'the battery icon found on an iPhone',
       link: '/repairs/iphone-battery-replacement',
     },
   ]
+  const description = 'FixNcell iPhone Repair is a mobile phone repair shop that serves the Westminster, Broomfield, and Arvada areas in Colorado. We fix broken phones and cracked screen. We can replace batteries and repair broken charging ports. We go to you.'
   return (
     <Layout pageTitle={title} currentUrl={pathname}>
-      <Helmet>
-        <meta
+      <Helmet
+        meta={[
+          {
+            name: 'description',
+            content: { description },
+          },
+          {
+            name: 'keywords',
+            content:
+              'iphone repair, screen replacement, screen repair, broken iphone screen, cracked iphone screen, fix my phone, westminster, broomfield, arvada, thornton, 80021',
+          },
+          {
+            property: 'og:title',
+            content: { title },
+          },
+          {
+            property: 'og:description',
+            content: { description },
+          },
+        ]}
+      >
+        {/* <meta
           name="description"
           content="Get your broken iPhone fixed with our mobile iPhone repair service that operates in the Westminster, Boulder, and Denver metro areas. We come to you."
-        />
+        /> */}
         <title>{title}</title>
       </Helmet>
+      <LocalBusinessJsonLd
+        type="Store"
+        id="https://www.fixncell.com"
+        name="FixNcell iPhone Repair"
+        description={description}
+        url="https://ww.fixncell.com"
+        telephone="+13034216499"
+        address={{
+          streetAddress: '9140 w 100th ave',
+          addressLocality: 'Westminster',
+          addressRegion: 'CO',
+          postalCode: '80021',
+          addressCountry: 'US',
+        }}
+        geo={{
+          latitude: '39.8773119',
+          longitude: '105.1007508',
+        }}
+
+      />
       <Showcase />
       <SelectPhone />
       {/* <SelectLocation /> */}
