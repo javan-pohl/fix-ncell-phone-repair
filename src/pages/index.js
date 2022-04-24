@@ -44,7 +44,7 @@ const IndexPage = ({ location: { pathname } }) => {
     </div>
   )
   // useScript('https://reviewsonmywebsite.com/js/embedLoader.js?id=cb477ad3a93eb5d679f0')
-  const title = 'FixNcell iPhone Repair'
+  const title = 'FixNcell iPhone Repair | Westminster, C0 80021'
   const servicesList = [
     {
       cardTitle: 'iPhone Screen Repair',
@@ -103,7 +103,7 @@ const IndexPage = ({ location: { pathname } }) => {
         id="https://www.fixncell.com"
         name="FixNcell iPhone Repair"
         description={description}
-        url="https://ww.fixncell.com"
+        url="https://www.fixncell.com"
         telephone="+13034216499"
         address={{
           streetAddress: '9140 w 100th ave',
