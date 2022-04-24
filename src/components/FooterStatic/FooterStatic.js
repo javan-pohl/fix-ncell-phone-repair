@@ -52,10 +52,13 @@ const FooterStatic = ({ url }) => {
     <div className="footerContainer">
       <div className="footerLogoContainer">
         <div className="footerLogo">
-          <img
-            src={logo}
-            alt="FixNcell logo that has the words 'Fix N cell' where the letter N is the image of a phone"
-          />
+          <Link to="/">
+
+            <img
+              src={logo}
+              alt="FixNcell logo that has the words 'Fix N cell' where the letter N is the image of a phone"
+            />
+          </Link>
           <a href="tel:3034216499" className="footerContactButton">
             &#9742; Call (303)421-6499
           </a>
@@ -70,9 +73,10 @@ const FooterStatic = ({ url }) => {
       <div className="footerListContainer">
         <div className="footerListBox">
           <div className="footerListTitleBox">
-            <a href="https://www.fixncell.com/iphone-repair.html">
+            <Link to="/repairs">
+
               iPhone Models We Fix
-            </a>
+            </Link>
           </div>
 
           {phoneMyLinks}

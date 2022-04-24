@@ -92,7 +92,7 @@ function Repairs({
         <ul style={{ paddingLeft: '20px' }}>
           <li>
             <span style={{ fontWeight: 'bold' }}>
-              Phone Screen Replacement:
+              <Link to="./iphone-screen-repair"> Phone Screen Replacement:</Link>
               {' '}
             </span>
             Whether you have cracked glass, a touchscreen that is not responding
@@ -165,22 +165,7 @@ function Repairs({
       <div style={content}>
         <h1 style={header}>{PageTitle}</h1>
         {Services()}
-        <h2>
-          {location}
-          's Top-Rated iPhone Repair Service
-        </h2>
-        <p>
-          We provide many services at FixNcell
-          {' '}
-          {location}
-          , but
-          <strong>
-            we are renowned for our high-quality iPhone screen repair service
-          </strong>
-          . We can replace your damaged iPhone screen typically in 20 minutes.
-          Rest assured that your new screen will function like it should--our
-          apple screen replacements are covered by a warranty!
-        </p>
+
         <h3 style={{ textAlign: 'center', margin: '0px', padding: '0px' }}>
           {' '}
           {location}
