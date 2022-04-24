@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/Layout/Layout'
 import SelectPhone from '../components/SelectPhone/SelectPhone'
 import AtDoorPhoto from '../images/javan_door_99.webp'
+import ServiceCards from '../components/ServiceCards/ServiceCards'
 import {
   main,
   mainTagLine,
@@ -36,12 +37,34 @@ const backImg = {
   paddingTop: '1px',
   paddingBottom: '25px',
 }
-
+const servicesList = [
+  {
+    cardTitle: 'iPhone Screen Repair',
+    cardBody:
+			'At FixNcell, we perform our iPhone screen repairs by replacing the entire iPhone screen assembly, including the glass, digitizer (touch-screen), and display (LCD or OLED). This allows for a timely and quality repair.',
+    imgText: 'iPhone with cracked screen',
+    link: '/repairs/iphone-screen-repair',
+  },
+  {
+    cardTitle: 'iPhone Charging Port Repair',
+    cardBody:
+			"If you are struggling to get a good connection with your iPhone's lightning charging port and the charging cable, it could be time for a new charging port. The charging port of iPhones and every other device wear out over time, but this is an issue that we can take care of for you.",
+    imgText: 'icon of iphone charging port',
+    link: '/repairs/iphone-charging-port-repair',
+  },
+  {
+    cardTitle: 'iPhone Battery Replacement',
+    cardBody:
+			'Your iPhone may not be holding a charge like it used to, or you may noticed swelling coming from typically the left side of the screen, where the glass is bulging away from the frame--these are both signs that you may need a new iPhone battery.',
+    imgText: 'the battery icon found on an iPhone',
+    link: '/repairs/iphone-battery-replacement',
+  },
+]
 function Repairs({
   location: { pathname },
   pageContext: { location = 'Westminster', zipCodes },
 }) {
-  const PageTitle = 'Repairs Services We Provide'
+  const PageTitle = 'Info About our iPhone Repairs'
   const MainText = () => (
     <div className={mainTextBody}>
       <h3 className={mainTagLine}>"We Come To You!"</h3>
@@ -59,7 +82,7 @@ function Repairs({
   const Services = () => (
     <div>
       <h2>
-        Services at FixNcell in
+        iPhone Repair Services at FixNcell in
         {' '}
         {location}
         {' '}
@@ -141,9 +164,7 @@ function Repairs({
       <SelectPhone url={pathname} />
       <div style={content}>
         <h1 style={header}>{PageTitle}</h1>
-        <p>
-          Here at FixNcell, we currently provide three types of iPhone Repairs:
-        </p>
+        {Services()}
         <h2>
           {location}
           's Top-Rated iPhone Repair Service

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import './FooterStatic.css'
 import { Link } from 'gatsby'
-import MyLink from '../MyLink/MyLink'
+// import MyLink from '../MyLink/MyLink'
 import getPhones from '../../queries/getPhones/getPhones'
 import getLocations from '../../queries/getLocations/getLocations'
 import facebook from '../../images/facebook.webp'
@@ -25,9 +25,9 @@ const FooterStatic = ({ url }) => {
         {nodes.map((phone) => {
           const phoneName = `${phone.make} ${phone.model}`
           return (
-            <MyLink url={url} to={phone.slug} key={phoneName}>
+            <Link to={phone.slug} key={phoneName}>
               <li className="footerListLI">{phoneName}</li>
-            </MyLink>
+            </Link>
           )
         })}
       </ul>
