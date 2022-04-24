@@ -137,10 +137,7 @@ const AboutPage = ({
           your location, we can travel and meet you within a 30 mile radius of
           Westminster.
         </p>
-        <h3>Cities we can travel to</h3>
-        <p>Westminster</p>
-        <h3>Zip Codes We Service</h3>
-        <p />
+
         <h2>Highly Rated</h2>
         <div className={reviews}>
           <p>
