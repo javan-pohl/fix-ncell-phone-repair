@@ -18,9 +18,7 @@ export default function Navigation3({ currentUrl, menuLinks }) {
   const { locations } = getLocations()
   const urlCap = shortUrl.charAt(1).toLocaleUpperCase() + shortUrl.slice(2)
   const pageIsLoc = locations.some((loc) => loc.name === urlCap)
-  // console.log('pageIsloc: ', pageIsLoc)
-  // console.log('urlCap: ', urlCap)
-  // console.log('locations: ', locations)
+
   menuLinks = menuLinks.map((val) => {
     if (val.text === 'Repairs') {
       val.sublinks = [
@@ -30,22 +28,22 @@ export default function Navigation3({ currentUrl, menuLinks }) {
           text: 'iPhone Screen Repair',
           pageURL: 'https://www.fixncell.com/repairs/iphone-screen-repair',
         },
-        {
-          testid: 'iphone-charging-port-repair',
-          link: '/repairs/iphone-charging-port-repair',
-          text: 'iPhone Charging Port Repair',
-          pageURL:
-            'https://www.fixncell.com/repairs/iphone-charging-port-repair',
-        },
-        {
-          testid: 'iphone-battery-replacement',
-          link: '/repairs/iphone-battery-replacement',
-          text: 'iPhone Battery Replacement',
-          pageURL:
-            'https://www.fixncell.com/repairs/iphone-battery-replacement',
-        },
+        // {
+        //   testid: 'iphone-charging-port-repair',
+        //   link: '/repairs/iphone-charging-port-repair',
+        //   text: 'iPhone Charging Port Repair',
+        //   pageURL:
+        //     'https://www.fixncell.com/repairs/iphone-charging-port-repair',
+        // },
+        // {
+        //   testid: 'iphone-battery-replacement',
+        //   link: '/repairs/iphone-battery-replacement',
+        //   text: 'iPhone Battery Replacement',
+        //   pageURL:
+        //     'https://www.fixncell.com/repairs/iphone-battery-replacement',
+        // },
       ]
-    } else if (val.text === 'Locations') {
+    } else if (val.text === 'Service Areas') {
       val.sublinks = locations.map((loc) => {
         const locLowerCase = loc.name.toLowerCase()
         return {
@@ -60,19 +58,32 @@ export default function Navigation3({ currentUrl, menuLinks }) {
   })
   const links = menuLinks.map((link) => (link.sublinks !== undefined ? (
     <div className={dropDown} key={link.text}>
-      <li
+      <Link
         style={{
           color: `${
             link.link === shortUrl
-              || link.text === 'Locations' && locations.some((loc) => loc.name.toLowerCase() === shortUrl.slice(1))
+              || locations.some((loc) => loc.name === link.text)
               ? 'white'
-              : 'black'
+              : ''
           }`,
         }}
-        key={link.testid}
+        data-testid={link.testid}
+        to={link.link}
       >
-        <span>{link.text}</span>
-      </li>
+        <li
+          style={{
+            color: `${
+              link.link === shortUrl
+						|| link.text === 'Locations' && locations.some((loc) => loc.name.toLowerCase() === shortUrl.slice(1))
+                ? 'white'
+                : 'black'
+            }`,
+          }}
+          key={link.testid}
+        >
+          <span>{link.text}</span>
+        </li>
+      </Link>
       <div className={dropMenu} key={link.text}>
         {link.sublinks.map((subLink) => (
           <Link className={dropMenuItem} to={subLink.link} key={subLink.text}>

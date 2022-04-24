@@ -83,7 +83,10 @@ const aboutHeading = {
   alignItems: 'center',
   whiteSpace: 'nowrap',
 }
-const AboutPage = ({ location: { pathname } }) => (
+
+const AboutPage = ({
+  location: { pathname },
+}) => (
   <Layout pageTitle="About Us | FixNcell" currentUrl={pathname}>
     <Helmet>
       <meta
@@ -111,8 +114,8 @@ const AboutPage = ({ location: { pathname } }) => (
         <h1>About Us</h1>
         <p>
           FixNcell started in 2014 as a store-front cell phone repair business
-          in Westminster, CO. In 2020, right before the pandemic started, we
-          made the decision to switch from a store-based provider to a
+          in Westminster, CO 80021. In 2020, right before the pandemic started,
+          we made the decision to switch from a store-based provider to a
           mobile-based service--where we would go to the customer's location to
           perform our cell phone repairs. We also made the decision at that
           point to focus primarily on working on Apple iPhones (this is due to
@@ -128,6 +131,16 @@ const AboutPage = ({ location: { pathname } }) => (
           like it did before it was damaged. We make take great care to ensure
           that your phone repair experience is as smooth painless as can be.
         </p>
+        <h2>Locations We Service</h2>
+        <p>
+          We are centrally located in Westminster Colorado 80021. Since we go to
+          your location, we can travel and meet you within a 30 mile radius of
+          Westminster.
+        </p>
+        <h3>Cities we can travel to</h3>
+        <p>Westminster</p>
+        <h3>Zip Codes We Service</h3>
+        <p />
         <h2>Highly Rated</h2>
         <div className={reviews}>
           <p>

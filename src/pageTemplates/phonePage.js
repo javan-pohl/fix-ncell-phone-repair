@@ -11,7 +11,7 @@ function PhonePage({
     phone: {
       make, model, image, repairs,
     },
-    location = 'Denver/Boulder Metro',
+    location = 'Westminster',
   },
 }) {
   const imageURL = getImages(image) || errImg

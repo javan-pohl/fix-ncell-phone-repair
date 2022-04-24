@@ -23,12 +23,12 @@ module.exports = {
         text: 'Repairs',
         pageURL: 'https://www.fixncell.com/repairs',
       },
-      {
-        testid: 'locationsLink',
-        link: '/locations',
-        text: 'Locations',
-        pageURL: 'https://www.fixncell.com/locations',
-      },
+      // {
+      //   testid: 'locationsLink',
+      //   link: '/locations',
+      //   text: 'Service Areas',
+      //   pageURL: 'https://www.fixncell.com/locations',
+      // },
       {
         testid: 'contactLink',
         link: '/contact-us',
@@ -41,28 +41,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-sitemap',
-      options: {
-        output: './sitemap.xml',
-        query: `
-					{
-							site {
-									siteMetadata {
-											siteUrl
-									}
-							}
-							allSitePage {
-									edges {
-											node {
-													path
-											}
-									}
-							}
-					}
-					`,
-      },
-    },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sass',
     'gatsby-plugin-image',

@@ -36,11 +36,12 @@ const backImg = {
   paddingTop: '1px',
   paddingBottom: '25px',
 }
+
 function Repairs({
   location: { pathname },
-  pageContext: { location = 'Denver/Boulder Metro', zipCodes },
+  pageContext: { location = 'Westminster', zipCodes },
 }) {
-  const PageTitle = `FixNcell iPhone Repair - ${location}`
+  const PageTitle = 'Repairs Services We Provide'
   const MainText = () => (
     <div className={mainTextBody}>
       <h3 className={mainTagLine}>"We Come To You!"</h3>
@@ -141,19 +142,7 @@ function Repairs({
       <div style={content}>
         <h1 style={header}>{PageTitle}</h1>
         <p>
-          If you live in the
-          {' '}
-          {location}
-          {' '}
-          area and need to get an iPhone screen
-          fixed, you've come to the right place. FixNcell is a mobile iPhone
-          repair service that will come to your location in
-          {' '}
-          {location}
-          {' '}
-          to fix
-          your phone. However, you may remember us from our store location on
-          100th and Wadsworth in Westminster where we opened in 2015.
+          Here at FixNcell, we currently provide three types of iPhone Repairs:
         </p>
         <h2>
           {location}

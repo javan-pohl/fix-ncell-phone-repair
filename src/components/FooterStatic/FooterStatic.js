@@ -9,7 +9,7 @@ import foursquare from '../../images/foursquare.webp'
 import twitter from '../../images/twitter.webp'
 import yelp from '../../images/yelpTrans2.webp'
 import logo from '../../images/logo.webp'
-
+import Hours from '../Hours/Hours'
 // I'm keeping this mostly static and will slowly change it to be fully dynamic
 
 const FooterStatic = ({ url }) => {
@@ -37,13 +37,13 @@ const FooterStatic = ({ url }) => {
     <div className="footerListItems">
       <ul className="footerListUL" title="Areas We Services">
         {locations.map((name) => (
-          <Link
-            url={url}
-            to={`/${name.name.toLowerCase()}/repairs/iphone`}
-            key={name.name}
-          >
-            <li className="footerListLI">{name.name}</li>
-          </Link>
+          // <Link
+          //   url={url}
+          //   to={`/${name.name.toLowerCase()}/repairs/iphone`}
+          //   key={name.name}
+          // >
+          <li className="footerListLI">{name.name}</li>
+          // </Link>
         ))}
       </ul>
     </div>
@@ -127,7 +127,8 @@ const FooterStatic = ({ url }) => {
         </div>
         <div className="footerStoreHoursContainer">
           <table className="footerStoreHoursTable">
-            <thead>
+            <Hours />
+            {/* <thead>
               <tr>
                 <th className="footerTableDayOfWeek">Day</th>
                 <th>Hours</th>
@@ -162,7 +163,7 @@ const FooterStatic = ({ url }) => {
                 <td className="footerTableDayOfWeek">Sunday</td>
                 <td>Closed</td>
               </tr>
-            </tbody>
+            </tbody> */}
           </table>
         </div>
       </div>

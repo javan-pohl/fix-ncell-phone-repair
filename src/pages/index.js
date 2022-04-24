@@ -78,7 +78,8 @@ const IndexPage = ({ location: { pathname } }) => {
         <title>{title}</title>
       </Helmet>
       <Showcase />
-      <SelectLocation />
+      <SelectPhone />
+      {/* <SelectLocation /> */}
       {IndexMain()}
       <div style={{ marginBottom: '0px' }}>
         <EmbedSocialWidget refId="290bdda409a96a5c382887408438f18ddeabb3ab" />

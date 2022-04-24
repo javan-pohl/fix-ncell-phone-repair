@@ -28,7 +28,7 @@ import crackedLcd from '../../images/iphone-xr-broken-lcd.webp'
 import crackedGlass from '../../images/iphone-cracked-glass.webp'
 import damagedDisplay from '../../images/iphone-damaged-display.webp'
 import EmbedSocialWidget from '../../components/EmbedSocialWidget/EmbedSocialWidget'
-import SelectLocation from '../../components/SelectLocation/SelectLocation'
+import SelectPhone from '../../components/SelectPhone/SelectPhone'
 
 const faqData = {
   title: 'FAQ - iPhone Screen Repair',
@@ -199,7 +199,7 @@ const processSection = () => (
   </section>
 )
 const iPhoneScreenRepair = ({ location: { pathname } }) => {
-  const title = 'FixNcell iPhone Screen Repairs'
+  const title = 'iPhone Screen Repairs | Westminster'
 
   return (
     <Layout pageTitle={title} currentUrl={pathname}>
@@ -231,7 +231,7 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
         <div style={blueBackImg(insidePhone)}>
           <div className={sideBySide}>
             <div className={h1Section}>
-              <h1 className="pseudo_border_green">iPhone Screen Repair</h1>
+              <h1 className="pseudo_border_green">{title}</h1>
               <p>
                 On this page, we'll provide more detail about the iPhone screen
                 repair process at FixNcell, reviews from past screen repair
@@ -245,16 +245,11 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
         </div>
       </section>
       <section>
-        <h2>Get More Information</h2>
-        <p>
-          To get more information, including pricing and available of iPhone
-          screen repairs for your particular iPhone model, please select your
-          location below:
-        </p>
-        <SelectLocation />
+
+        <SelectPhone />
       </section>
       <div>
-        <div>
+        {/* <div>
           <h2 className="pseudo_border_green">Mobile iPhone Repairs</h2>
           <p>
             The first thing to know about getting your iPhone screen replaced
@@ -262,7 +257,7 @@ const iPhoneScreenRepair = ({ location: { pathname } }) => {
             we used to have a store-front, we switched to mobile only repairs in
             2020.
           </p>
-        </div>
+        </div> */}
         <div>
           <h2 className="pseudo_border_green">
             iPhone Screen "Repair" or "Replacement"?
