@@ -26,7 +26,7 @@ const IndexPage = ({ location: { pathname } }) => {
     <div style={backImg(insidePhone)}>
       <span
         role="img"
-        aria-label="a FixNcell workstation that has an opened iPhone that is being worked"
+        aria-label="a FixNcell workstation that has an opened iPhone that is being worked on"
       />
       <div data-sal="slide-up" data-sal-easing="ease" data-sal-duration="1000">
         <h1 className="pseudo_border">{title}</h1>
@@ -58,14 +58,12 @@ const IndexPage = ({ location: { pathname } }) => {
       cardBody:
 			"If you are struggling to get a good connection with your iPhone's lightning charging port and the charging cable, it could be time for a new charging port. The charging port of iPhones and every other device wear out over time, but this is an issue that we can take care of for you.",
       imgText: 'icon of iphone charging port',
-      link: '/repairs/iphone-charging-port-repair',
     },
     {
       cardTitle: 'iPhone Battery Replacement',
       cardBody:
 			'Your iPhone may not be holding a charge like it used to, or you may noticed swelling coming from typically the left side of the screen, where the glass is bulging away from the frame--these are both signs that you may need a new iPhone battery.',
       imgText: 'the battery icon found on an iPhone',
-      link: '/repairs/iphone-battery-replacement',
     },
   ]
   const description = 'FixNcell iPhone Repair is a mobile phone repair shop that serves the Westminster, Broomfield, and Arvada areas in Colorado. We fix broken phones and cracked screen. We can replace batteries and repair broken charging ports. We go to you.'

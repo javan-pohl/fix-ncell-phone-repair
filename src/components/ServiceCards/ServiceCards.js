@@ -16,7 +16,7 @@ import chargingIcon from '../../images/charging_port_icon.webp'
 import batteryIcon from '../../images/battery_icon.webp'
 
 const ServiceCard = ({
-  cardTitle, iconImg, cardBody, imgText, link,
+  cardTitle, iconImg, cardBody, imgText, link = 'undefined',
 }) => {
   const altText = typeof imgText === 'undefined' ? cardTitle.replace('_', ' ') : imgText
   return (
@@ -29,9 +29,12 @@ const ServiceCard = ({
       <div className={serviceCardBody}>
         <h3>{cardTitle}</h3>
         <p>{cardBody}</p>
-        <Link to={link}>
-          <div className={button}>Learn More</div>
-        </Link>
+        {link !== 'undefined'
+          && (
+          <Link to={link}>
+            <div className={button}>Learn More</div>
+          </Link>
+          )}
       </div>
     </div>
   )
