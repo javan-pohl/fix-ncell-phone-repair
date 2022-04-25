@@ -83,17 +83,17 @@ const aboutHeading = {
   alignItems: 'center',
   whiteSpace: 'nowrap',
 }
-
+const title = 'About Us | FixNcell | Westminster, CO'
 const AboutPage = ({
   location: { pathname },
 }) => (
-  <Layout pageTitle="About Us | FixNcell" currentUrl={pathname}>
+  <Layout pageTitle={title} currentUrl={pathname}>
     <Helmet>
       <meta
         name="description"
         content="About FixNcell and why we should be your first choice for getting your cracked iPhone screen fixed."
       />
-      <title>About Us | FixNcell</title>
+      <title>{title}</title>
     </Helmet>
 
     <section>

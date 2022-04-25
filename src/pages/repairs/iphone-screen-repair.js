@@ -199,14 +199,14 @@ const processSection = () => (
   </section>
 )
 const iPhoneScreenRepair = ({ location: { pathname } }) => {
-  const title = 'iPhone Screen Repairs | Westminster'
+  const title = 'iPhone Screen Repairs | FixNcell | Westminster, CO'
 
   return (
     <Layout pageTitle={title} currentUrl={pathname}>
       <Helmet>
         <meta
           name="description"
-          content="Information on the different types of broken iPhone screen issues that the process for getting an iPhone screen fixed through FixNcell."
+          content="Information on the different types of broken iPhone screen issues that the process for getting an iPhone screen fixed through FixNcell. Westminster, C0 80021"
         />
         <title>{title}</title>
       </Helmet>

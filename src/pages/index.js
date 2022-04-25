@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
-import { LocalBusinessJsonLd } from 'gatsby-plugin-next-seo'
 import Layout from '../components/Layout/Layout'
 import Showcase from '../components/Showcase/Showcase'
 import SelectPhone from '../components/SelectPhone/SelectPhone'
@@ -44,7 +43,7 @@ const IndexPage = ({ location: { pathname } }) => {
     </div>
   )
   // useScript('https://reviewsonmywebsite.com/js/embedLoader.js?id=cb477ad3a93eb5d679f0')
-  const title = 'FixNcell iPhone Repair | Westminster, CO 80021'
+  const title = 'FixNcell Phone Repair | Westminster, CO 80021'
   const servicesList = [
     {
       cardTitle: 'iPhone Screen Repair',
@@ -66,7 +65,7 @@ const IndexPage = ({ location: { pathname } }) => {
       imgText: 'the battery icon found on an iPhone',
     },
   ]
-  const description = 'FixNcell iPhone Repair is a mobile phone repair shop that serves the Westminster, Broomfield, and Arvada areas in Colorado. We fix broken phones and cracked screen. We can replace batteries and repair broken charging ports. We go to you.'
+  const description = 'FixNcell Phone Repair is a mobile phone repair shop that serves the Westminster, Broomfield, and Arvada areas in Colorado. We fix broken iPhones and cracked screens. We can replace batteries and repair broken charging ports. We go to you.'
   return (
     <Layout pageTitle={title} currentUrl={pathname}>
       <Helmet
@@ -96,26 +95,7 @@ const IndexPage = ({ location: { pathname } }) => {
         /> */}
         <title>{title}</title>
       </Helmet>
-      <LocalBusinessJsonLd
-        type="Store"
-        id="https://www.fixncell.com"
-        name="FixNcell iPhone Repair"
-        description={description}
-        url="https://www.fixncell.com"
-        telephone="+13034216499"
-        address={{
-          streetAddress: '9140 w 100th ave',
-          addressLocality: 'Westminster',
-          addressRegion: 'CO',
-          postalCode: '80021',
-          addressCountry: 'US',
-        }}
-        geo={{
-          latitude: '39.8773119',
-          longitude: '105.1007508',
-        }}
 
-      />
       <Showcase />
       <SelectPhone />
       {/* <SelectLocation /> */}

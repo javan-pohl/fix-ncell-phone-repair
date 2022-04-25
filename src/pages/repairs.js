@@ -64,7 +64,7 @@ function Repairs({
   location: { pathname },
   pageContext: { location = 'Westminster', zipCodes },
 }) {
-  const PageTitle = 'Info About our iPhone Repairs'
+  const PageTitle = 'Repairs | FixNcell | Westminster, CO'
   const MainText = () => (
     <div className={mainTextBody}>
       <h3 className={mainTagLine}>"We Come To You!"</h3>

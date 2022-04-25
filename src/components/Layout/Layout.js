@@ -2,6 +2,7 @@ import * as React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
+import { LocalBusinessJsonLd } from 'gatsby-plugin-next-seo'
 import Header2 from '../Header2/Header2'
 import FooterStatic from '../FooterStatic/FooterStatic'
 
@@ -16,6 +17,7 @@ text-align: center
 
 const Layout = ({ currentUrl, pageTitle, children }) => {
   // keeping this here for now so that it doesn't try to force to an unbracketed arrow structure
+  const description = 'FixNcell Phone Repair is a mobile phone repair shop located in Westminster, CO. We also serve the Broomfield and Arvada. We fix broken iPhones and cracked screens. We can replace batteries and repair broken charging ports. We go to you.'
   if (currentUrl === '/' && typeof window !== 'undefined') {
     currentUrl = window.location.pathname
   }
@@ -24,6 +26,25 @@ const Layout = ({ currentUrl, pageTitle, children }) => {
       <Helmet>
         <html lang="en" />
       </Helmet>
+      <LocalBusinessJsonLd
+        type="Store"
+        id="https://www.fixncell.com"
+        name="FixNcell iPhone Repair"
+        description={description}
+        url="https://www.fixncell.com"
+        telephone="+13034216499"
+        address={{
+          streetAddress: '9140 w 100th ave',
+          addressLocality: 'Westminster',
+          addressRegion: 'CO',
+          postalCode: '80021',
+          addressCountry: 'US',
+        }}
+        geo={{
+          latitude: '39.8773119',
+          longitude: '105.1007508',
+        }}
+      />
       <GlobalStyle />
       <title>{pageTitle}</title>
       <Header2 currentUrl={currentUrl} />
