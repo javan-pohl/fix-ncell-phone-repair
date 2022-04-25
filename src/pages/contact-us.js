@@ -20,7 +20,7 @@ const ContactPage = ({ location: { pathname } }) => (
     <Helmet>
       <meta
         name="description"
-        content="How to contact us here at FixNcell Phone Repair. Westminster, C0 80021. You can reach us by text, phone, email, or form submission."
+        content="How to contact us here at FixNcell Phone Repair. Westminster, C0 80021. You can reach us by text, phone, email, or form submission. "
       />
       <title>{title}</title>
     </Helmet>
