@@ -25,6 +25,7 @@ const Layout = ({ currentUrl, pageTitle, children }) => {
     <main>
       <Helmet>
         <html lang="en" />
+        <meta name="google-site-verification" content="UuKA9CsGyvBUBvry0azI_PdbJomI8HWoTgRkfpChb8o" />
       </Helmet>
       <LocalBusinessJsonLd
         type="Store"
