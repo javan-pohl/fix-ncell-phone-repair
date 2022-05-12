@@ -40,7 +40,7 @@ function PhonePage({
           </tr>
         </thead>
         <tbody>
-          {Object.keys(repairs).map((repair, idx) => (
+          {Object.keys(repairs).reverse().map((repair, idx) => (
             <tr key={idx}>
               <td>
                 {`${make} ${model} ${
