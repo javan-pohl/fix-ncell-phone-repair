@@ -4,7 +4,7 @@ import emailIcon from '../../images/email.png'
 
 const EmailButton = () => (
   <button type="button" className={contactButton}>
-    <a data-testid="emailButtonA" href="mailto:info@fixncell.com">
+    <a data-testid="emailButtonA" href="mailto:fixncellllc@gmail.com">
       <img src={emailIcon} alt="email icon" />
       <br />
       Email Us
