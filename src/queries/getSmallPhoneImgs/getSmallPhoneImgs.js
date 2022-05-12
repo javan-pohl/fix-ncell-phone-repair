@@ -26,7 +26,6 @@ function getImages(image) {
     const name = image.replace('.jpg', '')
     return phoneImages[name]
   }
-  console.log('getSmallPhoneImgs: ', phoneImages)
   return phoneImages
 }
 

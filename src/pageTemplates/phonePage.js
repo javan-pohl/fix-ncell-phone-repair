@@ -15,6 +15,7 @@ function PhonePage({
   },
 }) {
   const imageURL = getImages(image) || errImg
+  console.log('imageURL: ', imageURL)
   const name = `${make} ${model}`
   const PageName = `FixNcell ${name} Repair - ${location}`
 

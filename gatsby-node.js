@@ -42,7 +42,7 @@ exports.createPages = async function ({ actions, graphql }) {
   // console.log('phones: ', data.allPhonesJson.nodes)
   data.allPhonesJson.nodes.forEach((node) => {
     node.image = `${node.make}-${node.model}-small.jpg`
-      .replace(' ', '-')
+      .replace(/\s/g, '-')
       .toLowerCase()
 
     actions.createPage({

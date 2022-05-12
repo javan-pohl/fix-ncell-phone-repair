@@ -3,7 +3,6 @@ import { card } from './PhoneCard.module.css'
 
 const PhoneCard = ({ model, img, myKey }) => {
   const name = `iPhone ${model}`
-  // console.log('img name: ', img)
   return (
     <div className={card} key={myKey} data-sal="slide-up" data-sal-easing="ease">
       <img src={img} alt={name} />
