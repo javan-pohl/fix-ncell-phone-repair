@@ -144,13 +144,24 @@
 	},
 	{
 		"make": "iPhone",
-		"model": "11 PRO",
-		"slug": "/repairs/iphone/11pro",
+		"model": "11 Pro",
+		"slug": "/repairs/iphone/11-pro",
 		"repairs": {
 			"screen-repair-price": "$199",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
 		},
-		"screenScheduleID": "14632960"
+		"screenScheduleID": "26408499"
+	},
+	{
+		"make": "iPhone",
+		"model": "11 Pro Max",
+		"slug": "/repairs/iphone/11-pro-max",
+		"repairs": {
+			"screen-repair-price": "$199",
+			"battery-repair-price": "$109",
+			"charging-port-repair-price": "$109"
+		},
+		"screenScheduleID": "26408482"
 	}
 ]

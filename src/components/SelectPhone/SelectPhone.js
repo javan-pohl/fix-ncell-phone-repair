@@ -9,9 +9,11 @@ import { selectPhone, heading, info } from './SelectPhone.module.css'
 
 function SelectPhone({ url }) {
   const phoneImages = getImages()
+  console.log('imgages: ', phoneImages)
   const { nodes } = getPhones()
   const phones = nodes.map((phone, index) => {
-    const phoneName = `iphone-${phone.model.replace(' ', '-').toLowerCase()}`
+    const phoneName = `iphone-${phone.model.replace(/\s/g, '-').toLowerCase()}`
+    console.log('phoneName: ', phoneName)
     return (
       <Link to={phone.slug} key={phoneName}>
         <PhoneCard
