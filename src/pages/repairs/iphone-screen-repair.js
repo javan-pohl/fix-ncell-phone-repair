@@ -44,7 +44,7 @@ const faqData = {
       content: `This is a multi-layered question. The first answer is "No--you likely won't notice a difference in quality between your original screen and the one we put on." 
 				
 				Related to this question is "Yes, we do typically use after-market screens, but we can install original quality Apple screens if you so desire."
-				\n If, after having FixNcell repair your screen, you're unhappy with the quality of the after-market screen, we will install the original grade screen for only the difference in price of the after-market screen vs the original `,
+				\n If, after having FixNcell repair your screen, you're unhappy with the quality of the after-market screen, we will install the original grade screen for only the difference in price of the after-market screen vs the original. We just want to point out that, out of the thousands of iPhone screens we've replaced, less than a dozen people have wanted to upgrade to the original quality. We're always keeping an eye on the quality of our iPhone parts, so the standard screens we use satisfy about 99.9% of our customers.`,
     },
     {
       title: 'Is is possible for me to replace my iPhone screen myself?',
