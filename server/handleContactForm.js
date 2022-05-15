@@ -10,7 +10,7 @@ const contactAddress = "info@fixncell.com"
 const mailer = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: process.env.production."fixncellllc@gmail.com",
+    user: process.env.production."info@fixncell.com",
     pass: process.env.production."*B!ggles82",
   },
 })

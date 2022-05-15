@@ -3,7 +3,7 @@ module.exports = {
     title: 'FixNcell iPhone Repair',
     siteName: 'FixNcell iPhone Repair',
     phone: '3034216499',
-    email: 'fixncellllc@gmail.com',
+    email: 'info@fixncell.com',
     menuLinks: [
       {
         testid: 'homeLink',

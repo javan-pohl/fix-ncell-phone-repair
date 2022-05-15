@@ -63,7 +63,7 @@ const FooterStatic = ({ url }) => {
             &#9742; Call (303)421-6499
           </a>
           <a
-            href="mailto:fixncellllc@gmail.com"
+            href="mailto:info@fixncell.com"
             className="footerContactButton"
           >
             &#9993; Email
