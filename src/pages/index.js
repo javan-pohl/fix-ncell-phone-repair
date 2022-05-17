@@ -55,13 +55,13 @@ const IndexPage = ({ location: { pathname } }) => {
     {
       cardTitle: 'iPhone Charging Port Repair',
       cardBody:
-			"If you are struggling to get a good connection with your iPhone's lightning charging port and the charging cable, it could be time for a new charging port. The charging port of iPhones and every other device wear out over time, but this is an issue that we can take care of for you.",
+        "If you are struggling to get a good connection with your iPhone's lightning charging port and the charging cable, it could be time for a new charging port. The charging port of iPhones and every other device wear out over time, but this is an issue that we can take care of for you.",
       imgText: 'icon of iphone charging port',
     },
     {
       cardTitle: 'iPhone Battery Replacement',
       cardBody:
-			'Your iPhone may not be holding a charge like it used to, or you may noticed swelling coming from typically the left side of the screen, where the glass is bulging away from the frame--these are both signs that you may need a new iPhone battery.',
+        'Your iPhone may not be holding a charge like it used to, or you may noticed swelling coming from typically the left side of the screen, where the glass is bulging away from the frame--these are both signs that you may need a new iPhone battery.',
       imgText: 'the battery icon found on an iPhone',
     },
   ]
@@ -72,7 +72,7 @@ const IndexPage = ({ location: { pathname } }) => {
         meta={[
           {
             name: 'description',
-            content: { description },
+            content: description,
           },
           {
             name: 'keywords',
@@ -81,11 +81,11 @@ const IndexPage = ({ location: { pathname } }) => {
           },
           {
             property: 'og:title',
-            content: { title },
+            content: title,
           },
           {
             property: 'og:description',
-            content: { description },
+            content: description,
           },
         ]}
       >
