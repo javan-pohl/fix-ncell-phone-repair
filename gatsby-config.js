@@ -13,13 +13,13 @@ module.exports = {
       },
       {
         testid: 'aboutLink',
-        link: '/about',
+        link: '/about/',
         text: 'About',
         pageURL: 'https://www.fixncell.com/about/',
       },
       {
         testid: 'repairsLink',
-        link: '/repairs',
+        link: '/repairs/',
         text: 'Repairs',
         pageURL: 'https://www.fixncell.com/repairs/',
       },
@@ -31,7 +31,7 @@ module.exports = {
       // },
       {
         testid: 'contactLink',
-        link: '/contact-us',
+        link: '/contact-us/',
         text: 'Contact',
         pageURL: 'https://www.fixncell.com/contact-us/',
       },

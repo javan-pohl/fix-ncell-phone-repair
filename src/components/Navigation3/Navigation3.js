@@ -24,9 +24,9 @@ export default function Navigation3({ currentUrl, menuLinks }) {
       val.sublinks = [
         {
           testid: 'iphone-screen-repair',
-          link: '/repairs/iphone-screen-repair',
+          link: '/repairs/iphone-screen-repair/',
           text: 'iPhone Screen Repair',
-          pageURL: 'https://www.fixncell.com/repairs/iphone-screen-repair',
+          pageURL: 'https://www.fixncell.com/repairs/iphone-screen-repair/',
         },
         // {
         //   testid: 'iphone-charging-port-repair',
