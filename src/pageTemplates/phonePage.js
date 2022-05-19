@@ -14,10 +14,9 @@ function PhonePage({
     location = 'Westminster',
   },
 }) {
-  console.log('phoneInfo: ', phoneInfo)
   const imageURL = getImages(image) || errImg
   const name = `${make} ${model}`
-  const PageName = `FixNcell ${name} Repair - ${location}`
+  const PageName = `FixNcell ${name} Repair - ${location}, CO`
 
   const ButtonFunction = (repair) => (
     <Link
@@ -69,7 +68,7 @@ function PhonePage({
   </div>
   )
   return (
-    <Layout pageTitle="FixNcell">
+    <Layout pageTitle={PageName} desc={`Pricing and information on our ${name} repairs`}>
       <h1>{PageName}</h1>
       <div className={phoneMain}>
         <img src={imageURL} alt={name} style={{ height: '250px' }} />

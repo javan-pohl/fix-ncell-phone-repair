@@ -15,9 +15,12 @@ text-align: center
 }
 `
 
-const Layout = ({ currentUrl, pageTitle, children }) => {
+const Layout = ({
+  currentUrl, pageTitle, children, desc,
+}) => {
   // keeping this here for now so that it doesn't try to force to an unbracketed arrow structure
-  const description = 'FixNcell Phone Repair is a mobile phone repair shop located in Westminster, CO. We also serve the Broomfield and Arvada. We fix broken iPhones and cracked screens. We can replace batteries and repair broken charging ports. We go to you.'
+  const description = desc || 'FixNcell Phone Repair is a mobile phone repair shop located in Westminster, CO. We also serve the Broomfield and Arvada. We fix broken iPhones and cracked screens. We can replace batteries and repair broken charging ports. We go to you.'
+  console.log('desc: ', description)
   if (currentUrl === '/' && typeof window !== 'undefined') {
     currentUrl = window.location.pathname
   }
@@ -26,6 +29,7 @@ const Layout = ({ currentUrl, pageTitle, children }) => {
       <Helmet>
         <html lang="en" />
         <meta name="google-site-verification" content="UuKA9CsGyvBUBvry0azI_PdbJomI8HWoTgRkfpChb8o" />
+        <meta name="description" content={description} />
       </Helmet>
       <LocalBusinessJsonLd
         type="Store"
