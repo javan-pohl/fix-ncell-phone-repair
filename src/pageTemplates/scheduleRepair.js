@@ -4,7 +4,7 @@ import Layout from '../components/Layout/Layout'
 const ScheduleRepair = ({
   pageContext: {
     phone: { make, model, screenScheduleID },
-    location = 'Denver/Boulder Metro',
+    location = 'Westminster Area',
     cal = '445985',
   },
 }) => (
