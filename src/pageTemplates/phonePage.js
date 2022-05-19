@@ -68,7 +68,7 @@ function PhonePage({
   </div>
   )
   return (
-    <Layout pageTitle={PageName} desc={`Pricing and information on our ${name} repairs`}>
+    <Layout pageTitle={PageName} desc={`Pricing and information on our ${name} repairs, including ${name} screen repairs, charging port repair, and battery replacement.`}>
       <h1>{PageName}</h1>
       <div className={phoneMain}>
         <img src={imageURL} alt={name} style={{ height: '250px' }} />
