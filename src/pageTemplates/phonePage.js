@@ -27,7 +27,7 @@ function PhonePage({
           : '/schedule-your-repair'
       }
     >
-      <td>Book</td>
+      <td>Schedule</td>
     </Link>
   )
   function repairTable() {
@@ -37,7 +37,7 @@ function PhonePage({
           <tr>
             <th>Repair</th>
             <th>Price</th>
-            <th>Book</th>
+            <th>Schedule</th>
           </tr>
         </thead>
         <tbody>
