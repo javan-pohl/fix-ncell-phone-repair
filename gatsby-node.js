@@ -12,6 +12,7 @@ exports.createPages = async function ({ actions, graphql }) {
             charging_port_repair_price
             screen_repair_price
           }
+					phoneInfo
           screenScheduleID
         }
       }

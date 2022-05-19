@@ -9,13 +9,13 @@ import { phoneMain, repairPrices } from './phonePage.module.css'
 function PhonePage({
   pageContext: {
     phone: {
-      make, model, image, repairs,
+      make, model, image, repairs, phoneInfo,
     },
     location = 'Westminster',
   },
 }) {
+  console.log('phoneInfo: ', phoneInfo)
   const imageURL = getImages(image) || errImg
-  console.log('imageURL: ', imageURL)
   const name = `${make} ${model}`
   const PageName = `FixNcell ${name} Repair - ${location}`
 
@@ -58,7 +58,16 @@ function PhonePage({
       </table>
     )
   }
-  const iPhoneScreenRepair = () => <div />
+  const infoSection = (info) => info && (
+  <div>
+    <h2>
+      {name}
+      {' '}
+      Info
+    </h2>
+    <p>{phoneInfo}</p>
+  </div>
+  )
   return (
     <Layout pageTitle="FixNcell">
       <h1>{PageName}</h1>
@@ -66,7 +75,7 @@ function PhonePage({
         <img src={imageURL} alt={name} style={{ height: '250px' }} />
         {repairTable()}
       </div>
-
+      {infoSection(phoneInfo)}
     </Layout>
   )
 }
