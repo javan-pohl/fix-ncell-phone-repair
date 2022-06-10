@@ -92,7 +92,7 @@
 		"model": "X",
 		"slug": "/repairs/iphone/x",
 		"repairs": {
-			"screen-repair-price": "$149",
+			"screen-repair-price": "$129",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
 		},
@@ -103,7 +103,7 @@
 		"model": "XS",
 		"slug": "/repairs/iphone/xs",
 		"repairs": {
-			"screen-repair-price": "$169",
+			"screen-repair-price": "$139",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
 		},
@@ -114,7 +114,7 @@
 		"model": "XS Max",
 		"slug": "/repairs/iphone/xs-max",
 		"repairs": {
-			"screen-repair-price": "$199",
+			"screen-repair-price": "$149",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
 		},
@@ -125,7 +125,7 @@
 		"model": "XR",
 		"slug": "/repairs/iphone/xr",
 		"repairs": {
-			"screen-repair-price": "$149",
+			"screen-repair-price": "$129",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
 		},
@@ -136,7 +136,7 @@
 		"model": "11",
 		"slug": "/repairs/iphone/11",
 		"repairs": {
-			"screen-repair-price": "$149",
+			"screen-repair-price": "$139",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
 		},
@@ -148,7 +148,7 @@
 		"model": "11 Pro",
 		"slug": "/repairs/iphone/11-pro",
 		"repairs": {
-			"screen-repair-price": "$199",
+			"screen-repair-price": "$149",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
 		},
@@ -159,7 +159,7 @@
 		"model": "11 Pro Max",
 		"slug": "/repairs/iphone/11-pro-max",
 		"repairs": {
-			"screen-repair-price": "$199",
+			"screen-repair-price": "$179",
 			"battery-repair-price": "$109",
 			"charging-port-repair-price": "$109"
 		},
